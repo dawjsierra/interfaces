@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>animaciones 3</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="generator" content="CSE HTML Validator (https://www.htmlvalidator.com/)">
+		<style type="text/css">
+			body{
+			}
+			
+			#barrita{
+				width: 100px;
+				height: 100px;
+				clear:both;
+				background-color: orange;
+				float: left;
+				margin: 15px 200px;
+				transition: transform 2s, background-color 2s;
+			}
+			
+			#barrita:target{
+				
+				background-color: yellow;
+				transform: translate(300px,300px);
+			}
+		
+		</style>
+	</head>
+
+	<body>
+		<a href="#barrita"><div id="barrita">Hola q ase?	</div></a>
+		<a href="#barrita"><div id="barrita">Hola q ase?	</div></a>
+		<a href="#barrita"><div id="barrita">Hola q ase?	</div></a>
+	</body>
+</html>

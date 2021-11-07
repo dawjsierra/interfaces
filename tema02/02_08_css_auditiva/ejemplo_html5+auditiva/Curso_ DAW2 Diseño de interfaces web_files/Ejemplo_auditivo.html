@@ -1,0 +1,62 @@
+
+<!-- saved from url=(0102)https://santiagohernandez.aeducar.es/pluginfile.php/13828/mod_resource/content/3/Ejemplo_auditivo.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Hoja estilo auditivo</title>
+        
+        <!--  <link rel="stylesheet" type="speech" href="estilo_audio.css" media="speech" />-->
+		
+		<style>
+        @media speech{
+            h1 { pause: 20ms; } /* pause-before: 20ms; pause-after: 20ms */
+            h2 { pause: 30ms 40ms; } /* pause-before: 30ms; pause-after: 40ms */
+            h3 { pause-after: 10ms; } /* pause-before: sin especificar; pause-after: 10ms */
+            h1, h2, h3, h4, h5, h6 {
+                voice-family: male;
+                voice-stress: moderate;
+                cue-before: url(Himno.mp3) +6dB;
+                voice-volume: medium +6dB;
+            }
+            p.heidi {
+                voice-family: female;
+                voice-balance: left;
+                voice-pitch: high;
+                voice-volume: -6dB;
+            }
+            p.peter {
+                voice-family: male;
+                voice-balance: right;
+                voice-rate: fast;
+            }
+            span.special {
+                voice-volume: soft;
+                pause-after: strong;
+            }
+            
+            ul #menu::before { content: "Comienza el menú de navegación: "; }
+            ul #menu::after  { content: "Fin del menú. "; }
+            
+            abbr {
+                content: attr(title);
+            }
+        }
+        
+        </style>
+    </head>
+    <body lang="ES">
+		<h1>Me llamo Pablo.</h1>
+		<p class="heidi">Hola, soy Heidi.</p>
+		<p class="pedro">
+			<span class="special">Cómo estás ?</span>
+			Soy Pedro.
+		</p>
+        <p class="suave">Hola, soy Heidi.</p>
+
+        <ul id="menu" class="pedro">
+            <li>La pandemia se dispara</li>
+            <li>Aquí ni Dios hace nada</li>
+        </ul>
+
+        <abbr class="pedro" title="Organización de Naciones Unidas">ONU</abbr>
+      
+    
+</body></html>

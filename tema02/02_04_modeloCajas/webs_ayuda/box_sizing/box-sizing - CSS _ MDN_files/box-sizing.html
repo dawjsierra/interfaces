@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!-- saved from url=(0070)https://interactive-examples.mdn.mozilla.net/pages/css/box-sizing.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>CSS Demo: box-sizing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./css-examples-libs.css">
+  <link rel="stylesheet" href="./editor-css.css">
+  <link rel="stylesheet" href="./box-sizing.css">
+  <script>"use strict";function postToKuma(e){window.parent.postMessage(e,"*")}postToKuma({markName:"interactive-editor-loading"}),document.addEventListener("readystatechange",function(e){switch(e.target.readyState){case"interactive":postToKuma({markName:"interactive-editor-interactive",measureName:"ie-time-to-interactive",startMark:"interactive-editor-loading",endMark:"interactive-editor-interactive"});break;case"complete":postToKuma({markName:"interactive-editor-complete",measureName:"ie-time-to-complete",startMark:"interactive-editor-loading",endMark:"interactive-editor-complete"})}});</script>
+</head>
+
+<body>
+  <section class="css-editor-container">
+    <header class="output-header">
+      <h4>CSS Demo: box-sizing</h4>
+      <button id="reset" class="reset" type="button">Reset</button>
+    </header>
+    <div class="editor-wrapper">
+      <section id="example-choice-list" class="example-choice-list live" data-property="boxSizing">
+<div class="example-choice">
+<pre class=" language-css"><code class=" language-css"><span class="token property">box-sizing</span><span class="token punctuation">:</span> content-box<span class="token punctuation">;</span>
+<span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span></code></pre>
+<button type="button" class="copy hidden" aria-hidden="true" aria-label="Copy to clipboard">
+    <span class="visually-hidden">Copy to Clipboard</span>
+</button>
+</div>
+
+<div class="example-choice selected" initial-choice="true">
+<pre class=" language-css"><code class=" language-css" contenteditable="true" spellcheck="false"><span class="token property">box-sizing</span><span class="token punctuation">:</span> content-box<span class="token punctuation">;</span>
+<span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+<span class="token property">border</span><span class="token punctuation">:</span> solid #5B6DCD 10px<span class="token punctuation">;</span>
+<span class="token property">padding</span><span class="token punctuation">:</span> 5px<span class="token punctuation">;</span></code></pre>
+<button type="button" class="copy" aria-hidden="false" aria-label="Copy to clipboard">
+    <span class="visually-hidden">Copy to Clipboard</span>
+</button>
+</div>
+
+<div class="example-choice">
+<pre class=" language-css"><code class=" language-css"><span class="token property">box-sizing</span><span class="token punctuation">:</span> border-box<span class="token punctuation">;</span>
+<span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+<span class="token property">border</span><span class="token punctuation">:</span> solid #5B6DCD 10px<span class="token punctuation">;</span>
+<span class="token property">padding</span><span class="token punctuation">:</span> 5px<span class="token punctuation">;</span></code></pre>
+<button type="button" class="copy hidden" aria-hidden="true" aria-label="Copy to clipboard">
+    <span class="visually-hidden">Copy to Clipboard</span>
+</button>
+</div>
+
+</section>
+
+<div id="output" class="output">
+    <section id="default-example">
+      <div id="example-element-parent">
+        <p>Parent container</p>
+        <div id="example-element" class="transition-all" style="box-sizing: content-box; width: 100%; border: 10px solid rgb(91, 109, 205); padding: 5px;">
+            <p>Child container</p>
+        </div>
+      </div>
+    </section>
+</div>
+
+    </div>
+  </section>
+  <div id="user-message" class="user-message" aria-hidden="true">Copied!</div>
+  <script src="./css-examples-libs.js.descarga"></script>
+  <script src="./editor-css.js.descarga"></script>
+  
+
+
+
+</body></html>

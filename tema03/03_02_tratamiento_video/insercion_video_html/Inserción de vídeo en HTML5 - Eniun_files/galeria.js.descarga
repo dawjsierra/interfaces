@@ -1,0 +1,190 @@
+function empezarGaleria() {
+
+    /*GALERIA SWIPER JS */
+    console.log("Inicio Galeria Swiper");
+
+    // Parametros
+    var mainSliderSelector = '#swiper',
+        navSliderSelector = '.nav-slider',
+        interleaveOffset = 0.5;
+
+    var loop = 0;
+    var loop2 = 0;
+    var loop3 = 0;
+
+    // Slider Principal Opciones
+    let mainSliderOptions = {
+        effect: 'fade',
+        // coverFlowEffect: {
+        //     rotate: 260,
+        //     slideShadows: false
+        // },
+        loop: false,
+        direction: 'horizontal',
+        speed: 1500,
+        spaceBetween: 10,
+        slidesPerView: 1,
+        slideToClickedSlide: true,
+        autoplay: {
+            delay: 1000
+        },
+        // loopAdditionalSlides: 8,
+        grabCursor: true,
+        watchSlidesProgress: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        controller: {
+            control: document.getElementById("swiper2")
+        },
+        on: {
+            init: function() {
+                // this.autoplay.stop();
+
+            },
+            imagesReady: function() {
+                //this.el.classList.remove('loading');
+                this.autoplay.start();
+            },
+            slideChangeTransitionStart: function() {
+                let swiper = this;
+                var actualItem = swiper.slides[swiper.activeIndex].querySelector('div').id;
+
+                var chandal = document.getElementById("chandal");
+                var zapatillas = document.getElementById("zapatillas");
+                var jersey = document.getElementById("jersey");
+                var itemb1 = document.getElementById("itemb1");
+                var itemb2 = document.getElementById("itemb2");
+                var itemb3 = document.getElementById("itemb3");
+
+
+                switch (actualItem) {
+                    case "item1":
+
+                        chandal.style.opacity = 0;
+                        zapatillas.style.opacity = 1;
+                        jersey.style.opacity = 0;
+
+                        itemb1.style.opacity = 1;
+                        itemb2.style.opacity = 0;
+                        itemb3.style.opacity = 0;
+
+                        break;
+                    case "item2":
+
+                        chandal.style.opacity = 1;
+                        zapatillas.style.opacity = 0;
+                        jersey.style.opacity = 0;
+
+                        itemb1.style.opacity = 0;
+                        itemb2.style.opacity = 1;
+                        itemb3.style.opacity = 0;
+
+                        break;
+                    case "item3":
+
+                        chandal.style.opacity = 0;
+                        zapatillas.style.opacity = 0;
+                        jersey.style.opacity = 1;
+
+                        itemb1.style.opacity = 0;
+                        itemb2.style.opacity = 0;
+                        itemb3.style.opacity = 1;
+
+                        break;
+                    default:
+                        break;
+
+                }
+            },
+            slideChangeTransitionEnd: function() {
+                /*Cuando el Slide cambia */
+                let swiper = this;
+                let contenedorImg = swiper.el.querySelectorAll('.contenedorImg');
+                for (let i = 0; i < contenedorImg.length; ++i) {
+                    contenedorImg[i].classList.remove('mostrarImg');
+                }
+
+
+                swiper.slides[swiper.activeIndex].querySelector('.contenedorImg').classList.add('mostrarImg');
+                //console.log(swiper.slides[swiper.activeIndex].querySelector('div').id);
+
+
+
+            },
+            progress: function() {
+                let swiper = this;
+                for (let i = 0; i < swiper.slides.length; i++) {
+                    let slideProgress = swiper.slides[i].progress,
+                        innerOffset = swiper.width * interleaveOffset,
+                        innerTranslate = slideProgress * innerOffset;
+
+                }
+
+                //console.log("valor de i en progress: ", i);
+                //console.log(swiper.slides);
+            },
+            touchStart: function() {
+                let swiper = this;
+                for (let i = 0; i < swiper.slides.length; i++) {
+                    swiper.slides[i].style.transition = "";
+                }
+            },
+            setTransition: function(speed) {
+                let swiper = this;
+                for (let i = 0; i < swiper.slides.length; i++) {
+                    swiper.slides[i].style.transition = speed + "ms";
+                    //swiper.slides[i].querySelector(".slide-bgimg").style.transition = speed + "ms";
+                }
+            },
+            reachEnd: function() {
+                loop++;
+                console.log("final de loop: " + loop);
+                if (loop === 3) {
+                    let swiper = this;
+                    swiper.autoplay.stop();
+                }
+
+            }
+        }
+    };
+
+    var slider2 = new Swiper("#swiper2", {
+        effect: 'fade',
+        loop: false,
+        direction: 'horizontal',
+        speed: 1500,
+        spaceBetween: 10,
+        slidesPerView: 1,
+        autoplay: {
+            delay: 1000
+        },
+        // loopAdditionalSlides:
+        grabCursor: true,
+        watchSlidesProgress: true,
+        slideToClickedSlide: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        on: {
+            reachEnd: function() {
+                // loop2++;
+                console.log("final de loop swiper 2: " + loop2);
+                if (loop2 === 3) {
+                    let swiper2 = this;
+                    swiper2.autoplay.stop();
+                }
+
+            }
+        }
+
+    });
+
+    var mainSlider = new Swiper(mainSliderSelector, mainSliderOptions);
+
+    // slider2.params.control = mainSlider;
+    // mainSlider.params.control = slider2;
+
+}

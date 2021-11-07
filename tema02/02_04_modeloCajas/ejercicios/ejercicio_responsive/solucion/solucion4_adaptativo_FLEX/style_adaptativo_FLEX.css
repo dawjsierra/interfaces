@@ -1,0 +1,128 @@
+html{background:white;
+	color:black
+}
+body{
+	font:normal medium 'Gill Sans','Gill Sans MT','Goudy Bookletter 1911','Linux Libertine O','Liberation Serif',Candara,serif;
+	padding:0;
+	margin:0 auto; /* centra la página */
+	width:90%; /* cambiamos el ancho al 90% */
+	line-height:1.75; /* definimos el espacio entre líneas */
+	word-spacing:0.1em /* definimos el espacio entre palabras */
+}
+
+#secundario{
+	display:flex;
+	/* DIRECCIÓN DE LOS ELEMENTOS visualice en una fila */
+	flex-direction: row; 
+	/* AJUSTAMOS EN EL EJE PRINCIPAL  nowrap, que ajusta los elementos a una línea */
+	flex-wrap:nowrap; 
+	/* ALINEACIÓN DE CONTENIDO
+	space-between, que reparte el espacio entre los elementos dejando los extremos pegados al borde.*/
+	justify-content: space-between; 
+	border: solid 2px black;
+}
+
+section{
+	width:  65%;
+	border: solid 1px red;
+	padding-top: 2em;
+}
+
+aside{
+	width: 33%;
+	border: solid 1px red;
+	padding-top: 3em;
+}
+article{
+	border: solid 1px green;
+	padding-bottom: 2em;
+}
+
+dt{
+	width: 6em;
+	padding-top: 0.5em;
+	text-align: right;
+	
+	border:solid 1px yellow; 
+}
+
+dt,dd{
+	font-weight: bold;
+	font-size:small;
+}
+
+dd{
+	margin-left: 4.5em;
+	border:solid 1px pink; 
+	display: flex;
+}
+
+.uno{
+	width: 1.3em;
+	border:solid 1px brown;
+	text-align: right;
+}
+
+.dos{
+	border:solid 1px brown;
+	width: 20em;
+	margin-left: 1.5em; 
+}
+
+dl a{
+	font-weight: lighter;
+}
+
+a{
+	background:transparent;
+	text-decoration:none;
+	border-bottom:1px dotted;
+}
+a:hover{border-bottom:1px solid}
+
+a:link{color:#1b67c9}
+
+a:visited{color:darkorchid}
+
+h1 a,h2 a,h3 a{color:inherit !important}
+
+h1,h2,h3{font-size:medium}
+
+h1{letter-spacing:1em;text-align:center;margin:0}
+
+header{background:black;color:white;margin:0;padding:1.75em 0;} 
+
+header p{text-align:center;font-size:medium;line-height:2.154}
+
+header a{color:white}
+
+footer{text-align:center;clear:both;}
+
+.post-date{float:right;font-size:small;font-weight:lighter; margin:2px 0 0 0}
+
+nav ul{margin:0;padding:0 1em 0 0;text-align:center}
+
+nav li{display:inline;padding-left:1em}
+
+.sectionSign:before{
+	/* pone contenido antes de aplicar la clase .sectionSign */
+	content:'\00A7';
+}
+
+@media screen and (max-width: 1000px) {
+	#secundario{
+		display:flex;
+		/* DIRECCIÓN DE LOS ELEMENTOS visualice en una columna */
+		flex-direction: column;
+	}
+
+	section, aside{
+		width: 100%;
+	}
+
+	section:after{
+		/* realizar cálculos https://developer.mozilla.org/es/docs/Web/CSS/calc() */
+		padding-left: calc(100% / 2 - 3px);
+		/* pone contenido despues de visualizar section */
+		content:'\00A7'; }
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>animaciones 4</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="generator" content="CSE HTML Validator (https://www.htmlvalidator.com/)">
+		<style type="text/css">
+			body{
+			}
+			.barrit{
+				width: 100px;
+				height: 100px;
+				clear:both;
+				background-color: orange;
+				float: left;
+				margin: 15px 200px;
+				transition: transform 2s, background-color 2s;
+			}
+			
+			/*La pseudo-clase :target de CSS representa un elemento único (el elemento objetivo) con un id que coincide con el fragmento de la URL.
+			https://developer.mozilla.org/es/docs/Web/CSS/:target
+			*/
+			
+			.barrit:target{
+				
+				background-color: yellow;
+				transform: translate(300px,300px);
+			}
+		
+		</style>
+	</head>
+
+	<body>
+		<a href="#barrita"><div class="barrit" id="barrita">Hola q ase?	1</div></a>
+		<a href="#barrita2"><div  class="barrit" id="barrita2">Hola q ase? 2	</div></a>
+		<a href="#barrita3"><div  class="barrit" id="barrita3">Hola q ase?3	</div></a>
+
+	</body>
+</html>

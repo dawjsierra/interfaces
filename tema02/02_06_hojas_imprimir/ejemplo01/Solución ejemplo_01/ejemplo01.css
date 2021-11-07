@@ -1,0 +1,153 @@
+/*Selector universal * */
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+/*Nueva jerarquía para cabeceras*/
+h1 {
+	font: bold 20px verdana, sans-serif;
+}
+h2 {
+	font: bold 14px verdana, sans-serif;
+}
+
+/*Declarando nuevos elementos HTML5*/
+header, section, footer, aside, nav, article, figure, figcaption,
+hgroup{
+	display: block;
+}
+
+/*Centrando el cuerpo*/
+body {
+	text-align: center;
+}
+
+/* Creando la caja principal */
+#agrupar {
+	width: 960px;
+	margin: 15px auto;
+	text-align: left;
+}
+
+/* La cabecera */
+#cabecera {
+	background: #FFFBB9;
+	/*border: 1px solid #999999;*/
+	padding: 20px;
+}
+
+/* barra de navegación */
+nav {
+	background: #CCCCCC;
+	padding: 5px 15px;
+	border-bottom: 2px solid #999999;
+}
+nav li {
+	display: inline-block;
+	list-style: none;
+	padding: 5px;
+	font: bold 14px verdana, sans-serif;
+	border-right:1px solid #999999;;
+}
+
+/* Quitamos el borde derecho del menu del último elemento */
+/*#menu li:nth-child(4){
+border:none;
+}*/
+nav li:last-child{
+border:none;
+}
+
+/* para cambiar el color de un elemento del menu al pasar el ratón sobre el */
+nav li:hover {
+  background-color: yellow;
+}
+
+/* section y aside */
+section {
+	float: left;
+	width: 660px;
+	margin: 20px;
+}
+
+
+aside {
+	float: left;
+	width: 198px;
+	margin: 20px 0px;
+	padding: 20px;
+	background: #CCCCCC;
+}
+
+aside blockquote ul{ margin-left:20px;}
+aside >blockquote> ul >li{ margin-left:30px;}
+
+/* Footer */
+#pie {
+	clear: both;
+	text-align: center;
+	padding: 20px;
+	border-top: 2px solid #999999;
+}
+
+article {
+	background: #FFFBCC;
+	border: 1px solid #999999;
+	padding: 20px;
+	margin-bottom: 15px;
+}
+
+/* para definir los margenes superior e inferior de P y H2 incluidos en
+la cabecera de los artículos */
+
+article>header>p,h2{
+margin-top:10px;
+margin-bottom:10px;
+}
+article footer {
+	text-align: right;
+}
+
+/* para determinar el tamaño de las imagenes contenidas en los artículos */
+article>figure>img{
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+}
+time {
+	color: #999999;
+}
+figcaption {
+	font: italic 14px verdana, sans-serif;
+}
+
+
+
+div {
+width: 100px;
+margin: 20px;
+padding: 10px;
+border: 1px solid #000000;
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+/*
+La propiedad box-sizing puede tomar dos valores. Por defecto es configurada como
+content-box, lo que significa que los navegadores agregarán los valores de padding y
+border al tamaño especificado por width y height. Usando el valor border-box en su
+lugar, este comportamiento es cambiado de modo que padding y border son incluidos
+dentro del elemento.
+
+-moz- para Firefox.
+-webkit- para Safari y Chrome.
+-o- para Opera.
+-khtml- para Konqueror.
+-ms- para Internet Explorer.
+-chrome- específico para Google Chrome.
+*/
+
+

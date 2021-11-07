@@ -1,0 +1,51 @@
+header {
+    height: 10%;
+    background-color: lightblue;
+}
+
+#principal {
+    display: flex;
+    flex-flow: row;
+    align-items: stretch;
+    min-height: 80%;
+}
+
+nav {
+    background-color: lightgray;
+    flex: 1 6 20%;
+    order: 1;
+}
+
+article {
+    background-color: lemonchiffon;
+    flex: 3 1 60%;
+    order: 2;
+}
+
+aside {
+    background-color: lightsalmon;
+    flex: 1 6 20%;
+    order: 3;
+}
+
+footer{
+    background-color: lightgreen;
+    height: 5%;
+}
+
+@media all and (max-width: 640px) {
+  
+    #principal  {
+        flex-flow: column;
+    }
+
+    article{
+        order: 1;
+    }
+    aside{
+        order: 2;
+    }
+    nav{
+        order: 3;
+    }
+}

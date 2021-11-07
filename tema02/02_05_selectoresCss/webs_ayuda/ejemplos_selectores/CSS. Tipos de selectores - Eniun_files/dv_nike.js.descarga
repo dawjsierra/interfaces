@@ -1,0 +1,110 @@
+	jvxAd.on("scene-1.sceneAssetsLoaded", function(event, param1, param2){
+	var check = 0, count_=0;
+	function call_dv(){	
+		var scene_childs = document.getElementById('scene-1').children.length;
+		//var nodes=[]; // commented
+		for(var i=0;i<scene_childs;i++){
+			var nodes=[]; // added here
+			var atts = document.getElementById('scene-1').children[i].attributes;
+			for(var j=0;j<atts.length;j++){
+				att = atts[j];
+				nodes.push(att.nodeName);
+			}
+		//	console.log(nodes);
+			if(nodes.indexOf("extfilepath") >-1){
+				var asset_value = document.getElementById('scene-1').children[i];
+		//		console.log('coming');
+			}	
+		}
+		if(asset_value!=undefined){
+		//	console.log(asset_value,'inside_function');
+			var asset_id = asset_value.contentWindow.document.getElementsByTagName('body')[0];
+		//	console.log(asset_id,"asset",dynamicJSONData['data']["NC_AID_RET"]);
+			if(asset_id!=undefined){
+				var asset_id_child = asset_value.contentWindow.document.getElementsByTagName('body')[0].firstElementChild;
+				var asset_id_child_attr = asset_id_child.hasAttribute('id');
+				if(asset_id_child_attr){
+					var attr_value = asset_id_child.getAttribute('id');
+		//			console.log("id attribute value",attr_value);
+				}else{
+					var attr_value = "ad_container_id";
+					asset_id_child.setAttribute("id", attr_value);
+		//			console.log('need to inject id attribute');
+				}
+				var jvxCampaignIdx = playerParamsMap.campaignId,
+					jvxSiteIdx = playerParamsMap.siteId,
+					jvxPlacementIdx = playerParamsMap.es_pId,
+					creativeVariationx = dynamicJSONData['data']['reporting-key'];
+					jvxImpressionIdx = playerParamsMap.jvxSessionId,
+					jvxContainerid = attr_value;
+					
+			var geo_lang_ = playerParamsMap.ap_DataSignal7;
+			if(geo_lang_ == "united kingdom_english"){
+				geo_lang_ = "unitedkingdom_english";
+			}
+			var geo_lang_val = {
+					chile_spanish:"GE",
+					mexico_spanish:"GE",
+					canada_english:"GE",
+					australia_english:"GE",
+					unitedkingdom_english:"WE",
+					poland_polish:"WE",
+					sweden_swedish:"WE",
+					austria_german:"WE",
+					denmark_danish:"WE",
+					ireland_english:"WE",
+					germany_german:"WE",
+					france_french:"WE",
+					italy_italian:"WE",
+					spain_catalan:"WE",
+					belgium_dutch:"WE",
+					spain_spanish:"WE",
+					belgium_german:"WE",
+					netherlands_dutch:"WE",
+					belgium_french:"WE",
+					NA_NA:"NA"
+				}
+				
+				var final_re = geo_lang_val[geo_lang_];
+				if (final_re != undefined){
+					var final_re = geo_lang_val[geo_lang_];
+				}else{
+					var final_re = "NA";
+				}
+				if ((typeof dynamicJSONData != "undefined") && (typeof dynamicJSONData['data']['NC_LID_RE'] != "undefined")){
+					var country_re = playerParamsMap.ap_DataSignal7;
+					if ((typeof dynamicJSONData != "undefined") && (typeof dynamicJSONData['data']['NC_UPSELL_RULE'] != "undefined") && (dynamicJSONData['data']['NC_UPSELL_RULE'].length >= 1)){
+						var line_id = dynamicJSONData['data']['NC_UPSELL_RULE'][0]['Reporting'];
+					}else if((typeof dynamicJSONData != "undefined") && (typeof dynamicJSONData['data']['NC_UPSELL_RUL_FD'] != "undefined") && (dynamicJSONData['data']['NC_UPSELL_RUL_FD'].length >= 1)){
+						var line_id = dynamicJSONData['data']['NC_UPSELL_RUL_FD'][0]['Reporting'];
+					}else{
+						var line_id = dynamicJSONData['data']['NC_LID_RE'][0]['Reporting'];
+					}
+					var aid = dynamicJSONData['data']['NC_AID_RET'][0]['Reporting'];
+					var creative_value = final_re+":"+country_re+":"+aid+":"+line_id;
+					var creativeVariationx = encodeURIComponent(creative_value);
+				}
+				
+				var dvUrl = "https://cdn.doubleverify.com/dvtp_src.js?ctx=14526021&cmp="+jvxCampaignIdx+"&sid="+jvxSiteIdx+"&plc="+jvxPlacementIdx+"&num=&adid=&advid=&adsrv=125&btreg="+jvxContainerid+"&btadsrv=jivox&crt="+creativeVariationx+"&crtname=&chnl=&unit=&pid=&uid=&tagtype=&dvtagver=6.1.src&DVPX_PP_IMP_ID="+jvxImpressionIdx+"";
+					
+					var newScript = document.createElement("script");
+					newScript.src = dvUrl;
+					asset_id.appendChild(newScript);
+			}else{
+				check++;
+			//	console.log(check,'else');
+				if(check<20){
+			//		console.log(check,'inside_else_asset_id');
+					setTimeout(call_dv,100);
+				}
+			}
+		}else{
+			count_++;
+			if(count_<20){
+		//		console.log(count_,'inside_else_asset_value');
+				setTimeout(call_dv,100);
+			}
+		}
+	}
+call_dv();
+});

@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>Animaciones 5</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="generator" content="CSE HTML Validator (https://www.htmlvalidator.com/)">
+		
+		<style type="text/css">
+		
+			@keyframes cambio {
+				from {left:15px; background-color: orange;}
+				50% {left:150px; background-color: green;}
+				to {left:300px; background-color: blue;}
+				/*75% {left:300px; background-color: yellow;}*/
+			}
+		
+			#capa1{
+				position: relative;
+				background-color: orange;
+				left: 15px;
+				height: 200px;
+				width: 200px;
+				animation-name: cambio;
+				animation-duration: 5s;
+				animation-iteration-count: 3;
+				animation-direction: alternate;
+			}
+			
+		
+		</style>
+		
+		
+	</head>
+
+	<body>
+		<div id="capa1">
+			<p>Texto de prueba en capa 1</p>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,89 @@
+<html>
+	<head>
+		<title>Formulario</title>
+		<meta charset="utf-8"/>
+			<style type="text/css">
+				form,fieldset{display: flex; flex-flow: row wrap; width: 480px;}
+				label{width: 200px;}
+				input{width: 250px;margin-bottom: 15px;}
+			</style>
+	</head>
+	<body>
+		<form action="http://www.miserver.es/repite.php" method="post">
+
+			<label>Texto:</label> <input type="text"/>
+			<label>Contraseña:</label> <input type="password"/>
+
+			<label>Email:</label> <input type="email"/>
+			<label>URL:</label> <input type="url"/>
+			<label>Teléfono:</label> <input type="tel"/>
+			<label>Búsqueda:</label> <input type="search"/>
+
+			<label>Casilla de verificación:</label> <input type="checkbox" value="hola"/>
+			<label>Casilla de verificación activa:</label> <input type="checkbox" checked/>
+			<label>Opción excluyente:</label> <input type="radio" name="opcion"/>
+			<label>Opción excluyente activa:</label> <input type="radio" name="opcion" checked/>
+
+			<label>Botón Enviar:</label> <input type="submit" value="Enviar"/>
+			<label>Botón Enviar con imagen:</label> <input type="image" src="enviar.png"/>
+			<label>Botón Reiniciar</label> <input type="reset" value="Reiniciar"/>
+			<label>Botón</label> <input type="button" value="Un botón"/>
+
+			<label>Número:</label> <input type="number" min="0" max="10" step="2" value="0"/>
+			<label>Rango:</label> <input type="range" min="1" max="5" step="1" value="3"/>
+			<label>Color:</label> <input type="color" value="#FF0000"/>
+
+			<label>Archivo:</label> <input type="file"/>
+			<label>Imagen:</label><input type="file" name="imagen" accept="image/jpeg, image/png"/>
+
+			<label>Lista:</label><input type="text" name="paramLista" list="opciones">
+			<datalist id="opciones">
+				<option value="Opción 1">
+				<option value="Opción 2">
+				<option value="Opción 3">
+			</datalist>
+
+			<label>Lista con etiquetas:</label>
+			<input type="url" name="paramURLs" list="urls">
+			<datalist id="urls">
+				<option label="Buscador Google" value="http://www.google.es">
+				<option label="Buscador Bing" value="http://www.bing.es">
+				<option label="Buscador Yahoo" value="http://www.yahoo.es">
+			</datalist>
+
+			<label>Login (placeholder):</label>
+			<input type="text" placeholder="Login"/>
+			<label>Contraseña (placeholder):</label>
+			<input type="password" placeholder="Contraseña"/>
+
+			<label>Email (pattern):</label>
+			<input type="email" pattern="[a-z0-9]+@[a-z0-9]+\.[a-z]{2,3}$"/>
+
+			<label>Contraseña (pattern):</label>
+			<input type="password" name="paramPasswd" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"/>
+
+			<label>Email (multiple):</label> <input type="email" name="paramEmail" multiple/>
+
+			<p>
+				<label>Comentarios</label>
+				<textarea name="nombre" rows="4" cols="60" maxlenght="100">
+					Escribe aquí tu comentario
+				</textarea>
+			<p>
+			<label>Lista de selección</label>
+			<select name="paraSeleccion">
+				<option value="opcion1">Primera opción</option>
+				<option value="opcion2">Segunda opción</option>
+				<option value="opcion3">Tercera opción</option>
+			</select>
+			<p>
+			<fieldset>
+				<legend>Login</legend>
+				<label>Texto:</label> <input type="text" required/>
+				<label>Contraseña:</label> <input type="password" required/>
+			</fieldset>
+
+
+		</form>
+	</body>
+</html>

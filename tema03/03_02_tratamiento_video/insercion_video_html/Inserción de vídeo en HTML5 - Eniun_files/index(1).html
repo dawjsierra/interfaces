@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)https://s0.2mdn.net/9416200/1635427574802/index.html -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="ad.size" content="width=728,height=90">
+    <meta name="viewport" content="width=728, height=90, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="./swiper.min(1).css">
+    <link rel="stylesheet" href="./estilos(1).css">
+    <script>
+        var clickTag = "https://www.decathlon.es/es/";
+    </script>
+    <script src="./jquery.min.js(1).descarga"></script>
+    <script src="./tweenmax_2.1.2_min.js.descarga"></script>
+    <script src="./swiper.min.js(1).descarga"></script>
+    <script src="./logica.js(1).descarga"></script>
+    <script src="./particles.min.js(1).descarga"></script> 
+      <title>DECATHLON ECO 2021</title>
+    <!-- DESIGN & DEVELOPMENT TERESA COSTAS  [MATTERKIND- KINESSO ] -->
+<script type="text/javascript">
+    
+  (function() {
+    var MAX_URL_PARAM_LENGTH = 34;
+    var CLICK_X_URL_KEY = 'nx';
+    var CLICK_Y_URL_KEY = 'ny';
+    var CREATIVE_DIMENSIONS_KEY = 'dim';
+    var AD_URL_PARAM = '&adurl=';
+
+    var relegateNavigation = '';
+    var urlParamMap = {};
+
+    urlParamMap[CLICK_X_URL_KEY] = null;
+    urlParamMap[CLICK_Y_URL_KEY] = null;
+    urlParamMap[CREATIVE_DIMENSIONS_KEY] = null;
+
+    var handleClickTagMessage = function(e) {
+      try {
+        var eventData = JSON.parse(e.data);
+      } catch (err) {
+        return;
+      }
+      if (eventData.isInitClickTag) {
+        if (eventData.clickTags) {
+          for (var i = 0; i < eventData.clickTags.length; i++) {
+            var clkTag = eventData.clickTags[i];
+            window[clkTag.name] = clkTag.url;
+          }
+        } else if (eventData.clickTag) {
+          window.clickTag = eventData.clickTag;
+        }
+        relegateNavigation = eventData.relegateNavigation;
+      }
+    };
+
+    var storeClickCoordinates = function(e) {
+      urlParamMap[CLICK_X_URL_KEY] = Math.round(e.clientX);
+      urlParamMap[CLICK_Y_URL_KEY] = Math.round(e.clientY);
+    };
+
+    var getCreativeDimensions = function() {
+      return window.innerWidth + 'x' + window.innerHeight;
+    }
+
+    var getExitClickParams = function(e) {
+      urlParamMap[CREATIVE_DIMENSIONS_KEY] = getCreativeDimensions();
+
+      var exitParams = '';
+      for (var key in urlParamMap) {
+        exitParams += '&' + key + '=';
+        if (urlParamMap[key] !== null) {
+          exitParams += urlParamMap[key];
+        }
+      }
+      return exitParams;
+    }
+
+    var appendExitClickParams = function(url) {
+      var adUrlIndex = url.toLowerCase().indexOf(AD_URL_PARAM);
+      var paramsToBeAdded = getExitClickParams();
+      if (adUrlIndex > -1 && paramsToBeAdded.length <= MAX_URL_PARAM_LENGTH) {
+        url = url.substr(0, adUrlIndex) + paramsToBeAdded +
+          url.substr(adUrlIndex);
+      };
+      return url;
+    };
+
+    if (open.call) {
+      window.open = function(open) {
+        return function(url, name, features) {
+          url = appendExitClickParams(url);
+          if (relegateNavigation === 'parent') {
+            var message = {'clickTag': url, 'isPostClickTag': true};
+            parent.postMessage(JSON.stringify(message), '*');
+          } else {
+            var args = [url, name];
+            if (features) {
+              args.push(features);
+            }
+            open.apply(window, args);
+          }
+        };
+      }(window.open);
+    }
+
+    if (window.addEventListener) {
+      window.addEventListener(
+          'message', handleClickTagMessage, false);
+      window.addEventListener('mousedown', storeClickCoordinates, true);
+    } else {
+      window.attachEvent('onmessage', handleClickTagMessage);
+    }
+  })();
+    
+  </script></head>
+
+<body>
+    <div id="contenedor_banner">
+        <div class="recuadro" id="recuadro"></div>
+        <a href="javascript:window.open(window.clickTag,&#39; _blank&#39;)">
+            <div id="contenido">
+                <!-- <div id="fondo"></div> -->
+                <!--Campaña-->
+                <div id="fondo">
+                  <div id="colorama"></div>
+                  
+                </div>
+
+
+
+                <!-- Contendor del deslizador principal: -->
+                <div class="swiper-container principal main-slider loading swiper-container-fade swiper-container-horizontal" id="swiper" style="cursor: grab;">
+                    <div class="swiper-wrapper" id="grid1" style="transition-duration: 0ms;">
+                    <div class="swiper-slide">
+                <div class="item" id="item1">
+                    <div class="contenedorImg">
+                        <img src="./a(1).jpg" alt="" id="img1">
+                    </div>
+                </div></div><div class="swiper-slide">
+                <div class="item" id="item2">
+                    <div class="contenedorImg">
+                        <img src="./b(1).jpg" alt="" id="img2">
+                    </div>
+                </div></div><div class="swiper-slide">
+                <div class="item" id="item3">
+                    <div class="contenedorImg">
+                        <img src="./c(1).jpg" alt="" id="img3">
+                    </div>
+                </div></div></div>
+
+
+                    <!--Final de Swiper-wrapper -->
+                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+
+                <!-- <div class="swiper-container secundario main-slider loading" id="swiper2">
+                    <div class="swiper-wrapper" id="grid2">
+
+                    </div>
+                </div> -->
+
+                <!-- <div class="swiper-container secundario main-slider loading " id="swiper3">
+                    <div class="swiper-wrapper ocultar" id="grid3">
+
+                    </div>
+                </div> -->
+
+                <!-- <div id="chandal" style="opacity:1;" class="textos colorNegro animar_con_salto">
+                    <p class="marca_txt font-decathlon">DOMYOS</p>
+                    <p class="nombreprod"><span class="font-bold">CHÁNDAL JR</span><br><span class="font-light">WARM'Y</span></p>
+                    <div class="caja_precio">
+                        <img src="999.svg" class="preciosvg" alt="9.99€">
+                    </div>
+                </div> -->
+
+                <div id="zapatillas" style="opacity:1;" class="textos colorNegro animar_con_salto">
+                    <p class="marca_txt font-decathlon">QUECHUA</p>
+                    <p class="nombreprod"><span class="font-bold">POLAR MH120</span><br><span class="font-light">HOMBRE</span></p>
+                    <div class="caja_precio">
+                        <img src="./1499(1).svg" class="preciosvg" alt="14.99€">
+                    </div>
+                </div>
+
+                <div id="chandal" style="opacity:0;" class="textos colorNegro animar_con_salto">
+                    <p class="marca_txt font-decathlon">QUECHUA</p>
+                    <p class="nombreprod"><span class="font-bold">POLAR MH100</span><br><span class="font-light">HOMBRE</span></p>
+                    <div class="caja_precio">
+                        <img src="./799(1).svg" class="preciosvg" alt="7.99€">
+                    </div>
+                </div>
+
+                <div id="jersey" style="opacity:0;" class="textos colorNegro animar_con_salto">
+                    <p class="marca_txt font-decathlon">QUECHUA</p>
+                    <p class="nombreprod"><span class="font-bold">POLAR MH20</span><br><span class="font-light">HOMBRE</span></p>
+                    <div class="caja_precio">
+                        <img src="./399(1).svg" class="preciosvg" alt="3.99€">
+                    </div>
+                </div>
+                <div id="particles-js" class="contenedor_hojas"><canvas class="particles-js-canvas-el" width="0" height="0" style="width: 100%; height: 100%;"></canvas></div>
+                <div class="rectangulo"></div>
+                
+
+                <img src="./grafica_ECO(1).svg" alt="" id="grafica">
+
+
+
+                <!--LOGO SVG-->
+                <svg id="logo-svg" xmlns="https://www.w3.org/2000/svg" width="176" height="44" viewBox="504 126 176 44">
+                    <path fill="#0082C3" d="M504 126h176v44H504z"></path>
+                    <path d="M534.984 145.816c-.4-2.665-1.52-4.84-3.307-6.44-2.478-2.23-5.115-2.703-8.896-2.703h-8.13v22.616h8.93c3.345 0 5.585-.45 8.125-2.8 1.784-1.673 2.885-3.774 3.28-6.258v9.04h12.94v-4.958h-7.12v-4.1l6.165-.006v-4.863l-6.165.004v-3.697l7.12-.005v-4.977h-12.94v9.146zm-12.174 8.506h-2.337v-12.785h2.31c4.274 0 6.584 2.296 6.584 6.37 0 4.448-2.104 6.415-6.557 6.415zm43.472-3.756c-.854 1.352-2.714 3.49-5.525 3.456-4.575-.07-6.298-3.234-6.298-6.07 0-3.233 2.57-6.01 5.942-6.07 3.8-.08 6.63 3.563 6.63 3.563l2.97-4.795s-3.365-4.567-9.548-4.43c-9.312.212-12.02 8.008-12.02 11.623 0 7.613 5.858 11.416 10.65 11.875 6.886.672 10.66-3.833 10.66-3.833s-.044-.01.188-.016a405.38 405.38 0 0 1 5.058.015v3.39h5.603v-22.6h-6.088c-.003-.002-7.493 12.745-8.223 13.89zm8.822.59h-3l3-5.12v5.12zm6.701-9.086h4.522v17.22h5.816v-17.22h4.516v-5.407h-14.855m27.859 8.595h-5.986v-8.588h-5.817v22.62h5.817v-8.655h5.986v8.656h5.818v-22.62h-5.817m53.879.003v12.562l-8.742-12.562h-5.257v7.7c-.568-1.78-1.58-3.42-3.012-4.815-2.23-2.176-5.132-3.358-8.197-3.358-3.26 0-6.1 1.12-8.356 3.327-2.26 2.204-3.48 5.087-3.48 8.223 0 2.48.597 4.657 1.777 6.54h-5.23V136.68h-5.785v22.61h12.573v-3.02c2.25 2.318 5.118 3.506 8.47 3.506 3.194 0 6.23-1.248 8.458-3.55a11.392 11.392 0 0 0 2.784-4.695v7.76h5.826v-12.6l8.88 12.6h5.12v-22.615h-5.827zM638.3 154.142c-3.162 0-6.03-2.743-6.03-6.327 0-3.328 2.682-5.988 6.098-5.988 3.228 0 5.908 2.66 5.908 5.988 0 3.705-2.68 6.327-5.975 6.327z" fill="#FFF"></path>
+                </svg>
+
+
+
+
+            </div>
+
+            <!--fin contenido-->
+
+            <!-- Navegación y clicktag -->
+            <div class="contenedorNav ">
+                <div class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide" aria-disabled="false"></div>
+                <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide" aria-disabled="false"></div>
+            </div>
+
+            <div class="boton">
+                <div class="ala_btn"></div>
+                <p class="cta_btn uppercase">COMPRAR YA</p>
+            </div>
+            <div id="intro" class="">
+                <img src="./728x90_portada_FH.jpg" alt="" id="imgportada">
+            </div>
+
+
+        </a>
+
+
+
+    </div>
+    <!--fin contenedor_banner-->
+
+
+
+<script src="./app.js(1).descarga"></script>
+<script src="./galeria.js(1).descarga"></script>
+<script>
+    var intervalo = setInterval(function() {
+        // toggle the class every five second
+        $('#intro').toggleClass('mostrar');
+        setTimeout(function() {
+            // toggle back after 1 second
+            $('#intro').toggleClass('mostrar');
+        }, 2000);
+
+    }, 6000);
+
+    setTimeout(function() {
+        clearInterval(intervalo);
+        console.log("intervalo limpiado");
+    }, 24000);
+
+    // var grid3 = document.getElementById('grid3');
+    // var grid2 = document.getElementById('grid2');
+    //
+    // grid3.onmouseover = function() {
+    //   $('#grid3').toggleClass('ocultar');
+    //   $('#grid2').toggleClass('ocultar');
+    // };
+    //
+    // grid2.onmouseout = function() {
+    //   $('#grid3').toggleClass('ocultar');
+    //   $('#grid2').toggleClass('ocultar');
+    // };
+
+
+
+</script>
+
+</body></html>

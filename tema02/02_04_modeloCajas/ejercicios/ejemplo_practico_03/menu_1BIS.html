@@ -1,0 +1,106 @@
+
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="robots" content="noindex" />
+		<title>MENÚ DESPLEGABLE1-HTML5</title>
+
+		<style type="text/css">
+		  /* PROPIEDADES GENERALES */
+
+			/* Quitamos los márgenes y los padding de todos los elementos */
+			
+			* {
+				margin: 0px;
+				padding: 0px; 
+			}
+
+			/* establecemos los valores del menú de navegación  */
+			nav {
+				text-align: center; /* centramos el texto */
+				font-size: 0.7em;   /* tamaño de letra */
+				margin: 20px auto;  /* margen superior e inferior 20 px y derecho izquierdo por defecto */
+			}
+
+			nav ul {
+				list-style-type: none; /* quitamos los elemento de decoración de la lista */
+				position:fixed;        /* posición fija  */
+				left:3%;               /* posición izquierda 3% */
+				border: 1px solid red;
+			}
+
+			
+			
+			.nivel1 a {
+				width: 162px;  /* anchura de todos los elementos del menú */
+			}
+
+			.nivel1 a {
+				display: block;
+				text-decoration: none;
+				color: #fff;
+				background-color: rgba(59,93,148,1);
+				border: solid 1px #fff;
+				padding: 8px;
+			}
+
+			/* es lo mismo que poner nav ul li ul */
+			
+			.nivel2 {     
+				display: none;
+			}
+
+
+			/* PROPIEDAD HOVER */
+
+			nav ul li:hover {
+				position: relative;
+			}
+
+			nav ul li a:hover{
+				background-color: #6CC;
+				color: #000;
+				
+			}
+
+			nav  ul li:hover ul.nivel2{
+				display: block;
+				position: absolute;
+				left: 100%; top:50%;
+			}
+			
+		</style>
+
+
+	</head>
+
+
+
+	<body>
+		<nav>
+			<ul>
+				<li class="nivel1"><a href="#" >ESPAÑA</a>
+					<ul class="nivel2">
+						 <li><a href="#">Barcelona</a></li>
+						 <li><a href="#">Madrid</a></li>
+						 <li><a href="#">Zaragoza</a></li>
+					 </ul>
+				 </li>
+				 <li class="nivel1"><a href="#" >FRANCIA</a>
+					 <ul class="nivel2">
+						<li><a href="#">París</a></li>
+						<li><a href="#">Lion</a></li>
+						<li><a href="#">Marsella</a></li>
+					</ul>
+				 </li>
+				 <li class="nivel1"><a href="#" >INGLATERRA</a>
+					 <ul class="nivel2">
+						<li><a href="#">Londres</a></li>
+					</ul>
+				 </li>
+				 
+			</ul>	
+		</nav>
+	</body>
+</html>

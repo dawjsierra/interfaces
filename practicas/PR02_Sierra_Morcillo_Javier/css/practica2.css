@@ -1,0 +1,724 @@
+@font-face {
+    font-family: 'PTSans';
+    src: url('../fonts/PTSans/PTSans-Regular.ttf') format('truetype');
+    font-weight: 1;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PTSansBold';
+    src: url('../fonts/PTSans/PTSans-Bold.ttf') format('truetype');
+    font-weight: 2;
+    font-style: normal;
+}
+
+a{
+    text-decoration: none;
+    color:black;
+}
+
+body{
+    width: 1190px;
+    margin: auto;
+    padding: 0;
+}
+
+
+
+/**********************/
+header{
+    width:590px;
+    float: left;
+    border: red 1px solid;
+}
+
+header>img{
+    width:60%;
+    height:80px;
+}
+
+
+
+/*********************/
+#navPrincipal{
+    width: 590px;
+    float:right;
+    height:84px;
+    border: red 1px solid;
+}
+
+#login{
+    float: right;
+    margin-right: 0;
+    width: 20%;
+}
+
+#login>ul{
+    margin:0;
+    padding:0;
+    list-style-type: none;
+    font-size:12px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display:flex;
+    justify-content: space-between;
+}
+
+#login>ul>li{
+    font-weight: bold;
+    color:black;
+}
+
+#navegacion{
+    width: 590px;
+    margin-bottom: 0;
+}
+
+#navegacion>ul{
+    margin-top:10px;
+    font-size:20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display:flex;
+    justify-items: flex-start;
+    justify-content: space-between;
+    text-align: center;
+}
+
+#navegacion>ul>li{
+    display: inline;
+    list-style-type: none;
+    font-weight: bold;
+    color:rgb(132,139,150);
+    background-color:rgb(244,240,243);
+    width:19%;
+    height:30px;
+    text-align: center;
+    float: left;
+    border-radius: 5px;
+}
+
+
+
+/******************/
+#tituloNav{
+    clear: both;
+    width:100%;
+    border: red 1px solid;
+}
+
+#tituloNav>h2{
+    font-family: PTSansBold;
+    color: rgb(18,106,124);
+    font-size: 35px;
+    margin:auto;
+    padding:0;
+}
+
+
+
+/*****************/
+#navSecundario{
+    width:690px;
+    float:left;
+    font-family: PTSans;
+    width: 690px;
+    height:35px;
+    border: red 1px solid;
+}
+
+#navSecundario>ul{
+    display:flex;
+    justify-content: space-between;
+    padding:0;
+    list-style-type: none;
+    font-size:14px;
+}
+
+#navSecundario>ul>a>li{
+    font-weight: bold;
+    color:rgb(159,164,168);
+    background-color: rgb(244,244,244);
+    text-align: center;
+    width: 80px;
+    border-start-end-radius: 10px;
+    border-top-left-radius: 10px;
+    height: 20px;
+    margin-top: -3px;
+}
+
+#navSecundario>img{
+    position:relative;
+    top:-17px;
+    left: 128px;
+}
+
+
+
+/*******************/
+#idiomas{
+    display: flex;
+    width:490px;
+    margin-bottom:0;
+    padding:0;
+    float: right;
+    border: red 1px solid;
+}
+
+#idiomas>p{
+    margin:auto;
+    color: black;
+    font-family: PTSans;
+    padding:0;
+    text-align: right;
+    position:relative;
+    left:180px;
+}
+
+#idiomas>ul{
+    margin:0;
+    padding:0;
+}
+
+#idiomas>ul>li{
+    font-family: PTSans;
+    display: inline;
+    list-style-type: none;
+    color:rgb(132,139,150);
+    background-color:rgb(244,240,243);
+    width:100%;
+    text-align: center;
+}
+
+#idiomas>ul>:last-child{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color:rgb(244,240,243);
+}
+
+#idiomas>ul>:first-child{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background: lightgray;
+}
+
+
+
+/********************/
+#program{
+    width: 890px;
+    float: left;
+    border: red 1px solid;
+}
+
+#program>h2{
+    font-family: arial;
+}
+
+#programTexto{
+    font-family: 'Times New Roman', Times, serif;
+    width: 590px;
+}
+
+#program>img{
+    position:relative;
+    right:10px;
+    bottom: 12px;
+    width: 150px;
+    float:right;
+}
+
+.titulos{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 35px;
+    color:rgb(63,186,196);
+}
+
+
+
+/*******************/
+#register{
+    width:290px;
+    float:right;
+    background-color: rgb(154,206,255);
+    border-radius: 5px;
+    color: rgb(66,111,168);
+    text-align: center;
+    border: red 1px solid;
+}
+
+#botonRegister{
+    display: flex;
+    padding:0;
+    margin-left:10px;
+    margin-right:10px;
+    margin-top: 15px;
+    background-color: rgb(140,207,104) ;
+    border-radius: 5px;
+    height: 50px;
+    box-shadow: 0px 1px 0px 1px rgba(0,0,0,0.3);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#botonRegister>p{
+    margin:auto;
+    padding:0;
+    font-size:30px;
+    width:80%;
+    color: white;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-shadow: 0px 0.5px 0px black;
+    
+}
+
+
+
+/*****************************/
+#benefit{
+    width:290px;
+    float:right;
+    font-family: PTSans;
+    background-color: rgb(240,242,241);
+    border-radius: 8px;
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+    border: red 1px solid;
+}
+
+.benefitDist{
+    margin:6px;
+    padding:0;
+    width:95%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.benefitDist>p{
+    float:right;
+    margin:auto;
+    padding:0;
+    width:80%;
+    font-size: 15px;
+}
+
+.benefitDist>img{
+    margin: auto;
+    padding: 0;
+    width:45px;
+    height:45px;
+}
+
+
+
+/*******************/
+#parrafo1{
+    width:490px;
+    float: left;
+    border: red 1px solid;
+}
+
+#parrafo1>p{
+    color:rgb(141,134,139);
+    width: 390px;
+    font-style: italic;
+}
+
+
+
+/***************************/
+#parrafo2{
+    width: 390px;
+    margin-left: 10px;
+    border: red 1px solid;
+}
+
+#parrafo2>p{
+    color:rgb(141,134,139);
+    float:left;
+    width: 390px;
+    font-style: italic;
+}
+
+#parrafo1, #parrafo2{
+    display:inline-block;
+}
+
+.titulosParrafos{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: rgb(10,119,122);
+    font-weight: bold;
+    font-style: normal;
+}
+
+.textoAzul{
+    color: rgb(37,123,124);
+}
+
+.textoAzulOscuro{
+    color: rgb(6,109,114);
+}
+
+
+
+/*************************/
+#festivalSpaces{
+    width:890px;
+    float:left;
+    border: red 1px solid;
+}
+
+#textoSpaces{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.titulosCuadros{
+    font-family: PTSansBold;
+    padding:8px;
+    margin-left: 7px;
+    margin-right: 7px;
+    margin-bottom: 12px;
+    height:70%;
+}
+
+#cuadrosColores{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.textoCuadro{
+    font-family: 'Times New Roman', Times, serif;
+    padding:8px;
+    margin-left: 7px;
+    margin-right: 7px;
+    margin-bottom: 12px;
+    height:70%;
+}
+
+.cuadro{
+    width: 240px;
+    box-shadow: 1px 3px 3px 2px rgba(0,0,0,0.2);
+    margin:auto;
+    padding:0;
+}
+
+.espacioCuadro{
+    width:290px;
+    margin-top: 20px;
+    padding:0;
+    border:blue 1px solid;
+}
+
+.verde{
+    background-color: rgb(222,239,171);
+}
+
+.rojo{
+    background-color: rgb(255,218,212);
+}
+
+.amarillo{
+    background-color: rgb(254,252,195);
+}
+
+.azul{
+    background-color: rgb(153,219,233);
+}
+
+.rotacion1{
+    transform:rotate(-4deg);
+}
+
+.rotacion2{
+    transform:rotate(2deg);
+}
+
+.rotacion3{
+    transform:rotate(6deg);
+}
+
+#textoPie{
+    width: 65%;
+    font-family: 'Times New Roman', Times, serif;
+    margin-left:25px;
+}
+
+#tituloPie{
+    margin-left: 25px;
+}
+
+
+/*************************/
+#asideChecks{
+    clear: none;
+    width:290px;
+    float:right;
+    font-family: PTSans;
+    padding: 0;
+    margin-top: 16px;
+    background-color: rgb(254,252,195);
+    box-shadow: 1px 3px 3px 2px rgba(0,0,0,0.2);
+    border-radius: 4px;
+    transform: rotate(1deg);
+    height:auto;
+    display:flex;
+    flex-direction: column;
+    border: red 1px solid;
+}
+
+#checkTitulo{
+    font-size: 25px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    color: rgb(156,0,1);
+    margin:15px;
+    padding:0;
+    width:85%;
+}
+
+#checks{
+    width: 85%;
+    margin:auto;
+    padding:0;
+}
+
+#contenedorChecks{
+    margin:auto;
+    padding:0;
+    width:85%;
+}
+
+#checks>p{
+    margin: auto;
+    padding:0;
+}
+
+#checkTexto{
+    font-family: 'Times New Roman', Times, serif;
+    margin:auto;
+    padding:0;
+    width:90%;
+}
+
+/**********************/
+#webs{
+    width:290px;
+    float:right;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    border: red 1px solid;
+}
+
+#identica{
+    float: left;
+    margin-top: 65px;
+    margin-left: 30px;
+    padding:0;
+    width:80%;
+    height:30px;
+    background-color: rgb(125,180,201) ;
+    box-shadow: 0px 1px 0px 1px rgba(0,0,0,0.3);
+    border-radius: 5px;
+}
+
+#contIdentica{
+    display: flex;
+    width:70%;
+    margin:auto;
+    float: left;
+}
+
+#contIdentica>p{
+    margin:auto;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    padding:0;
+    text-align: left;
+}
+
+#contIdentica>img{
+    float: left;
+    height:25px;
+    padding:0;
+}
+
+#twitter{
+    margin-top: 9px;
+    margin-left: 30px;
+    display:flex;
+    padding:0;
+    width:80%;
+    height:30px;
+    background-color: rgb(0,188,255) ;
+    box-shadow: 0px 1px 0px 1px rgba(0,0,0,0.3);
+    border-radius: 5px;
+}
+
+#twitter>p{
+    margin:auto;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    padding:0;
+    text-align: left;
+    float:left;
+}
+
+#twitter>img{
+    height:30px;
+    float: left;
+    margin-left:5px;
+    padding:0;
+}
+
+
+
+/******************/
+footer{
+    height:140px;
+    background-color: rgb(122,119,114);
+    clear:both;
+    border: red 1px solid;
+}
+
+    /*Contenedor de footer. Distribución y posicionamiento*/
+    #contFooter{
+        width:1071px;
+        height: 100px;
+        margin:auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /*Div de redes. Distribución de las partes*/
+    #redes{
+        width: 235.62px;
+        height:80px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    /*Parte de rss (izquierda)*/
+    #rss{
+        display: flex;
+        width:141.37px;
+        height: 100%;
+        float: left;
+    }
+
+    /*Parrafo de rss (Drumbeat Blog...)*/
+    #rss>p{
+        float:right;
+        margin-top:0;
+        margin-left: 8px;
+        padding:0;
+        width:80%;
+        font-size: 14px;
+        float: right;
+        color:white;
+        font-weight: bold;
+    }
+
+    /*Posicionamiento de la foto de rss (naranja)*/
+    #rss>img{
+        float:left;
+        width: 18px;
+        height: 18px;
+    }
+
+    /*Estilo de los elementos de Social (Facebook, Twitter, Flickr)*/
+    #social{
+        width:95px;
+        color:white;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    /*Imagenes de Social. Distribución y estilo.*/
+    #social>img{
+        width: 14px;
+        height:14px;
+        float:left;
+        margin-right: 8px;
+    }
+
+    /*Distribución y estilo del contenedor de enlaces (Mozilla y join)*/
+    #enlaces{
+        width: 270px;
+        height:80px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bold;
+    }
+
+    /*Distribucion del div mozilla*/
+    #mozilla{
+        display: flex;
+        width:50%;
+        height: 100%;
+        float: left;
+    }
+
+    /*Distribucion div join*/
+    #join{
+        width: 50%;
+        float:right;
+    }
+
+    /*Posicionamiento y distribución de la lista dentro de join*/
+    #join>ul{
+        margin:auto;
+        padding:0;
+        float: left;
+    }
+
+    /*Estilo de la lista de join*/
+    #join>ul>li{
+        color:white;
+        list-style-type: none;
+    }
+
+    /*Estilo y posicionamiento del texto del div de mozilla*/
+    #mozilla>p{
+        float:right;
+        margin-top:0;
+        margin-left: 8px;
+        padding:0;
+        width:80%;
+        font-size: 14px;
+        float: right;
+        color:white;
+        font-weight: bold;
+    }
+
+    /*Posicionamiento de la imagen de mozilla (Dragoncito rojo)*/
+    #mozilla>img{
+        float:left;
+        width: 18px;
+        height: 18px;
+    }
+
+    /*Texto de la derecha del footer. Estilo y posiconamiento*/
+    #textoFooter{
+        width: 350px;
+        height:80px;
+        flex-direction: row;
+        font-family: 'Times New Roman', Times, serif;
+        text-align: right;
+    }
+
+    /*clase para el texto blanco del footer*/
+    .textoBlanco{
+        color:white;
+        font-weight: bold;
+    }

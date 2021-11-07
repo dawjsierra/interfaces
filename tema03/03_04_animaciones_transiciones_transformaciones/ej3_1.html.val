@@ -1,0 +1,94 @@
+
+--------------------------------------------------
+
+CSE HTML Validator Lite v15.04
+Checking "U:\web\animaciones\ej3_1.html" (851 characters).
+File date is viernes, 13 de noviembre de 2015 at 20:15:25.
+File checked on lunes, 16 de noviembre de 2015 at 15:34:15.
+
+[CSE] No errors or warnings were detected!
+
+     Number of lines checked: 16 in 0.00 seconds
+ Number of lines in document: 35 (45.7% of lines checked)
+     Number of lines ignored: 19
+Number of character entities: 0
+        Number of start tags: 13
+          Number of end tags: 11 (84.6% of start tags with end tags)
+Number of <% ... %> sections: 0
+     Number of HTML comments: 0
+
+Number of validator comments: 3
+          Number of messages: 0
+            Number of errors: 0
+          Number of warnings: 0
+
+--------------------------------------------------
+
+   1: <!DOCTYPE HTML>
+   2: <html lang="en">
+   3: <head>
+   4:  <title>animaciones 1</title>
+   5:  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   6:  <meta name="generator" content="CSE HTML Validator (https://www.htmlvalidator.com/)">
+   7:  <style type="text/css">
+   8:   body{
+   9:    }
+  10:   .barrit{
+  11:   width: 100px;
+  12:   height: 100px;
+  13:   clear:both;
+  14:   background-color: orange;
+  15:   float: left;
+  16:   margin: 15px 200px;
+  17:   transition: transform 2s, background-color 2s;
+  18:   }
+  19:   
+  20:   .barrit:target{
+  21:    
+  22:    background-color: yellow;
+  23:    transform: translate(300px,300px);
+  24:   }
+  25:  
+  26:  </style>
+  27: </head>
+  28: 
+  29: <body>
+  30: <a href="#barrita"><div class="barrit" id="barrita">Hola q ase? 1</div></a>
+  31: <a href="#barrita2"><div  class="barrit" id="barrita2">Hola q ase? 2 </div></a>
+  32: <a href="#barrita3"><div  class="barrit" id="barrita3">Hola q ase?3 </div></a>
+  33: 
+  34: </body>
+  35: </html>
+
+[CSE] Comment number 1:
+Congratulations! There were no errors or warnings. NOTE:
+Checking is limited compared to paid editions. Visit
+freehtmlvalidator.com for more information.
+
+[CSE] Comment number 2:
+HTML5 document detected.
+
+[CSE] Comment number 3:
+0 errors, 0 warnings, 0 messages, 3 comments.
+
+--------------------------------------------------
+
+<html> (2)
+| <head> (3)
+| | <title> (4) </title> (4)
+| | <meta /> (5)
+| | <meta /> (6)
+| | <style> (7) </style> (26)
+| </head> (27)
+| <body> (29)
+| | <a> (30)
+| | | <div> (30) </div> (30)
+| | </a> (30)
+| | <a> (31)
+| | | <div> (31) </div> (31)
+| | </a> (31)
+| | <a> (32)
+| | | <div> (32) </div> (32)
+| | </a> (32)
+| </body> (34)
+</html> (35)

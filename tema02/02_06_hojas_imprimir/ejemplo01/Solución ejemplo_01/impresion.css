@@ -1,0 +1,64 @@
+/* https://programandoointentandolo.com/2017/06/estilos-css-imprimir-media-print.html
+http://www.vicente-navarro.com/blog/2007/11/07/hojas-de-estilo-css-para-imprimir/
+http://desarrolloweb.dlsi.ua.es/libros/html-css/como-crear-una-hoja-de-estilo-para-impresion
+
+*/
+
+@media print {
+    /* Definimos el color blanco de fondo para el body */
+	body {
+        background: #fff !important;
+    }
+    /* Definimos como se quiere imprimir la cabecera */
+	#cabecera {
+        box-shadow: none;
+        background: #fff !important;
+		margin-bottom:20px;
+        border: 1px solid #000;
+		padding-left:5px;
+    }
+
+    /* Definimos como se quiere imprimir el título de la cabecera */
+	header h1 {
+        background: #fff;
+    }
+    
+    /* Definimos lo que no queremos imprimir en el documento */
+	nav {
+        display: none;
+    }
+    
+    aside {
+        display: none;
+    }
+
+    /* Definimos como se tiene que imprimir los artículos */
+	article {
+        width: 100%;
+        float: none;
+        padding-left: 0;
+		padding-bottom:10px;
+        background: #fff;
+		margin-bottom:20px;
+		border-bottom: 1px solid #000;
+        -webkit-print-color-adjust: exact; /*economy | exact*/
+        
+        color-adjust: exact;
+		page-break-inside: avoid; /* sirve para no cortar un artículo con un salto de página */
+    }
+
+    /* Definimos dónde y cómo se van a visualizar los enlaces 
+	   En este caso se abre en una página nueva*/
+	article a[target=_blank]:after {
+        content: " (" attr(href) ")";
+    }
+
+    /* Definimos como se tiene que imprimir el pie */
+	#pie {
+        background: #fff;
+		margin-top:20px;
+        border: 1px solid #000;
+		
+    }
+
+}

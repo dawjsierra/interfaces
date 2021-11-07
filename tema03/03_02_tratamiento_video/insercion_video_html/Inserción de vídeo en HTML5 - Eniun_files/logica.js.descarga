@@ -1,0 +1,105 @@
+// If true, start function. If false, listen for INIT.
+window.onload = function() {
+    console.log("Ventana cargada.");
+
+    //Cargar información:
+    function cargarInfo() {
+
+
+        var productos = {
+            a: {
+                rutaimg: "a.jpg",
+                rutaimg2: "colorama_mh120_H.png",
+            },
+            b: {
+                rutaimg: "b.jpg",
+                rutaimg2: "colorama_mh100_H.png",
+            },
+            c: {
+                rutaimg: "c.jpg",
+                rutaimg2: "colorama_mh20_H.png",
+            }
+
+        }
+
+        var lista = [productos.a, productos.b, productos.c];
+
+        var grid1 = document.getElementById("grid1");
+        var grid2 = document.getElementById("grid2");
+
+
+
+        lista.forEach(function(itemActual, index, arr) {
+            var contenidoProd = document.createElement("div");
+            contenidoProd.className = "swiper-slide";
+            contenidoProd.innerHTML = `
+                <div class="item" id="${'item' + (index + 1)}">
+                    <div class="contenedorImg">
+                        <img src="${itemActual.rutaimg}" alt="" id="${'img' + (index + 1)}">
+                    </div>
+                </div>`;
+            /* FIN objetos del Slider principal */
+            var contenidoProd2 = document.createElement("div");
+            contenidoProd2.className = "swiper-slide";
+            contenidoProd2.innerHTML = `
+                <div class="item" id="${'itemb' + (index + 1)}">
+                    <div class="contenedorImg">
+                        <img src="${itemActual.rutaimg2}" alt="" id="${'imgb' + (index + 1)}">
+                    </div>
+                </div>`;
+
+
+            grid1.appendChild(contenidoProd);
+            grid2.appendChild(contenidoProd2);
+
+        });
+
+
+
+        /* Función que retorna una imagen random entre los valores */
+
+        function cargarImg() {
+            var listaportada = [portada.sujetador, portada.malla];
+            var imgportada = document.getElementById("imgportada");
+
+            var num = Math.floor(Math.random() * (listaportada.length));
+            imgportada.src = listaportada[num].rutaimg;
+            // sale_price.textContent = listaportada[num].precio;
+            // price.textContent = listaportada[num].precioold;
+            // discount.textContent = listaportada[num].descuento;
+            // nombre_producto.textContent = listaportada[num].nombre;
+
+            // switch (listaportada[num].idsalida) {
+            //     case "chaqueta":
+            //         document.getElementById('bg-exit').addEventListener('click', chaqueta, false);
+            //         break;
+            //     case "botasEsqui":
+            //         document.getElementById('bg-exit').addEventListener('click', botasEsqui, false);
+            //         break;
+            //     case "reloj":
+            //         document.getElementById('bg-exit').addEventListener('click', reloj, false);
+            //         break;
+
+            //     default:
+            //         document.getElementById('bg-exit').addEventListener('click', bgExitHandler, false);
+            //         break;
+            // }
+
+            console.log(listaportada[num]);
+        }
+        /*FIN cargarImg */
+        //cargarImg();
+
+
+    }
+
+
+    cargarInfo();
+
+    //cargarGradients();
+    //Empezar animación:
+    // empezarBanner();
+    empezarGaleria();
+
+
+}
