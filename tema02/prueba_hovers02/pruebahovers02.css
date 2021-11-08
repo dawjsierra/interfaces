@@ -1,0 +1,29 @@
+*{
+    list-style-type: none;
+}
+
+body{
+    width:500px;
+    margin:auto;
+    padding:0;
+}
+
+#principal{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.nivel1:hover ul{
+    display:block;
+}
+
+
+.nivel2{
+    display: none;
+}
+
+.nivel3{
+    display:none;
+}
+
