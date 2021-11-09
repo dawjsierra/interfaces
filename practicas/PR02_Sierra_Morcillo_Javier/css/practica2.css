@@ -1,3 +1,12 @@
+
+/*NOTA IMPORTANTE:*/
+/*Para que se entienda mejor el texto y se puedan diferenciar los elementos,
+los elementos principales están tabulados a la izquierda y los que nacen
+de ellos a la derecha. Cuando se empieza un elemento nuevo, se vuelve a la izquierda.
+Para diferenciarlos mejor a simple vista y si buscamos uno diferenciarlo rapidamente*/
+/***********************************************************************************/
+
+/*Introducción de PTSans (normal)*/
 @font-face {
     font-family: 'PTSans';
     src: url('../fonts/PTSans/PTSans-Regular.ttf') format('truetype');
@@ -5,6 +14,7 @@
     font-style: normal;
 }
 
+/*Introducción de PTSansBold (negrita)*/
 @font-face {
     font-family: 'PTSansBold';
     src: url('../fonts/PTSans/PTSans-Bold.ttf') format('truetype');
@@ -12,11 +22,13 @@
     font-style: normal;
 }
 
+/*definimos el estilo de los enlaces del documento*/
 a{
     text-decoration: none;
     color:black;
 }
 
+/*Definimos el ancho y la posición del body en la página*/
 body{
     width: 1190px;
     margin: auto;
@@ -25,217 +37,239 @@ body{
 
 
 
-/**********************/
+/*****HEADER*****/
 header{
     width:590px;
     float: left;
-    border: red 1px solid;
 }
 
-header>img{
-    width:60%;
-    height:80px;
-}
+    /*Imagen del header*/
+    header>img{
+        width:60%;
+        height:80px;
+    }
 
 
 
-/*********************/
+/*****NAV PRINCIPAL*****/
 #navPrincipal{
     width: 590px;
     float:right;
     height:84px;
-    border: red 1px solid;
 }
 
-#login{
-    float: right;
-    margin-right: 0;
-    width: 20%;
-}
+    /*Parte de login del Nav*/
+    #login{
+        float: right;
+        margin-right: 0;
+        width: 20%;
+    }
 
-#login>ul{
-    margin:0;
-    padding:0;
-    list-style-type: none;
-    font-size:12px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display:flex;
-    justify-content: space-between;
-}
+    /*Lista del login*/
+    #login>ul{
+        margin:0;
+        padding:0;
+        list-style-type: none;
+        font-size:12px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        display:flex;
+        justify-content: space-between;
+    }
 
-#login>ul>li{
-    font-weight: bold;
-    color:black;
-}
+    /*Elementos de la lista de login*/
+    #login>ul>li{
+        font-weight: bold;
+        color:black;
+    }
 
-#navegacion{
-    width: 590px;
-    margin-bottom: 0;
-}
+    /*Parte de las pestañas en la navegación principal (about, projects...), ancho y posicionamiento*/
+    #navegacion{
+        width: 590px;
+        margin-bottom: 0;
+    }
 
-#navegacion>ul{
-    margin-top:10px;
-    font-size:20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display:flex;
-    justify-items: flex-start;
-    justify-content: space-between;
-    text-align: center;
-}
+    /*Lista de la navegación del nav principal. Posicionamiento, estilo y distribución*/
+    /*Con flex start conseguimos que empiece desde la izquierda, con space between que pegue los elementos
+    a los extremos, dejando espacio entre ellos y alineamos el texto al centro*/
+    #navegacion>ul{
+        margin-top:10px;
+        font-size:20px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        display:flex;
+        justify-items: flex-start;
+        justify-content: space-between;
+        text-align: center;
+    }
 
-#navegacion>ul>li{
-    display: inline;
-    list-style-type: none;
-    font-weight: bold;
-    color:rgb(132,139,150);
-    background-color:rgb(244,240,243);
-    width:19%;
-    height:30px;
-    text-align: center;
-    float: left;
-    border-radius: 5px;
-}
+    /*Elementos de la lista de navegacion*/
+    /*Display inline para que estén en linea, no aplicamos estilo de lista y centramos el texto en la celda*/
+    #navegacion>ul>li{
+        display: inline;
+        list-style-type: none;
+        font-weight: bold;
+        color:rgb(132,139,150);
+        background-color:rgb(244,240,243);
+        width:19%;
+        height:30px;
+        text-align: center;
+        float: left;
+        border-radius: 5px;
+    }
 
 
 
-/******************/
+/*****TÍTULO DEL NAV*****/
+/*clear both para que nos ocupe todo a lo ancho. Anchura 100% para que nos ocupe todo*/
 #tituloNav{
     clear: both;
     width:100%;
-    border: red 1px solid;
 }
 
-#tituloNav>h2{
-    font-family: PTSansBold;
-    color: rgb(18,106,124);
-    font-size: 35px;
-    margin:auto;
-    padding:0;
-}
+    /*Estilo del titulo*/
+    #tituloNav>h2{
+        font-family: PTSansBold;
+        color: rgb(18,106,124);
+        font-size: 35px;
+        margin:auto;
+        padding:0;
+    }
 
 
 
-/*****************/
+/*****NAV SECUNDARIO*****/
+/*Float left para que nos lo pegue a la parte izquierda.*/
 #navSecundario{
     width:690px;
     float:left;
     font-family: PTSans;
-    width: 690px;
     height:35px;
-    border: red 1px solid;
 }
 
-#navSecundario>ul{
-    display:flex;
-    justify-content: space-between;
-    padding:0;
-    list-style-type: none;
-    font-size:14px;
-}
+    /*Lista del nav secundario (Festival, Program, Participants...)*/
+    /*Display flex para poder ajustar los elementos de la lista y con space between */
+    #navSecundario>ul{
+        display:flex;
+        justify-content: space-between;
+        padding:0;
+        list-style-type: none;
+        font-size:14px;
+    }
 
-#navSecundario>ul>a>li{
-    font-weight: bold;
-    color:rgb(159,164,168);
-    background-color: rgb(244,244,244);
-    text-align: center;
-    width: 80px;
-    border-start-end-radius: 10px;
-    border-top-left-radius: 10px;
-    height: 20px;
-    margin-top: -3px;
-}
+    /*Estilo de los elementos de la lista del nav secundario*/
+    /*Bordeamos los border "start-end" y "top-left"*/
+    #navSecundario>ul>li{
+        font-weight: bold;
+        color:rgb(159,164,168);
+        background-color: rgb(244,244,244);
+        text-align: center;
+        width: 80px;
+        border-start-end-radius: 10px;
+        border-top-left-radius: 10px;
+        height: 20px;
+        margin-top: -3px;
+    }
 
-#navSecundario>img{
-    position:relative;
-    top:-17px;
-    left: 128px;
-}
+    /*Posicionamiento de la flecha*/
+    /*He puesto con relative la flecha, porque si no se me hacía imposible posicionarla*/
+    #navSecundario>img{
+        position:relative;
+        top:-21px;
+        left: 130px;
+    }
 
 
 
-/*******************/
+/*****NAV IDIOMAS*****/
+/*Display flex para poder ajustar los elementos, le damos anchura y lo posicionamos a la dcha con float right*/
 #idiomas{
     display: flex;
     width:490px;
-    margin-bottom:0;
     padding:0;
     float: right;
-    border: red 1px solid;
 }
 
-#idiomas>p{
-    margin:auto;
-    color: black;
-    font-family: PTSans;
-    padding:0;
-    text-align: right;
-    position:relative;
-    left:180px;
-}
+    /*Texto de idiomas (language), estilo y posicionamiento*/
+    /*lo he puesto con relative porque si no no se me pegaba al lenguaje*/
+    #idiomas>p{
+        margin:auto;
+        color: black;
+        font-family: PTSans;
+        padding:0;
+        text-align: right;
+        position:relative;
+        left:180px;
+    }
 
-#idiomas>ul{
-    margin:0;
-    padding:0;
-}
+    /*Lista de idiomas*/
+    #idiomas>ul{
+        margin:0;
+        padding:0;
+    }
 
-#idiomas>ul>li{
-    font-family: PTSans;
-    display: inline;
-    list-style-type: none;
-    color:rgb(132,139,150);
-    background-color:rgb(244,240,243);
-    width:100%;
-    text-align: center;
-}
+    /*Elementos de la lista de idioams (en,cas,es)*/
+    #idiomas>ul>li{
+        font-family: PTSans;
+        display: inline;
+        list-style-type: none;
+        color:rgb(132,139,150);
+        background-color:rgb(244,240,243);
+        width:100%;
+        text-align: center;
+    }
 
-#idiomas>ul>:last-child{
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    background-color:rgb(244,240,243);
-}
+    /*Indicamos que el ultimo hijo de la lista de idiomas tenga los bordes indicados redondeados*/
+    #idiomas>ul>:last-child{
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        background-color:rgb(244,240,243);
+    }
 
-#idiomas>ul>:first-child{
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    background: lightgray;
-}
+    /*Indicamos que el primer hijo de la lista de idiomas tenga los bordes indicados redondeados*/
+    #idiomas>ul>:first-child{
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        background: lightgray;
+    }
 
 
 
-/********************/
+/*****PROGRAM*****/
 #program{
     width: 890px;
     float: left;
-    border: red 1px solid;
 }
 
-#program>h2{
-    font-family: arial;
-}
+    /*Título de progam*/
+    #program>h2{
+        font-family: arial;
+    }
 
-#programTexto{
-    font-family: 'Times New Roman', Times, serif;
-    width: 590px;
-}
+    /*Texto del Program, fuente y anchura*/
+    #programTexto{
+        font-family: 'Times New Roman', Times, serif;
+        width: 590px;
+    }
 
-#program>img{
-    position:relative;
-    right:10px;
-    bottom: 12px;
-    width: 150px;
-    float:right;
-}
+    /*Posicionamiento y anchura de la foto de program*/
+    #program>img{
+        position:relative;
+        right:10px;
+        bottom: 12px;
+        width: 150px;
+        float:right;
+    }
 
-.titulos{
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    font-size: 35px;
-    color:rgb(63,186,196);
-}
+    /*Creo una clase para los títulos ("Program" y "In Partnership With)*/
+    .titulos{
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 35px;
+        color:rgb(63,186,196);
+    }
 
 
 
-/*******************/
+/*****REGISTER*****/
 #register{
     width:290px;
     float:right;
@@ -243,37 +277,39 @@ header>img{
     border-radius: 5px;
     color: rgb(66,111,168);
     text-align: center;
-    border: red 1px solid;
 }
 
-#botonRegister{
-    display: flex;
-    padding:0;
-    margin-left:10px;
-    margin-right:10px;
-    margin-top: 15px;
-    background-color: rgb(140,207,104) ;
-    border-radius: 5px;
-    height: 50px;
-    box-shadow: 0px 1px 0px 1px rgba(0,0,0,0.3);
-    font-family: 'Times New Roman', Times, serif;
-}
+    /*Botón verde del Register. Distibución y estilo.*/
+    #botonRegister{
+        display: flex;
+        padding:0;
+        margin-left:10px;
+        margin-right:10px;
+        margin-top: 15px;
+        background-color: rgb(140,207,104) ;
+        border-radius: 5px;
+        height: 50px;
+        box-shadow: 0px 1px 0px 1px rgba(0,0,0,0.3);
+        font-family: 'Times New Roman', Times, serif;
+    }
 
-#botonRegister>p{
-    margin:auto;
-    padding:0;
-    font-size:30px;
-    width:80%;
-    color: white;
-    text-align: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    text-shadow: 0px 0.5px 0px black;
-    
-}
+    /*Texto del botón del Register ("Register"). Posicionamiento y estilo*/
+    #botonRegister>p{
+        margin:auto;
+        padding:0;
+        font-size:30px;
+        width:80%;
+        color: white;
+        text-align: center;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        text-shadow: 0px 0.5px 0px black;
+        
+    }
 
 
 
-/*****************************/
+/*****BENEFIT*****/
+/*con flex direction: column consigo que su distribución se de arriba a abajo*/
 #benefit{
     width:290px;
     float:right;
@@ -283,176 +319,198 @@ header>img{
     margin-top: 8px;
     display: flex;
     flex-direction: column;
-    border: red 1px solid;
 }
+    /*BenefitDist porque es la distribución general de benefit (BenefitDistribution)*/
+    /*Clase que usamos para cada linea imagen+texto*/
+    /*con flex-direction:row la distribución serrá de izda a derecha, aplicandole space
+    around para que sus elementos estén espaciados*/
+    .benefitDist{
+        margin:6px;
+        padding:0;
+        width:95%;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+    }
 
-.benefitDist{
-    margin:6px;
-    padding:0;
-    width:95%;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-}
+    /*Texto de los benefitDist. Posicioaniento y anchura*/
+    .benefitDist>p{
+        float:right;
+        margin:auto;
+        padding:0;
+        width:80%;
+        font-size: 15px;
+    }
 
-.benefitDist>p{
-    float:right;
-    margin:auto;
-    padding:0;
-    width:80%;
-    font-size: 15px;
-}
-
-.benefitDist>img{
-    margin: auto;
-    padding: 0;
-    width:45px;
-    height:45px;
-}
+    /*Foto de los Benefit Dist*/
+    .benefitDist>img{
+        margin: auto;
+        padding: 0;
+        width:45px;
+        height:45px;
+    }
 
 
 
-/*******************/
+/*****WHAT'S IT ALL ABOUT?*****/
 #parrafo1{
     width:490px;
     float: left;
-    border: red 1px solid;
 }
 
-#parrafo1>p{
-    color:rgb(141,134,139);
-    width: 390px;
-    font-style: italic;
-}
+    /*Estilo y anchura del texto*/
+    #parrafo1>p{
+        color:rgb(141,134,139);
+        width: 390px;
+        font-style: italic;
+    }
 
 
 
-/***************************/
+/*****SCHEDULE*****/
 #parrafo2{
     width: 390px;
     margin-left: 10px;
-    border: red 1px solid;
 }
 
-#parrafo2>p{
-    color:rgb(141,134,139);
-    float:left;
-    width: 390px;
-    font-style: italic;
-}
+    /*Estilo y posicionamiento del texto de Schedule*/
+    #parrafo2>p{
+        color:rgb(141,134,139);
+        float:left;
+        width: 390px;
+        font-style: italic;
+    }
 
-#parrafo1, #parrafo2{
-    display:inline-block;
-}
+    /*Alineación de parrafo1 (Whats It All About) y parrafo2 (Schedule)*/
+    /*para que me queden en linea, les aplico el inline-block*/
+    #parrafo1, #parrafo2{
+        display:inline-block;
+    }
 
-.titulosParrafos{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
-    color: rgb(10,119,122);
-    font-weight: bold;
-    font-style: normal;
-}
+    /*Clase utilizada en los titulos "Whats It All About", "Schedule", "Festival Spaces"*/
+    .titulosParrafos{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 18px;
+        color: rgb(10,119,122);
+        font-weight: bold;
+        font-style: normal;
+    }
 
-.textoAzul{
-    color: rgb(37,123,124);
-}
+    /*Clase usada en los textos de color azul (parrafos)*/
+    .textoAzul{
+        color: rgb(37,123,124);
+    }
 
-.textoAzulOscuro{
-    color: rgb(6,109,114);
-}
+    /*Clase usada en los textos de color azul un poco mas oscuro (cuadros colores)*/
+    .textoAzulOscuro{
+        color: rgb(6,109,114);
+    }
 
 
 
-/*************************/
+/*****FESTIVAL SPACES*****/
 #festivalSpaces{
     width:890px;
     float:left;
-    border: red 1px solid;
 }
+    /*Fuente aplicada al texto de "festival spaces"*/
+    #textoSpaces{
+        font-family: 'Times New Roman', Times, serif;
+    }
 
-#textoSpaces{
-    font-family: 'Times New Roman', Times, serif;
-}
+    /*Clase definida para los titulos dentro de los cuadros de colores*/
+    .titulosCuadros{
+        font-family: PTSansBold;
+        padding:8px;
+        margin-left: 7px;
+        margin-right: 7px;
+        margin-bottom: 12px;
+        height:70%;
+    }
 
-.titulosCuadros{
-    font-family: PTSansBold;
-    padding:8px;
-    margin-left: 7px;
-    margin-right: 7px;
-    margin-bottom: 12px;
-    height:70%;
-}
+    /*Distribución del div de cuadros de colores*/
+    #cuadrosColores{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
 
-#cuadrosColores{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
+    /*Clase que define el posicionamiento, tipo de fuente y altura de los cuadros de colores*/
+    .textoCuadro{
+        font-family: 'Times New Roman', Times, serif;
+        padding:8px;
+        margin-left: 7px;
+        margin-right: 7px;
+        margin-bottom: 12px;
+        height:70%;
+    }
 
-.textoCuadro{
-    font-family: 'Times New Roman', Times, serif;
-    padding:8px;
-    margin-left: 7px;
-    margin-right: 7px;
-    margin-bottom: 12px;
-    height:70%;
-}
+    /*Clase para marcar la anchura, el sombreado y el posicionamiento del espacio del cuadro*/
+    .cuadro{
+        width: 240px;
+        box-shadow: 1px 3px 3px 2px rgba(0,0,0,0.2);
+        margin:auto;
+        padding:0;
+    }
 
-.cuadro{
-    width: 240px;
-    box-shadow: 1px 3px 3px 2px rgba(0,0,0,0.2);
-    margin:auto;
-    padding:0;
-}
+    /*Clase para el espacio de los cuadros (anchura y posicionamiento)*/
+    .espacioCuadro{
+        width:290px;
+        margin-top: 20px;
+        padding:0;
+    }
 
-.espacioCuadro{
-    width:290px;
-    margin-top: 20px;
-    padding:0;
-    border:blue 1px solid;
-}
+    /*Clase para los cuadros con fondo verde*/
+    .verde{
+        background-color: rgb(222,239,171);
+    }
 
-.verde{
-    background-color: rgb(222,239,171);
-}
+    /*Clase para los cuadros con fondo rojo*/
+    .rojo{
+        background-color: rgb(255,218,212);
+    }
 
-.rojo{
-    background-color: rgb(255,218,212);
-}
+    /*Clase para los cuadros con fondo amarillo*/
+    .amarillo{
+        background-color: rgb(254,252,195);
+    }
 
-.amarillo{
-    background-color: rgb(254,252,195);
-}
+    /*Clase para los cuadros con fondo azul*/
+    .azul{
+        background-color: rgb(153,219,233);
+    }
 
-.azul{
-    background-color: rgb(153,219,233);
-}
+    /*Clase para los cuadros con rotación 1 (hacia la izquierda)*/
+    .rotacion1{
+        transform:rotate(-4deg);
+    }
 
-.rotacion1{
-    transform:rotate(-4deg);
-}
+    /*Clase para los cuadros con rotación 2 (hacia la derecha)*/
+    .rotacion2{
+        transform:rotate(2deg);
+    }
 
-.rotacion2{
-    transform:rotate(2deg);
-}
+    /*Clase para los cuadros con rotación 1 (hacia la izquierda)*/
+    .rotacion3{
+        transform:rotate(6deg);
+    }
 
-.rotacion3{
-    transform:rotate(6deg);
-}
+    /*Texto de debajo de los cuadros. Definimos su tipo de fuente, anchura y margen*/
+    #textoPie{
+        width: 65%;
+        font-family: 'Times New Roman', Times, serif;
+        margin-left:25px;
+    }
 
-#textoPie{
-    width: 65%;
-    font-family: 'Times New Roman', Times, serif;
-    margin-left:25px;
-}
-
-#tituloPie{
-    margin-left: 25px;
-}
-
-
-/*************************/
+    /*Margen del título "In partership with". Lleva la clase titulos*/
+    #tituloPie{
+        margin-left: 25px;
+    }
+    
+    
+    
+/*****ASIDE DE CHECKS*****/
 #asideChecks{
     clear: none;
     width:290px;
@@ -467,122 +525,136 @@ header>img{
     height:auto;
     display:flex;
     flex-direction: column;
-    border: red 1px solid;
 }
 
-#checkTitulo{
-    font-size: 25px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-weight: bold;
-    color: rgb(156,0,1);
-    margin:15px;
-    padding:0;
-    width:85%;
-}
+    /*Titilo de los checks "Who should come?". Definimos su estilo, posicionamiento y anchura*/
+    #checkTitulo{
+        font-size: 25px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-weight: bold;
+        color: rgb(156,0,1);
+        margin:15px;
+        padding:0;
+        width:85%;
+    }
 
-#checks{
-    width: 85%;
-    margin:auto;
-    padding:0;
-}
+    /*Definimos anchura y posicionamiento de los checks*/
+    #checks{
+        width: 85%;
+        margin:auto;
+        padding:0;
+    }
 
-#contenedorChecks{
-    margin:auto;
-    padding:0;
-    width:85%;
-}
+    /*Contenedor de los checks dentro del asidechecks. Posicionamiento y anchura*/
+    #contenedorChecks{
+        margin:auto;
+        padding:0;
+        width:85%;
+    }
 
-#checks>p{
-    margin: auto;
-    padding:0;
-}
+    /*Texto dentro de los checks*/
+    #checks>p{
+        margin: auto;
+        padding:0;
+    }
 
-#checkTexto{
-    font-family: 'Times New Roman', Times, serif;
-    margin:auto;
-    padding:0;
-    width:90%;
-}
-
-/**********************/
+    /*Parte de abajo del aside check, el texto. Definimos su fuente, posicionamiento y anchura*/
+    #checkTexto{
+        font-family: 'Times New Roman', Times, serif;
+        margin:auto;
+        padding:0;
+        width:90%;
+    }
+    
+    
+    
+/*****PARTE DEL ASIDE DE WEBS (Identi.ca + Twitter)*****/
+/*column para que se me distribuyan los elementos de arriba a abajo y space between para que se
+ajusten en cada extremo (uno arriba y otro abajo)*/
 #webs{
     width:290px;
     float:right;
     display: flex;
     flex-direction: column;
     align-content: space-between;
-    border: red 1px solid;
 }
+    /*Parte de identi.ca*/
+    #identica{
+        float: left;
+        margin-top: 65px;
+        margin-left: 30px;
+        padding:0;
+        width:80%;
+        height:30px;
+        background-color: rgb(125,180,201) ;
+        box-shadow: 0px 1px 0px 1px rgba(0,0,0,0.3);
+        border-radius: 5px;
+    }
 
-#identica{
-    float: left;
-    margin-top: 65px;
-    margin-left: 30px;
-    padding:0;
-    width:80%;
-    height:30px;
-    background-color: rgb(125,180,201) ;
-    box-shadow: 0px 1px 0px 1px rgba(0,0,0,0.3);
-    border-radius: 5px;
-}
+    /*Contenedor de Identi.ca*/
+    #contIdentica{
+        display: flex;
+        width:70%;
+        margin:auto;
+        float: left;
+    }
 
-#contIdentica{
-    display: flex;
-    width:70%;
-    margin:auto;
-    float: left;
-}
+    /*Texto dentro del contenedor de Identi.ca*/
+    #contIdentica>p{
+        margin:auto;
+        color: white;
+        font-family: 'Times New Roman', Times, serif;
+        padding:0;
+        text-align: left;
+    }
 
-#contIdentica>p{
-    margin:auto;
-    color: white;
-    font-family: 'Times New Roman', Times, serif;
-    padding:0;
-    text-align: left;
-}
+    /*Imagen dentro del contenedor de Identi.ca*/
+    /*Para que se me pegue la imagen a la izda, pongo un float left*/
+    #contIdentica>img{
+        float: left;
+        height:25px;
+        padding:0;
+    }
 
-#contIdentica>img{
-    float: left;
-    height:25px;
-    padding:0;
-}
+    /*Twitter*/
+    #twitter{
+        margin-top: 9px;
+        margin-left: 30px;
+        display:flex;
+        padding:0;
+        width:80%;
+        height:30px;
+        background-color: rgb(0,188,255) ;
+        box-shadow: 0px 1px 0px 1px rgba(0,0,0,0.3);
+        border-radius: 5px;
+    }
 
-#twitter{
-    margin-top: 9px;
-    margin-left: 30px;
-    display:flex;
-    padding:0;
-    width:80%;
-    height:30px;
-    background-color: rgb(0,188,255) ;
-    box-shadow: 0px 1px 0px 1px rgba(0,0,0,0.3);
-    border-radius: 5px;
-}
+    /*texto de Twitter*/
+    #twitter>p{
+        margin:auto;
+        color: white;
+        font-family: 'Times New Roman', Times, serif;
+        padding:0;
+        text-align: left;
+        float:left;
+    }
 
-#twitter>p{
-    margin:auto;
-    color: white;
-    font-family: 'Times New Roman', Times, serif;
-    padding:0;
-    text-align: left;
-    float:left;
-}
-
-#twitter>img{
-    height:30px;
-    float: left;
-    margin-left:5px;
-    padding:0;
-}
+    /*Imagen de twitter*/
+    /*Para que se me pegue la imagen a la izda, pongo un float left*/
+    #twitter>img{
+        height:30px;
+        float: left;
+        margin-left:5px;
+        padding:0;
+    }
 
 
 
-/******************/
+/*****FOOTER*****/
 footer{
     height:140px;
     background-color: rgb(122,119,114);
     clear:both;
-    border: red 1px solid;
 }
 
     /*Contenedor de footer. Distribución y posicionamiento*/
@@ -717,8 +789,3 @@ footer{
         text-align: right;
     }
 
-    /*clase para el texto blanco del footer*/
-    .textoBlanco{
-        color:white;
-        font-weight: bold;
-    }

@@ -6,11 +6,14 @@
         <link href = "../css/practica2.css" rel="stylesheet" type="text/css">
     </head>
     <body>
+        <!--HEADER-->
         <header>
+            <!--Foto principal del Header-->
             <img src="../img/iconos/drumbeat_logo.png" alt="fotologo">
         </header>
-
+        <!--Nav principal (arriba a la derecha)-->
         <nav id="navPrincipal">
+            <!--Parte del login-->
             <div id="login">
                 <ul>
                     <li>Login</li>
@@ -18,6 +21,7 @@
                 </ul>
             </div>
             <br/>
+            <!--Parte de la navegación (about, projects, people...)-->
             <div id="navegacion">
                 <ul>
                     <li>about</li>
@@ -28,11 +32,11 @@
                 </ul>
             </div>
         </nav>
-        
+        <!--Nav con el título (Drumbeat Learning...)-->
         <nav id="tituloNav">
             <h2>Drumbeat Learning, Freedom and the Web Festival</h2>
         </nav>
-        
+        <!--Nav secundario (festival, program, participants...)-->
         <nav id="navSecundario">
             <ul>
                 <li><a href="#">Festival</a></li>
@@ -43,10 +47,12 @@
                 <li><a href="#">Get Involved</a></li>
                 <li><a href="#">Wiki</a></li>
             </ul>
+            <!--imagen de la flechita hacia abajo-->
             <img src="../img/iconos/puntica.jpg" alt="flechaPestanyas">
         </nav>
-
+        <!--idiomas-->
         <nav id="idiomas">
+            <!--lista con los idiomas-->
             <p>language:</p>
             <ul>
                 <li>en</li>
@@ -54,54 +60,61 @@
                 <li>es</li>
             </ul>
         </nav>
-        
+
+        <!--Program-->
         <section id="program">
             <h2 class="titulos">Program</h2>
             <img src="../img/iconos/program.png" alt="fotoProgram">
             <div id="programTexto">
                 <p>
-                    <b>Imagine a folk festival with many different tents -</b> tents for all different sorts of music, a tent where you learn how to fiddle, and maybe one where you make drums. Each has it focus. People move from tent to tent making up their own experience.
+                    <span class="negrita">Imagine a folk festival with many different tents -</span> tents for all different sorts of music, a tent where you learn how to fiddle, and maybe one where you make drums. Each has it focus. People move from tent to tent making up their own experience.
                 </p>
                 <p>
-                    <b>The Drumbeat Festival will work exactly like this.</b> We'll all kinds of spaces where you can teach and learn - studios, labs, playgrounds, classrooms and even a few tents in the public square. Each space will provide a place to dive deep and get your hands dirty with some of the most interesting ideas at the interserction of learnig, freedom and the web.
+                    <span class="negrita">The Drumbeat Festival will work exactly like this.</span> We'll all kinds of spaces where you can teach and learn - studios, labs, playgrounds, classrooms and even a few tents in the public square. Each space will provide a place to dive deep and get your hands dirty with some of the most interesting ideas at the interserction of learnig, freedom and the web.
                 </p>
             </div>
         </section>
 
+        <!--Aside parte del register-->
         <aside id="register">
+            <!--Creamos un div para el botón o parte verde-->
             <div id="botonRegister">
                 <p>Register</p>
             </div>
-            <p>or find out how to <b>get more involved</b></p>
+            <!--texto del register-->
+            <p>or find out how to <span class="negrita">get more involved</span></p>
         </aside>
 
+        <!--Cuadro gris del aside-->
         <aside id="benefit">
+            <!--Una clase que se repita el patrón en cada parrafo (imagen+texto)-->
             <div class="benefitDist">
                 <img src="../img/iconos/benefit_p2pu.png" alt="benefit1">
-                <p>Learn how to organize <b>Peer 2 Peer University</b> course.</p>
+                <p>Learn how to organize <span class="negrita">Peer 2 Peer University</span> course.</p>
             </div>
             <div class="benefitDist">
                 <img src="../img/iconos/benefit_creds.png" alt="benefit2">
-                <p>Help build a <b>'digital backpack'</b> to track credentials for online learners.</p>
+                <p>Help build a <span class="negrita">'digital backpack'</span> to track credentials for online learners.</p>
             </div>
             <div class="benefitDist">
                 <img src="../img/iconos/benefit_hackbus.png" alt="benefit3">
-                <p>Convert a public square into a learning lab with the <b>Hackbus</b>.</p>
+                <p>Convert a public square into a learning lab with the <span class="negrita">Hackbus</span>.</p>
             </div>
             <div class="benefitDist">
                 <img src="../img/iconos/benefit_teaching.png" alt="benefit3">
-                <p>Trade ideas about <b>teaching the open web</b>.</p>
+                <p>Trade ideas about <span class="negrita">teaching the open web</span>.</p>
             </div>
             <div class="benefitDist">
                 <img src="../img/iconos/benefit_hack.png" alt="benefit4">
-                <p>Share the <b>best practices</b> for open web hackers.</p>
+                <p>Share the <span class="negrita">best practices</span> for open web hackers.</p>
             </div>
             <div class="benefitDist">
                 <img src="../img/iconos/benefit_wikipedia.png" alt="benefit5">
-                <p>Integrate <b>Wikipedia</b> into your learning project.</p>
+                <p>Integrate <span class="negrita">Wikipedia</span> into your learning project.</p>
             </div>
         </aside>
 
+        <!--Párrafo de texto "Whats It All About?"-->
         <section id="parrafo1">
             <p>
                 <span class="titulosParrafos">What's it all about?</span><br/>
@@ -109,23 +122,30 @@
             </p>
         </section>
 
+        <!--Párrafo de texto "schedule"-->
         <section id="parrafo2">
-            <p><span class="titulosParrafos">Schedule</span><br/>
+            <p>
+                <span class="titulosParrafos">Schedule</span><br/>
                 Want to know exactly what's going to happen? You can see the <span class="textoAzul">draft schedule</span> here on the <span class="textoAzul">Festival wiki.</span> We're still evolving the details - but the general themes and style of sessions will give you a feel for what's going to happen. You can also read the <span class="textoAzul">activities page</span> on the wiki for more detailed information.
             </p>
         
         </section>
 
+        <!--Sección de Festival Spaces. Aquí van incluidos los cuadros de colores-->
         <section id="festivalSpaces">
+            <!--Texto antes de los cuados-->
             <div id="textoSpaces">
                 <span class="titulosParrafos">Festival Spaces</span>
                 <p>
-                    <b>Here's some of the different spaces we're planning for the Drumbeat Festival.</b><br/>
+                    <span class="negrita">Here's some of the different spaces we're planning for the Drumbeat Festival.</span><br/>
                 Check back often as hosts will be updating these descriptions over the coming weeks
-            </p>
+                </p>
             </div>
+            <!--Div para los cuadros-->
             <div id="cuadrosColores">
+                <!--Espacio del cuadro (290 px ancho)-->
                 <div class="espacioCuadro">
+                    <!--El cuadro de color dentro de su espacio-->
                     <div class="cuadro rojo rotacion1 ">
                         <p class="titulosCuadros">Badge Lab</p>
                         <p class="textoCuadro">
@@ -158,7 +178,7 @@
                     </div>
                 </div>
                 <div class="espacioCuadro">
-                    <div class="cuadro rojo ">
+                    <div class="cuadro rojo rotacion3">
                         <p class="titulosCuadros">Open content studio</p>
                         <p class="textoCuadro">
                             Hack on open textbooks and help build a global corseware catalog. Hosted by <span class="textoAzulOscuro">Flat World Knowledge</span>, <span class="textoAzulOscuro">OCW Consortium</span>, <span class="textoAzulOscuro">Creative Commons</span> and <span class="textoAzulOscuro">Connexions</span>.
@@ -216,8 +236,11 @@
             </div>
         </section>
 
+        <!--Aside de checks-->
         <aside id="asideChecks">
+            <!--Titulo de los checks-->
                 <div id="checkTitulo">Who should come?</div>
+                <!--Div que engloba los checks-->
                 <div id="checks">
                     <p>
                         <img src="../img/iconos/check.png" alt="check1"> Open textbook authors and remixers<br/>
@@ -228,19 +251,20 @@
                         <img src="../img/iconos/check.png" alt="check6"> Radical librarians<br/>
                         <img src="../img/iconos/check.png" alt="check7"> Wikipedians<br/>
                         <img src="../img/iconos/check.png" alt="check8"> Open education start ups<br/>
-                        <img src="../img/iconos/check.png" alt="check9"> <b>And, of course, teachers and learners of all stripes</b>
+                        <img src="../img/iconos/check.png" alt="check9"> <span class="negrita">And, of course, teachers and learners of all stripes</span>
                     </p>
                 </div>
+                <!--Texto debajo de los checks-->
                 <div id="checkTexto">
                     <p>
-                        We're extending a <b>special invite and reduced fees to people attending <span class="textoAzul">OpenEd2010</span></b> which takes place in Barcelona on the two days before the Drumbeat Festival. We'll announce details in the coming weeks.
+                        We're extending a <span class="negrita">special invite and reduced fees to people attending <span class="textoAzul">OpenEd2010</span></span> which takes place in Barcelona on the two days before the Drumbeat Festival. We'll announce details in the coming weeks.
                     </p>
                 </div>
         </aside>
 
-        
-
+        <!--Aside de webs (identi.ca y Twitter)-->
         <aside id="webs">
+            <!--Parte idénti.ca-->
             <div id="identica">
                 <!--CONTENEDOR-->
                 <div id="contIdentica">
@@ -248,6 +272,7 @@
                     <p>Share on Identi.ca</p>
                 </div>
             </div>
+            <!--Parte Twitter-->
             <div id="twitter">
                 <img src="../img/iconos/twitter.png" alt="twitter"> 
                 <p>Tweet this</p>
