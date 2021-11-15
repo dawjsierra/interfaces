@@ -412,10 +412,15 @@ header{
 #festivalSpaces{
     width:890px;
     float:left;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
     /*Fuente aplicada al texto de "festival spaces"*/
     #textoSpaces{
         font-family: 'Times New Roman', Times, serif;
+        width:890px;
     }
 
     /*Clase definida para los titulos dentro de los cuadros de colores*/
@@ -426,14 +431,6 @@ header{
         margin-right: 7px;
         margin-bottom: 12px;
         height:70%;
-    }
-
-    /*Distribución del div de cuadros de colores*/
-    #cuadrosColores{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
     }
 
     /*Clase que define el posicionamiento, tipo de fuente y altura de los cuadros de colores*/
