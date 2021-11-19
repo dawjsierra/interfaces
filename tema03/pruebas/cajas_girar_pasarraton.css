@@ -1,0 +1,23 @@
+body{
+    margin:auto;
+    padding:0;
+    border: red 1px solid;
+    width: 1000px;
+    height: 1000px
+}
+
+.elemento{
+    background-color: orange;
+    width:100px;
+    height:10px;
+    border: red 1px solid;
+    margin:5px;
+    float:left;
+    clear:both;
+    transition: 1s linear;
+}
+
+.elemento:hover{
+    -webkit-transform:rotate(90deg);
+    transform: rotate(90deg);
+}

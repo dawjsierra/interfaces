@@ -1,0 +1,21 @@
+body{
+    margin:auto;
+    padding:0;
+    border: red 1px solid;
+    width: 1000px;
+    height: 1000px
+}
+
+.elemento{
+    background-color: orange;
+    width:100px;
+    margin:5px;
+    float:left;
+    clear:both;
+    transition: background-color 3s ease, width 3s ease;
+}
+
+.elemento:hover{
+    background-color:blue;
+    width: 500px;
+}
