@@ -1,0 +1,181 @@
+@media (min-width: 1000px) { 
+    
+    body{
+        margin:auto;
+        padding:0;
+        width: 1600px;
+        background-color: rgb(245,245,245);
+    }
+
+    #contenedorFijoMonitor{
+        border:blue 1px solid;
+        width:100%;
+        margin:auto;
+        padding:0;
+        display:flex;
+        height: 125px;
+        background-color: rgb(157,205,245);
+    }
+
+    #navegacionMonitor{
+        width:25%;
+        height:125px;
+    }
+
+    #navegacionMonitor>ul{
+        width:90%;
+        height:100%;
+        margin:0;
+        padding:0;
+        list-style-type: none;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    #navegacionMonitor>ul>li{
+        margin:2px;
+        text-align: center;
+        color:black;
+        border:red 1px solid;
+    }
+
+    #headerMonitor{
+        width:50%;
+        height:125px;
+    }
+    #headerMonitor>img{
+        width:100%;
+        height:125px;
+    }
+
+    #loginMonitor{
+        width:25%;
+        height:125px;
+    }
+
+    #formLoginMonitor{
+        height:100%;
+        padding:0;
+        text-align: right;
+    }
+
+    #fotoEncabezadoMonitor{
+        width:100%;
+        display: flex;
+        justify-content: center;
+        background-color: rgb(20,23,28);
+    }
+
+    #fotoEncabezadoMonitor>img{
+        width:100%;
+        padding: 0;
+        margin:auto;
+    }
+
+    #sectionMonitor{
+        width:74%;
+    }
+
+    #espacioTablas{
+        border: red 1px solid;
+        width:100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        float:left;
+    }
+
+    #espacioActiv{
+        width:100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    #tablaActividades{
+        width:80%;
+    }
+
+    #formularioAct{
+        margin:10px;
+        padding: 0;
+        float:left;
+        width:30%;
+    }
+
+    #espacioFisios{
+        width:100%;
+        display:flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    
+    #tablaFisios{
+        width:80%;
+    }
+
+    #formularioFis{
+        margin-left:10px;
+        margin-top:50px;
+        float:left;
+        width:35%;
+    }
+
+    #espacioIndices{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        border: blue 1px solid;
+    }
+
+    #fcm{
+        border: red 1px solid;
+    }
+
+    #imgsMonitor{
+        display:flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #imgsMonitor>img{
+        margin-top: 1px;
+    }
+
+    #asideMonitor{
+        width:24%;
+        float: right;
+        border:red 1px solid;
+    }
+
+}
+
+@media(min-width:600px) and (max-width:999px){
+    *{
+        border: blue 1px solid;
+    }
+    
+    body{
+        margin:auto;
+        padding:0;
+        width: 80%;
+    }
+}
+
+@media(max-width:599px){
+    *{
+        border: purple 1px solid;
+    }
+    
+    body{
+        margin:auto;
+        padding:0;
+        width: 80%;
+    }
+
+    #loginMonitor, #imcMonitor, #fcmMonitor, #fotoEncabezadoMonitor{
+        display:none;
+    }
+}

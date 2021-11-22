@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>INDEX</title>
+        <meta charset="UTF-8">
+        <link href = "../css/index.css" rel="stylesheet" type="text/css">
+        <script src="../js/index.js"></script>
+    </head>
+    <body>
+        <div id="contenedorFijoMonitor">
+            <nav id="navegacionMonitor">
+                <ul>
+                    <li>FISIOS Y ACTIVIDADES</li>
+                    <li>FCM</li>
+                    <li>IMC</li>
+                    <li>IMÁGENES</li>
+                    <li>INFO Y OFERTAS</li>
+                </ul>
+            </nav>
+            <header id="headerMonitor">
+                <img src="../img/logoNegro.png">
+            </header>
+            <nav id="loginMonitor">
+                <form id="formLoginMonitor">
+                    <label id="labelUMonitor">USUARIO</label><br/>
+                    <input type="text" id="usuario" value=""><br/>
+                    <label id="labelCMonitor">CONTRASEÑA</label><br/>
+                    <input type="password" id="password" value=""><br/><br/>
+                    <input type="button" id="botonMonitor" value="login" onclick="comprobarContrasena()">
+                </form>
+            </nav>
+        </div>
+        
+        <nav id="fotoEncabezadoMonitor">
+            <img src="../img/fotoencabecado.jpg">
+        </nav>
+        <section id="sectionMonitor">
+            <h2>NUESTRAS ACTIVIDADES Y FISIOS</h2>
+            <p>Aquí puede consultar nuestras actividades y nuestros fisios con sus horas correspondientes. </p>
+            <div id="espacioTablas">
+                <h3>ACTIVIDADES</h3>
+                <div id="espacioActiv">
+                    <table id="tablaActividades">
+                        <tbody>
+                            <tr>
+                                <th></th>
+                                <th>LUNES</th>
+                                <th>MARTES</th>
+                                <th>MIERCOLES</th>
+                                <th>JUEVES</th>
+                                <th>VIERNES</th>
+                                <th>SABADO</th>
+                            </tr>
+                            <tr><td>07:00 - 09:00</td></tr>
+                            <tr><td>09:00 - 11:00</td></tr>
+                            <tr><td>11:00 - 13:00</td></tr>
+                            <tr><td>13:00 - 15:00</td></tr>
+                            <tr><td>17:00 - 19:00</td></tr>
+                            <tr><td>19:00 - 21:00</td></tr>
+                        </tbody>
+                    </table>
+                    <br/>
+                    <div id="formularioAct">
+                        <form id="formulario" name="formAct">
+                            <input type="checkbox" name="actividades" value="Crossfit">CROSSFIT<br/>
+                            <input type="checkbox" name="actividades" value="Zumba">ZUMBA<br/>
+                            <input type="checkbox" name="actividades" value="Bodypump">BODYPUMP<br/>
+                            <input type="checkbox" name="actividades" value="Spinning">SPINNING<br/>
+                            <input type="checkbox" name="actividades" value="Pilates">PILATES<br/>
+                            <input type="checkbox" name="actividades" value="Yoga">YOGA<br/>
+                            <input type="button" id="boton1" value="MOSTRAR" onclick="mostrarAct()">
+                        </form>
+                    </div>
+                </div>
+                <br/>
+                <h3>FISIOS</h3>
+                <div id="espacioFisios">
+                    <table id="tablaFisios">
+                        <tbody>
+                            <tr>
+                                <th></th>
+                                <th>LUNES</th>
+                                <th>MARTES</th>
+                                <th>MIERCOLES</th>
+                                <th>JUEVES</th>
+                                <th>VIERNES</th>
+                            </tr>
+                            <tr><td>10:00 - 10:45</td></tr>
+                            <tr><td>10:45 - 11:30</td></tr>
+                            <tr><td>11:30 - 12:15</td></tr>
+                            <tr><td>12:15 - 13:00</td></tr>
+                            <tr><td>13:00 - 13:45</td></tr>
+                            <tr><td>17:00 - 17:45</td></tr>
+                            <tr><td>17:45 - 18:30</td></tr>
+                            <tr><td>18:30 - 19:15</td></tr>
+                            <tr><td>19:15 - 20:00</td></tr>
+                            <tr><td>20:00 - 20:45</td></tr>
+                        </tbody>
+                    </table>
+                    <div id="formularioFis">
+                        <form id="formulario" name="formFis">
+                            <input type="radio" name="fisio" value="Marta">MARTA<br/>
+                            <input type="radio" name="fisio" value="Marcos">MARCOS<br/>
+                            <input type="radio" name="fisio" value="Sergio">SERGIO<br/>
+                            <input type="radio" name="fisio" value="Laura">LAURA<br/>
+                            <input type="radio" name="fisio" value="Ivan">IVÁN<br/>
+                            <input type="radio" name="fisio" value="Pablo">PABLO<br/>
+                            <input type="button" id="boton2" value="MOSTRAR" onclick="mostrarFis()">
+                        </form>
+                    </div>
+                </div>
+                    <script>
+                        //funcion de generar tablas
+                        init();
+                    </script>
+            </div>
+            </article>
+            <article id="indices">
+                <h2>BIENESTAR Y SALUD PERSONAL.</h2>
+                <p>Le ofrecemos en nuestra web un espacio para calcular su IMC y su FCM. Creemos que es importante conocernos y cuidarnos</p>
+                <div id="espacioIndices">
+                    <div id="fcm">
+                        <h3>FRECUENCIA CARDIACA MÁXIMA</h3>
+                            <p id="fcmpersonal">Tu frecuencia cardiaca máxima es: </p>
+                            <ul id="lista" >
+                                <!--Porcentajes-->
+                                <li>Zona de recuperación (60%-70%): </li>
+                                <li>Zona aeróbica (70%-80%): </li>
+                                <li>Zona anaeróbica (80%-90%): </li>
+                                <li>Linea roja (90%-100%): </li>
+                            </ul>
+                            <input type="button" id="botonFCM" value="CALCULAR" onclick="calcularfcm()">
+                    </div>
+                    <div id="imc">
+                        <h3>INDICE DE MASA CORPORAL</h3>
+                        <ul>
+                            <li> - 16.00: INFRAPESO (delgadez severa)</li>
+                            <li> 16.00 - 16.99: INFRAPESO (delgadez moderada)</li>
+                            <li> 17.00 - 18.49: INFRAPESO (delgadez aceptable)</li>
+                            <li> 18.50 - 24.99: PESO NORMAL</li>
+                            <li> 25.00 - 29.99: SOBREPESO</li>
+                            <li> 30.00 - 34.99: OBESO (tipo I)</li>
+                            <li> 35.00 - 40.00: OBESO (tipo II)</li>
+                            <li> + 40.00: OBESO (tipo III)</li>
+                        </ul>
+                        <input type="button" id="botonIMC" value="CALCULAR" onclick="calcularimc()">
+                    </div>
+                </div>
+            </article>
+            <article id="galeriaMonitor">
+                <h2>IMÁGENES</h2>
+                <div id="imgsMonitor">
+                    <img src="../img/galeria1.jpg">
+                    <img src="../img/imagen2.jpg">
+                    <img src="../img/imagen3.jpeg">
+                    <img src="../img/imagen4.jpg">
+                    <img src="../img/galeria3.jpg">
+                    <img src="../img/imagen6.jpg">
+                </div>
+            </article>
+        </section>
+        <aside id="asideMonitor">
+            <div id="horarioMonitor">
+                <div id="animar">
+                    <h3>¡VEN A CONOCER NUESTRAS INSTALACIONES!</h3>
+                    <p>Te esperamos en <span negita>C/Alberto Dominguez 18, Zaragoza, 50004</span></p>
+                </div>
+                <div id="horario">
+                    HORARIOS Y DÍAS DE APERTURA:
+                    <ul>
+                        <li>LUNES: 06:00 - 23:00</li>
+                        <li>MARTES: 06:00 - 23:00</li>
+                        <li>MIERCOLES: 06:00 - 23:00</li>
+                        <li>JUEVES: 06:00 - 23:00</li>
+                        <li>VIERNES: 06:00 - 23:00</li>
+                        <li>SABADO: 06:00 - 21:00</li>
+                        <li>DOMINGO: 10:00 - 14:00</li>
+                    </ul>
+                    <p>Cerramos días de Navidad, Año Nuevo y Día del Pilar</p>
+                </div>
+            </div>
+            <div id="ofertasMonitor">
+                ofertas
+            </div>
+        </aside>
+        <footer id="footerMonitor">
+            footer
+        </footer>
+        
+    </body>
+</html>
