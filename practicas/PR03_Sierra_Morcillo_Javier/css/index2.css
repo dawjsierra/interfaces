@@ -1469,11 +1469,15 @@
 
     #dias{
         margin-bottom: 10px;
-        border:gold 1px solid;
+        border:gold 2px solid;
     }
 
     #dias>h3{
         font-family: "Arial";
+        width: 70%;
+        text-align: center;
+        margin:auto;
+        padding:0;
     }
 
     #dias>ul{
@@ -1484,32 +1488,35 @@
 
     #dias>ul>li{
         text-align: left;
-        font-size: 13px;
+        font-size: 15px;
         font-weight: normal;
     }
 
     #direccion{
         margin-bottom: 10px;
-        border:gold 1px solid;
+        border:gold 2px solid;
     }
 
     #direccion>h3{
+        width: 70%;
+        text-align: center;
+        margin:auto;
+        padding:0;
         font-family: Arial, Helvetica, sans-serif;
     }
 
     #direccion>p{
-        font-size: 15px;
+        font-size: 18px;
     }
 
     #ofertas{
         border: gold 2px solid;
+        text-align: center;
     }
 
     #oferta1, #oferta2, #oferta3{
-        border-top: black 2px solid;
-        border-bottom: black 2px solid;
-        border-right: none;
-        border-left: none;
+        border:none;
+        border-bottom:black 1px solid;
     }
 
     #ofertas>h3{
@@ -1517,19 +1524,44 @@
     }
 
     .tituloOferta{
-        font-size: 15px;
+        color:black;
+        background-color: gold;
+        font-size: 19px;
+        font-weight: bold;
+        width: 70%;
+        text-align: center;
+        margin:auto;
+        padding:0;
     }
 
     .textoOferta{
-        font-size: 11px;
+        font-size: 14px;
+        font-weight: normal;
     }
 
     .precio{
         font-size: 15px;
+        width: 70%;
+        text-align: center;
+        margin:auto;
+        padding:0;
+        background-color: white;
+        color:black;
+        margin-bottom: 5px;
+    }
+
+    footer{
+        margin-top: 10px;
+        height: 70%;
+        font-size: 12px;
     }
 
     #rrss{
+        color: black;
+        background-color: white;
         margin-top:0;
         padding:0;
+        border: red 1px solid;
+        width:100%;
     }
 }
