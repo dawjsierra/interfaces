@@ -3,6 +3,7 @@
     <head>
         <title>INDEX2</title>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <link href = "../css/index2.css" rel="stylesheet" type="text/css">
         <script src="../js/index.js"></script>
     </head>
@@ -33,131 +34,164 @@
         <nav id="fotoEncabezado">
             <img src="../img/encabezado2.jpg">
         </nav>
-        <section>
-            <article id="horarios">
-                <h2>NUESTRAS ACTIVIDADES Y FISIOS</h2>
-                <div id="espacioTablas">
-                    <h3>ACTIVIDADES</h3>
-                    <div id="espacioActiv">
-                        <table id="tablaActividades" class="ampliarMovil">
-                            <tbody>
-                                <tr>
-                                    <th>HORARIO</th>
-                                    <th>LUNES</th>
-                                    <th>MARTES</th>
-                                    <th>MIERCOLES</th>
-                                    <th>JUEVES</th>
-                                    <th>VIERNES</th>
-                                    <th>SABADO</th>
-                                </tr>
-                                <tr><td>07:00 - 09:00</td></tr>
-                                <tr><td>09:00 - 11:00</td></tr>
-                                <tr><td>11:00 - 13:00</td></tr>
-                                <tr><td>13:00 - 15:00</td></tr>
-                                <tr><td>17:00 - 19:00</td></tr>
-                                <tr><td>19:00 - 21:00</td></tr>
-                            </tbody>
-                        </table>
-                        <div id="formularioAct">
-                            <form id="formulario" name="formAct">
-                                <input type="checkbox" name="actividades" value="Crossfit">CROSSFIT<br/>
-                                <input type="checkbox" name="actividades" value="Zumba">ZUMBA<br/>
-                                <input type="checkbox" name="actividades" value="Bodypump">BODYPUMP<br/>
-                                <input type="checkbox" name="actividades" value="Spinning">SPINNING<br/>
-                                <input type="checkbox" name="actividades" value="Pilates">PILATES<br/>
-                                <input type="checkbox" name="actividades" value="Yoga">YOGA<br/>
-                                <input type="button" id="boton1" value="MOSTRAR" onclick="mostrarAct()">
-                            </form>
+        <div id="contedorContenido">
+            <section>
+                <article id="horarios">
+                    <h2>NUESTRAS ACTIVIDADES Y FISIOS</h2>
+                    <div id="espacioTablas">
+                        <h3>ACTIVIDADES</h3>
+                        <div id="espacioActiv">
+                            <table id="tablaActividades" class="ampliarMovil">
+                                <tbody>
+                                    <tr>
+                                        <th>HORARIO</th>
+                                        <th>LUNES</th>
+                                        <th>MARTES</th>
+                                        <th>MIERCOLES</th>
+                                        <th>JUEVES</th>
+                                        <th>VIERNES</th>
+                                        <th>SABADO</th>
+                                    </tr>
+                                    <tr><td>07:00 - 09:00</td></tr>
+                                    <tr><td>09:00 - 11:00</td></tr>
+                                    <tr><td>11:00 - 13:00</td></tr>
+                                    <tr><td>13:00 - 15:00</td></tr>
+                                    <tr><td>17:00 - 19:00</td></tr>
+                                    <tr><td>19:00 - 21:00</td></tr>
+                                </tbody>
+                            </table>
+                            <div id="formularioAct">
+                                <form id="formulario" name="formAct">
+                                    <input type="checkbox" name="actividades" value="Crossfit">CROSSFIT<br/>
+                                    <input type="checkbox" name="actividades" value="Zumba">ZUMBA<br/>
+                                    <input type="checkbox" name="actividades" value="Bodypump">BODYPUMP<br/>
+                                    <input type="checkbox" name="actividades" value="Spinning">SPINNING<br/>
+                                    <input type="checkbox" name="actividades" value="Pilates">PILATES<br/>
+                                    <input type="checkbox" name="actividades" value="Yoga">YOGA<br/>
+                                    <input type="button" id="boton1" value="MOSTRAR" onclick="mostrarAct()">
+                                </form>
+                            </div>
                         </div>
-                    </div>
-                    <br/>
-                    <h3>FISIOS</h3>
-                    <div id="espacioFisios">
-                        <table id="tablaFisios" class="ampliarMovil">
-                            <tbody>
-                                <tr>
-                                    <th>HORARIO</th>
-                                    <th>LUNES</th>
-                                    <th>MARTES</th>
-                                    <th>MIERCOLES</th>
-                                    <th>JUEVES</th>
-                                    <th>VIERNES</th>
-                                </tr>
-                                <tr><td>10:00 - 10:45</td></tr>
-                                <tr><td>10:45 - 11:30</td></tr>
-                                <tr><td>11:30 - 12:15</td></tr>
-                                <tr><td>12:15 - 13:00</td></tr>
-                                <tr><td>13:00 - 13:45</td></tr>
-                                <tr><td>17:00 - 17:45</td></tr>
-                                <tr><td>17:45 - 18:30</td></tr>
-                                <tr><td>18:30 - 19:15</td></tr>
-                                <tr><td>19:15 - 20:00</td></tr>
-                                <tr><td>20:00 - 20:45</td></tr>
-                            </tbody>
-                        </table>
-                        <div id="formularioFis">
-                            <form id="formulario" name="formFis">
-                                <input type="radio" name="fisio" value="Marta">MARTA<br/>
-                                <input type="radio" name="fisio" value="Marcos">MARCOS<br/>
-                                <input type="radio" name="fisio" value="Sergio">SERGIO<br/>
-                                <input type="radio" name="fisio" value="Laura">LAURA<br/>
-                                <input type="radio" name="fisio" value="Ivan">IVÁN<br/>
-                                <input type="radio" name="fisio" value="Pablo">PABLO<br/>
-                                <input type="button" id="boton2" value="MOSTRAR" onclick="mostrarFis()">
-                            </form>
+                        <br/>
+                        <h3>FISIOS</h3>
+                        <div id="espacioFisios">
+                            <table id="tablaFisios" class="ampliarMovil">
+                                <tbody>
+                                    <tr>
+                                        <th>HORARIO</th>
+                                        <th>LUNES</th>
+                                        <th>MARTES</th>
+                                        <th>MIERCOLES</th>
+                                        <th>JUEVES</th>
+                                        <th>VIERNES</th>
+                                    </tr>
+                                    <tr><td>10:00 - 10:45</td></tr>
+                                    <tr><td>10:45 - 11:30</td></tr>
+                                    <tr><td>11:30 - 12:15</td></tr>
+                                    <tr><td>12:15 - 13:00</td></tr>
+                                    <tr><td>13:00 - 13:45</td></tr>
+                                    <tr><td>17:00 - 17:45</td></tr>
+                                    <tr><td>17:45 - 18:30</td></tr>
+                                    <tr><td>18:30 - 19:15</td></tr>
+                                    <tr><td>19:15 - 20:00</td></tr>
+                                    <tr><td>20:00 - 20:45</td></tr>
+                                </tbody>
+                            </table>
+                            <div id="formularioFis">
+                                <form id="formulario" name="formFis">
+                                    <input type="radio" name="fisio" value="Marta">MARTA<br/>
+                                    <input type="radio" name="fisio" value="Marcos">MARCOS<br/>
+                                    <input type="radio" name="fisio" value="Sergio">SERGIO<br/>
+                                    <input type="radio" name="fisio" value="Laura">LAURA<br/>
+                                    <input type="radio" name="fisio" value="Ivan">IVÁN<br/>
+                                    <input type="radio" name="fisio" value="Pablo">PABLO<br/>
+                                    <input type="button" id="boton2" value="MOSTRAR" onclick="mostrarFis()">
+                                </form>
+                            </div>
                         </div>
+                            <script>
+                                //funcion de generar tablas
+                                init();
+                            </script>
                     </div>
-                        <script>
-                            //funcion de generar tablas
-                            init();
-                        </script>
-                </div>
-            </article>
-            <article id="indices">
-                <h2>BIENESTAR Y SALUD PERSONAL</h2>
-                <div id="espacioIndices">
-                    <div id="fcm">
-                        <h3>FRECUENCIA CARDIACA MÁXIMA</h3>
-                            <p id="fcmpersonal">Tu frecuencia cardiaca máxima es: </p>
-                            <ul id="listafcm" >
-                                <!--Porcentajes-->
-                                <li>Zona de recuperación (60%-70%): </li>
-                                <li>Zona aeróbica (70%-80%): </li>
-                                <li>Zona anaeróbica (80%-90%): </li>
-                                <li>Linea roja (90%-100%): </li>
+                </article>
+                <article id="indices">
+                    <h2>BIENESTAR Y SALUD PERSONAL</h2>
+                    <div id="espacioIndices">
+                        <div id="fcm">
+                            <h3>FRECUENCIA CARDIACA MÁXIMA</h3>
+                                <p id="fcmpersonal">Tu frecuencia cardiaca máxima es: </p>
+                                <ul id="listafcm" >
+                                    <!--Porcentajes-->
+                                    <li>Zona de recuperación (60%-70%): </li>
+                                    <li>Zona aeróbica (70%-80%): </li>
+                                    <li>Zona anaeróbica (80%-90%): </li>
+                                    <li>Linea roja (90%-100%): </li>
+                                </ul>
+                                <input type="button" id="botonFCM" value="CALCULAR" onclick="calcularfcm()">
+                        </div>
+                        <div id="imc">
+                            <h3>INDICE DE MASA CORPORAL</h3>
+                            <ul id="listaimc">
+                                <li> - 16.00: INFRAPESO (delgadez severa)</li>
+                                <li> 16.00 - 16.99: INFRAPESO (delgadez moderada)</li>
+                                <li> 17.00 - 18.49: INFRAPESO (delgadez aceptable)</li>
+                                <li> 18.50 - 24.99: PESO NORMAL</li>
+                                <li> 25.00 - 29.99: SOBREPESO</li>
+                                <li> 30.00 - 34.99: OBESO (tipo I)</li>
+                                <li> 35.00 - 40.00: OBESO (tipo II)</li>
+                                <li> + 40.00: OBESO (tipo III)</li>
                             </ul>
-                            <input type="button" id="botonFCM" value="CALCULAR" onclick="calcularfcm()">
+                            <input type="button" id="botonIMC" value="CALCULAR" onclick="calcularimc()">
+                        </div>
                     </div>
-                    <div id="imc">
-                        <h3>INDICE DE MASA CORPORAL</h3>
-                        <ul id="listaimc">
-                            <li> - 16.00: INFRAPESO (delgadez severa)</li>
-                            <li> 16.00 - 16.99: INFRAPESO (delgadez moderada)</li>
-                            <li> 17.00 - 18.49: INFRAPESO (delgadez aceptable)</li>
-                            <li> 18.50 - 24.99: PESO NORMAL</li>
-                            <li> 25.00 - 29.99: SOBREPESO</li>
-                            <li> 30.00 - 34.99: OBESO (tipo I)</li>
-                            <li> 35.00 - 40.00: OBESO (tipo II)</li>
-                            <li> + 40.00: OBESO (tipo III)</li>
+                </article>
+                <article id="articleFotos">
+                    <h2>Imágenes</h2>
+                    <div id="espacioFotos">
+                        <img class="ampliar" src="../img/galeria1.jpg">
+                        <img class="ampliar" src="../img/imagen2.jpg">
+                        <img class="ampliar" src="../img/imagen3.jpeg">
+                        <img class="ampliar" src="../img/imagen4.jpg">
+                        <img class="ampliar" src="../img/galeria3.jpg">
+                        <img class="ampliar" src="../img/imagen6.jpg">
+                    </div>
+                </article>
+                <article id="apertura">
+                    <div id="diasTablet">
+                        <h3>HORARIO DE APERTURA:</h3>
+                        <ul>
+                            <li>LUNES: 06:00 - 23:00</li>
+                            <li>MARTES: 06:00 - 23:00</li>
+                            <li>MIERCOLES: 06:00 - 23:00</li>
+                            <li>JUEVES: 06:00 - 23:00</li>
+                            <li>VIERNES: 06:00 - 23:00</li>
+                            <li>SABADO: 06:00 - 21:00</li>
+                            <li>DOMINGO: 10:00 - 14:00</li>
                         </ul>
-                        <input type="button" id="botonIMC" value="CALCULAR" onclick="calcularimc()">
                     </div>
-                </div>
-            </article>
-            <article id="articleFotos">
-                <h2>Imágenes</h2>
-                <div id="espacioFotos">
-                    <img class="ampliar" src="../img/galeria1.jpg">
-                    <img class="ampliar" src="../img/imagen2.jpg">
-                    <img class="ampliar" src="../img/imagen3.jpeg">
-                    <img class="ampliar" src="../img/imagen4.jpg">
-                    <img class="ampliar" src="../img/galeria3.jpg">
-                    <img class="ampliar" src="../img/imagen6.jpg">
-                </div>
-            </article>
-            <article id="apertura">
-                <div id="diasTablet">
+                    <div id="cerrarTablet">
+                        <h3>MENOS LOS DÍAS...</h3>
+                        <ul>
+                            <li>01/01: AÑO NUEVO</li>
+                            <li>05/03: CINCOMARZADA</li>
+                            <li>15/08: DÍA DEL TRABAJADOR</li>
+                            <li>12/10: DÍA DEL PILAR</li>
+                            <li>01/11: TODOS LOS SANTOS</li>
+                            <li>25/12: NAVIDAD</li>
+                        </ul>
+                    </div>
+                    <div id="direccionTablet">
+                        <h3>¿DÓNDE ESTAMOS?</h3>
+                        <p>C/Alberto Dominguez 18, Zaragoza, 50004</p>
+                        <a href="https://www.google.es/maps"><img src="../img/fotomaps.jpg"></a>
+                    </div>
+                </article>
+            </section>
+            <aside id="aside">
+                <div id="dias">
                     <h3>HORARIO DE APERTURA:</h3>
+                    <br/>
                     <ul>
                         <li>LUNES: 06:00 - 23:00</li>
                         <li>MARTES: 06:00 - 23:00</li>
@@ -166,117 +200,86 @@
                         <li>VIERNES: 06:00 - 23:00</li>
                         <li>SABADO: 06:00 - 21:00</li>
                         <li>DOMINGO: 10:00 - 14:00</li>
-                    </ul>
+                    </ul><br/>
+                    <div id="cerrar">
+                        <h3>MENOS LOS DÍAS...</h3>
+                        <ul>
+                            <li>01/01: AÑO NUEVO</li>
+                            <li>05/03: CINCOMARZADA</li>
+                            <li>15/08: DÍA DEL TRABAJADOR</li>
+                            <li>12/10: DÍA DEL PILAR</li>
+                            <li>01/11: TODOS LOS SANTOS</li>
+                            <li>25/12: NAVIDAD</li>
+                        </ul>
+                    </div>
                 </div>
-                <div id="cerrarTablet">
-                    <h3>MENOS LOS DÍAS...</h3>
-                    <ul>
-                        <li>01/01: AÑO NUEVO</li>
-                        <li>05/03: CINCOMARZADA</li>
-                        <li>15/08: DÍA DEL TRABAJADOR</li>
-                        <li>12/10: DÍA DEL PILAR</li>
-                        <li>01/11: TODOS LOS SANTOS</li>
-                        <li>25/12: NAVIDAD</li>
-                    </ul>
-                </div>
-                <div id="direccionTablet">
+                <div id="direccion">
                     <h3>¿DÓNDE ESTAMOS?</h3>
                     <p>C/Alberto Dominguez 18, Zaragoza, 50004</p>
                     <a href="https://www.google.es/maps"><img src="../img/fotomaps.jpg"></a>
                 </div>
-            </article>
-        </section>
-        <aside id="aside">
-            <div id="dias">
-                <h3>HORARIO DE APERTURA:</h3>
-                <br/>
-                <ul>
-                    <li>LUNES: 06:00 - 23:00</li>
-                    <li>MARTES: 06:00 - 23:00</li>
-                    <li>MIERCOLES: 06:00 - 23:00</li>
-                    <li>JUEVES: 06:00 - 23:00</li>
-                    <li>VIERNES: 06:00 - 23:00</li>
-                    <li>SABADO: 06:00 - 21:00</li>
-                    <li>DOMINGO: 10:00 - 14:00</li>
-                </ul><br/>
-                <div id="cerrar">
-                    <h3>MENOS LOS DÍAS...</h3>
+                <div id="ofertas">
+                    <h3>¡APROVECHA NUESTRAS OFERTAS!</h3>
+                    <div id="oferta1">
+                        <p class="tituloOferta">OFERTA GOLD</p>
+                        <p class="textoOferta">6 MESES + ENTRENADOR PERSONAL</p>
+                        <p class="precio">200€</p>
+                    </div>
+                    <div id="oferta2">
+                        <p class="tituloOferta">OFERTA FRIENDLY 2X1</p>
+                        <p class="textoOferta">SI TE APUNTAS CON UN AMIGO, PAGAIS LA MITAD</p>
+                        <p class="precio">-50%</p>
+                    </div>
+                    <div id="oferta3">
+                        <p class="tituloOferta">OFERTA NUEVOS</p>
+                        <p class="textoOferta">AHORRATE LA CUOTA DE ALTA EL PRIMER MES</p>
+                        <p class="precio">-20€</p>
+                    </div>
+                </div>
+            </aside>
+    
+            <section id="ofertasTablet">
+                <h3>¡APROVECHA NUESTRAS OFERTAS!</h3>
+                <div id="espacioOfertasTablet">
+                    <div id="oferta1" class="ampliar">
+                        <p class="tituloOferta">OFERTA GOLD</p>
+                        <p class="textoOferta">6 MESES + ENTRENADOR PERSONAL</p>
+                        <p class="precio">200€</p>
+                    </div>
+                    <div id="oferta2" class="ampliar">
+                        <p class="tituloOferta">OFERTA FRIENDLY 2X1</p>
+                        <p class="textoOferta">SI TE APUNTAS CON UN AMIGO, PAGAIS LA MITAD</p>
+                        <p class="precio">-50%</p>
+                    </div>
+                    <div id="oferta3" class="ampliar">
+                        <p class="tituloOferta">OFERTA NUEVOS</p>
+                        <p class="textoOferta">AHORRATE LA CUOTA DE ALTA EL PRIMER MES</p>
+                        <p class="precio">-20€</p>
+                    </div>
+                </div>
+            </section>
+            <footer>
+                <div id="rrss">
+                    <div id="contenidorrss">
+                    <p id="tituloRedes">¡SÍGUENOS EN REDES!</p>
+                    <a href="https://www.facebok.com"><img src="../img/logofacebook.png"></a>
+                    <a href="https://www.instagram.com"><img src="../img/logoinstagram.png"></a>
+                    <a href="https://www.pinterest.com"><img src="../img/logopinterest.png"></a>
+                    <a href="https://www.twitter.com"><img src="../img/logotwitter.png"></a>
+                    <a href="https://www.snapchat.com"><img src="../img/logosnapchat.png"></a>
+                    </div>
+                </div>
+    
+                <div id="enlacesFooter">
                     <ul>
-                        <li>01/01: AÑO NUEVO</li>
-                        <li>05/03: CINCOMARZADA</li>
-                        <li>15/08: DÍA DEL TRABAJADOR</li>
-                        <li>12/10: DÍA DEL PILAR</li>
-                        <li>01/11: TODOS LOS SANTOS</li>
-                        <li>25/12: NAVIDAD</li>
+                        <li><a href="#">ÚNETE A NUESTRO EQUIPO</a></li>
+                        <li><a href="#">INFO SOBRE NUTRICIÓN</a></li>
+                        <li><a href="#">ORIENTACIÓN SOBRE ENTRENAMIENTOS</a></li>
+                        <li><a href="#">PREGUNTAS FRECUENTES</a></li>
+                        <li><a href="#">SUGERENCIAS</a></li>
                     </ul>
                 </div>
-            </div>
-            <div id="direccion">
-                <h3>¿DÓNDE ESTAMOS?</h3>
-                <p>C/Alberto Dominguez 18, Zaragoza, 50004</p>
-                <a href="https://www.google.es/maps"><img src="../img/fotomaps.jpg"></a>
-            </div>
-            <div id="ofertas">
-                <h3>¡APROVECHA NUESTRAS OFERTAS!</h3>
-                <div id="oferta1">
-                    <p class="tituloOferta">OFERTA GOLD</p>
-                    <p class="textoOferta">6 MESES + ENTRENADOR PERSONAL</p>
-                    <p class="precio">200€</p>
-                </div>
-                <div id="oferta2">
-                    <p class="tituloOferta">OFERTA FRIENDLY 2X1</p>
-                    <p class="textoOferta">SI TE APUNTAS CON UN AMIGO, PAGAIS LA MITAD</p>
-                    <p class="precio">-50%</p>
-                </div>
-                <div id="oferta3">
-                    <p class="tituloOferta">OFERTA NUEVOS</p>
-                    <p class="textoOferta">AHORRATE LA CUOTA DE ALTA EL PRIMER MES</p>
-                    <p class="precio">-20€</p>
-                </div>
-            </div>
-        </aside>
-
-        <section id="ofertasTablet">
-            <h3>¡APROVECHA NUESTRAS OFERTAS!</h3>
-            <div id="espacioOfertasTablet">
-                <div id="oferta1" class="ampliar">
-                    <p class="tituloOferta">OFERTA GOLD</p>
-                    <p class="textoOferta">6 MESES + ENTRENADOR PERSONAL</p>
-                    <p class="precio">200€</p>
-                </div>
-                <div id="oferta2" class="ampliar">
-                    <p class="tituloOferta">OFERTA FRIENDLY 2X1</p>
-                    <p class="textoOferta">SI TE APUNTAS CON UN AMIGO, PAGAIS LA MITAD</p>
-                    <p class="precio">-50%</p>
-                </div>
-                <div id="oferta3" class="ampliar">
-                    <p class="tituloOferta">OFERTA NUEVOS</p>
-                    <p class="textoOferta">AHORRATE LA CUOTA DE ALTA EL PRIMER MES</p>
-                    <p class="precio">-20€</p>
-                </div>
-            </div>
-        </section>
-        <footer>
-            <div id="rrss">
-                <div id="contenidorrss">
-                <p id="tituloRedes">¡SÍGUENOS EN REDES!</p>
-                <a href="https://www.facebok.com"><img src="../img/logofacebook.png"></a>
-                <a href="https://www.instagram.com"><img src="../img/logoinstagram.png"></a>
-                <a href="https://www.pinterest.com"><img src="../img/logopinterest.png"></a>
-                <a href="https://www.twitter.com"><img src="../img/logotwitter.png"></a>
-                <a href="https://www.snapchat.com"><img src="../img/logosnapchat.png"></a>
-                </div>
-            </div>
-
-            <div id="enlacesFooter">
-                <ul>
-                    <li><a href="#">ÚNETE A NUESTRO EQUIPO</a></li>
-                    <li><a href="#">INFO SOBRE NUTRICIÓN</a></li>
-                    <li><a href="#">ORIENTACIÓN SOBRE ENTRENAMIENTOS</a></li>
-                    <li><a href="#">PREGUNTAS FRECUENTES</a></li>
-                    <li><a href="#">SUGERENCIAS</a></li>
-                </ul>
-            </div>
-        </footer>
+            </footer>
+        </div>
     </body>
 </html>
