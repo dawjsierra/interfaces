@@ -33,6 +33,121 @@
     font-style: normal;
 }
 
+@media print{
+    #login, #fotoEncabezado, #navegacionPagina, #horarios, #enlacesFooter, #espacioTablas{
+        display:none;
+    }
+
+    #indices, #articleFotos, #direccionTablet>a>img, #cerrar, #direccion>a>img, #ofertasTablet{
+        display: none;
+    }
+
+    body{
+        border:none;
+    }
+
+    #header>img{
+        margin-top:0;
+        padding-top:0;
+    }
+    #dias{
+        margin-bottom: 10px;
+        border:gold 2px solid;
+    }
+
+    #dias>h3{
+        font-family: "Arial";
+        width: 70%;
+        text-align: center;
+        margin:auto;
+        padding:0;
+    }
+
+    #dias>ul{
+        margin:auto;
+        padding:0;
+        border:none;
+    }
+
+    #dias>ul>li{
+        text-align: left;
+        font-size: 15px;
+        font-weight: normal;
+    }
+
+    #direccion{
+        margin-bottom: 10px;
+        border:gold 2px solid;
+    }
+
+    #direccion>h3{
+        width: 70%;
+        text-align: center;
+        margin:auto;
+        padding:0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #direccion>p{
+        font-size: 18px;
+    }
+
+    #ofertas{
+        border: gold 2px solid;
+        text-align: center;
+    }
+
+    #oferta1, #oferta2, #oferta3{
+        border:none;
+        border-bottom:black 1px solid;
+    }
+
+    #ofertas>h3{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .tituloOferta{
+        color:black;
+        background-color: gold;
+        font-size: 19px;
+        font-weight: bold;
+        width: 70%;
+        text-align: center;
+        margin:auto;
+        padding:0;
+    }
+
+    .textoOferta{
+        font-size: 14px;
+        font-weight: normal;
+    }
+
+    .precio{
+        font-size: 15px;
+        width: 70%;
+        text-align: center;
+        margin:auto;
+        padding:0;
+        background-color: white;
+        color:black;
+        margin-bottom: 5px;
+    }
+
+    footer{
+        margin-top: 10px;
+        height: 70%;
+        font-size: 12px;
+    }
+
+    #rrss{
+        color: black;
+        background-color: white;
+        margin-top:0;
+        padding:0;
+        width:100%;
+    }
+}
+
 @media (min-width: 1000px){
 
     *{
@@ -50,9 +165,10 @@
     }
 
     body{
-        width:100%;
+        width:90%;
         margin: auto;
         padding:0;
+        border:solid 2px black;
     }
 
     h2{
@@ -71,7 +187,7 @@
     #contenedorMonitor{
         position: fixed;
         overflow: hidden;
-        width:100%;
+        width:90%;
         display:flex;
         flex-direction: row;
         justify-content: space-between;
@@ -79,7 +195,7 @@
         background-color: gold;
         border: black 1px solid;
         box-sizing: border-box;
-        height:160px;
+        height:190px;
     }
     
     #navegacionPagina>ul{
@@ -243,11 +359,6 @@
         border: gold 1px solid;
     }
     
-    #espacioIndices{
-        display: flex;
-        flex-direction: row;
-    }
-    
     #imc{
         float:right;
         width:50%;
@@ -303,6 +414,7 @@
 
     #articleFotos{
         background-color: gold;
+        width:100%;
     }
     
     #espacioFotos{
@@ -328,22 +440,26 @@
 
     aside{
         float:right;
-        width:24%;
+        width: 23%;
         display: flex;
+        margin-right: 0px;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        height: 1800px;
+        height:100%;
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
 
     #dias{
-        margin-top: 50px;
-        width:90%;
         border: black 1px solid;
         font-size: 20px;
         font-weight: bold;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
 
@@ -352,17 +468,14 @@
     }
 
     #dias>ul{
-        border-bottom: black 1px solid;
         width:100%;
-        margin:auto;
-        padding:0;
         display: flex;
         justify-content: space-between;
         flex-direction: column;
+        align-items: left;
     }
 
     #dias>ul>li{
-        margin:2px;
         text-align: left;
         color:black;
         font-size: 18px;
@@ -401,7 +514,7 @@
     #direccion{
         text-align: center;
         font-size: 20px;
-        width: 90%;
+        width: 100%;
         border: black 1px solid;
     }
 
@@ -415,7 +528,7 @@
 
     #direccion>a>img{
         border: 1px black solid;
-        width:95%;
+        width:40%;
     }
 
     #ofertas{
@@ -1481,113 +1594,3 @@
 
 }
 
-@media print{
-    #login, #fotoEncabezado, #navegacionPagina, #horarios, #enlacesFooter{
-        display:none;
-    }
-
-    #indices, #articleFotos, #direccionTablet>a>img, #cerrar, #direccion>a>img, #ofertasTablet{
-        display: none;
-    }
-
-    body{
-        border:none;
-    }
-
-    #dias{
-        margin-bottom: 10px;
-        border:gold 2px solid;
-    }
-
-    #dias>h3{
-        font-family: "Arial";
-        width: 70%;
-        text-align: center;
-        margin:auto;
-        padding:0;
-    }
-
-    #dias>ul{
-        margin:auto;
-        padding:0;
-        border:none;
-    }
-
-    #dias>ul>li{
-        text-align: left;
-        font-size: 15px;
-        font-weight: normal;
-    }
-
-    #direccion{
-        margin-bottom: 10px;
-        border:gold 2px solid;
-    }
-
-    #direccion>h3{
-        width: 70%;
-        text-align: center;
-        margin:auto;
-        padding:0;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-
-    #direccion>p{
-        font-size: 18px;
-    }
-
-    #ofertas{
-        border: gold 2px solid;
-        text-align: center;
-    }
-
-    #oferta1, #oferta2, #oferta3{
-        border:none;
-        border-bottom:black 1px solid;
-    }
-
-    #ofertas>h3{
-        font-family: Arial, Helvetica, sans-serif;
-    }
-
-    .tituloOferta{
-        color:black;
-        background-color: gold;
-        font-size: 19px;
-        font-weight: bold;
-        width: 70%;
-        text-align: center;
-        margin:auto;
-        padding:0;
-    }
-
-    .textoOferta{
-        font-size: 14px;
-        font-weight: normal;
-    }
-
-    .precio{
-        font-size: 15px;
-        width: 70%;
-        text-align: center;
-        margin:auto;
-        padding:0;
-        background-color: white;
-        color:black;
-        margin-bottom: 5px;
-    }
-
-    footer{
-        margin-top: 10px;
-        height: 70%;
-        font-size: 12px;
-    }
-
-    #rrss{
-        color: black;
-        background-color: white;
-        margin-top:0;
-        padding:0;
-        width:100%;
-    }
-}
