@@ -34,11 +34,26 @@
 }
 
 @media print{
+
+    *{
+        list-style-type: none;
+        font-family: Cuprum;
+    }
+
+    h3, h2{
+        text-align: center;
+    }
+
+    #direccion, #dias, #ofertas{
+        border: gold 1px solid;
+        margin-top: 15px;
+    }
+
     #login, #fotoEncabezado, #navegacionPagina, #horarios, #enlacesFooter, #espacioTablas{
         display:none;
     }
 
-    #indices, #articleFotos, #direccionTablet>a>img, #cerrar, #direccion>a>img, #ofertasTablet{
+    #indices, #articleFotos, #direccionTablet>a>img, #cerrar, #direccion>a>img, #ofertasTablet, #apertura, footer{
         display: none;
     }
 
@@ -46,109 +61,77 @@
         border:none;
     }
 
+    header{
+        display:flex;
+        flex-direction: column;
+    }
+
     #header>img{
         margin-top:0;
         padding-top:0;
+        margin:auto;
+        padding: 0;
     }
+
+    #contedorContenido{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        
+    }
+
     #dias{
-        margin-bottom: 10px;
-        border:gold 2px solid;
+        border: gold 1px solid;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     #dias>h3{
-        font-family: "Arial";
-        width: 70%;
+        font-family: Cuprum;
         text-align: center;
-        margin:auto;
-        padding:0;
+        font-size: 20px;
     }
 
     #dias>ul{
-        margin:auto;
-        padding:0;
-        border:none;
+        width: 60%;
+        display:flex;
+        flex-direction: column;
+        text-align: left;
     }
 
     #dias>ul>li{
         text-align: left;
-        font-size: 15px;
-        font-weight: normal;
+        font-family: Cuprum;
     }
 
     #direccion{
-        margin-bottom: 10px;
-        border:gold 2px solid;
-    }
-
-    #direccion>h3{
-        width: 70%;
         text-align: center;
-        margin:auto;
-        padding:0;
-        font-family: Arial, Helvetica, sans-serif;
     }
 
-    #direccion>p{
-        font-size: 18px;
-    }
-
-    #ofertas{
-        border: gold 2px solid;
+    #tituloRedes{
+        font-family: Cuprum;
+        font-weight: bold;
+        font-size: 20px;
         text-align: center;
     }
 
     #oferta1, #oferta2, #oferta3{
-        border:none;
-        border-bottom:black 1px solid;
+        border-top: black 2px solid;
+        text-align: center;
     }
 
-    #ofertas>h3{
-        font-family: Arial, Helvetica, sans-serif;
-    }
-
-    .tituloOferta{
-        color:black;
-        background-color: gold;
-        font-size: 19px;
+    .tituloOferta, .precio{
         font-weight: bold;
-        width: 70%;
-        text-align: center;
-        margin:auto;
-        padding:0;
-    }
-
-    .textoOferta{
-        font-size: 14px;
-        font-weight: normal;
-    }
-
-    .precio{
-        font-size: 15px;
-        width: 70%;
-        text-align: center;
-        margin:auto;
-        padding:0;
-        background-color: white;
-        color:black;
-        margin-bottom: 5px;
-    }
-
-    footer{
-        margin-top: 10px;
-        height: 70%;
-        font-size: 12px;
-    }
-
-    #rrss{
-        color: black;
-        background-color: white;
-        margin-top:0;
-        padding:0;
-        width:100%;
+        font-size: 22px;
     }
 }
 
-@media (min-width: 1000px){
+
+
+
+@media only screen and (min-width: 1000px){
 
     *{
         list-style-type: none;
@@ -184,16 +167,18 @@
     p{
         font-family: Arial, Helvetica, sans-serif;
     }
-    #contenedorMonitor{
+
+    #contenedorFijo{
         position: fixed;
         overflow: hidden;
+        margin-top:0;
         width:90%;
         display:flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: flex-start;
         background-color: gold;
-        border: black 1px solid;
+        border: black 5px solid;
         box-sizing: border-box;
         height:190px;
     }
@@ -234,7 +219,7 @@
     }
 
     header>img{
-        width:100%;
+        width:90%;
         height:125px;
     }
     
@@ -252,8 +237,19 @@
         font-weight: bold;
     }
 
+    #labelU, #labelC{
+        margin: 2px;
+        font-family: Cuprum;
+        font-size: 20px;
+    }
+
     #botonLogin{
         margin:0;
+        background-color: black;
+        color:gold;
+        border:white;
+        margin: 10px;
+        font-weight: bold;
     }
 
     #fotoEncabezado{
@@ -264,7 +260,7 @@
     }
 
     #fotoEncabezado>img{
-        height:600px;
+        width: 100%;
         padding: 0;
         margin-top: 160px;
     }
@@ -277,6 +273,7 @@
         justify-content: space-around;
         background-color: black;
         border: black 1px solid;
+        margin-bottom: 0;
     }
 
     #horarios{
@@ -284,13 +281,10 @@
         background-color: gold;
     }
     
-
     #espacioTablas{
+        margin: auto;
+        padding:0;
         width:100%;
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-        float:left;
     }
 
     #espacioActiv{
@@ -298,22 +292,20 @@
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-        background-color: gold;
     }
 
     #tablaActividades{
-        width:80%;
-        background-color: white;
-        font-weight: bold;
-        text-align: center;
-        border-color: black;
+        width:75%;
+        background-color:white;
+        border: none;
+        text-align:center;
     }
 
     #formularioAct{
-        margin:10px;
+        margin:auto;
         padding: 0;
         float:left;
-        width:30%;
+        width:20%;
     }
 
     #espacioFisios{
@@ -321,21 +313,48 @@
         display:flex;
         justify-content: space-between;
         align-items: flex-start;
-        background-color: gold;
     }
 
     #tablaFisios{
-        width:80%;
+        width:75%;
         background-color:white;
+        border: none;
         text-align:center;
-        font-weight: bold;
+    }
+
+    tbody>tr>th,td{
+        font-family: Kaushan Script;
+        font-weight: normal;
+    }
+
+    tr:hover{
+        background-color: gold;
+        color:black;
+    }
+
+    tr>th{
+        background-color: black;
+        color:white;
+        font-family: Kaushan Script;
     }
 
     #formularioFis{
-        margin-left:10px;
-        margin-top:50px;
+        margin:auto;
+        padding: 0;
         float:left;
-        width:35%;
+        width:20%;
+    }
+
+    #boton1{
+        background-color: black;
+        color:white;
+        font-weight: bold;
+    }
+
+    #boton2{
+        background-color: black;
+        color:white;
+        font-weight: bold;
     }
 
     #formulario{
@@ -356,7 +375,7 @@
         flex-direction: row;
         justify-content: space-around;
         background-color: white;
-        border: gold 1px solid;
+        border-top: gold 1px solid;
     }
     
     #imc{
@@ -377,14 +396,14 @@
     }
 
     #botonIMC{
-        background-color: white;
+        background-color: gold;
         color:black;
         font-weight: bold;
         width: 30%;
         margin:auto;
         padding: 0;
     }
-    
+
     #fcm{
         float:right;
         width:50%;
@@ -395,7 +414,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        border: gold 1px solid;
+        border-right: gold 1px solid;
     }
 
     #fcm>h3{
@@ -404,7 +423,7 @@
     }
 
     #botonFCM{
-        background-color: white;
+        background-color: gold;
         color:black;
         font-weight: bold;
         width: 30%;
@@ -440,19 +459,18 @@
 
     aside{
         float:right;
-        width: 23%;
+        width: 24%;
         display: flex;
         margin-right: 0px;
         flex-direction: column;
         justify-content: space-between;
-        align-items: center;
-        height:100%;
+        height:70%;
         margin-top: 20px;
         margin-bottom: 20px;
     }
 
     #dias{
-        border: black 1px solid;
+        margin-top: 20px;
         font-size: 20px;
         font-weight: bold;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -460,11 +478,13 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: 95%;
     }
 
 
     #dias>h3{
         background-color: gold;
+        width: 100%;
     }
 
     #dias>ul{
@@ -478,44 +498,46 @@
     #dias>ul>li{
         text-align: left;
         color:black;
-        font-size: 18px;
+        font-size: 15px;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     }
 
     #cerrar{
         width:100%;
-        font-size: 20px;
         font-weight: bold;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     #cerrar>h3{
         background-color: gold;
+        width: 100%;
+        text-align: center;
     }
 
     #cerrar>ul{
         width:100%;
-        margin:auto;
-        padding:0;
         display: flex;
         justify-content: space-between;
         flex-direction: column;
+        align-items: left;
     }
 
     #cerrar>ul>li{
-        margin:2px;
         text-align: left;
         color:black;
-        font-size: 18px;
+        font-size: 14px;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     }
 
     #direccion{
+        margin-top: 20px;
         text-align: center;
-        font-size: 20px;
-        width: 100%;
-        border: black 1px solid;
+        font-size: 15px;
+        width: 95%;
     }
 
     #direccion>p{
@@ -528,19 +550,20 @@
 
     #direccion>a>img{
         border: 1px black solid;
-        width:40%;
+        width:80%;
     }
 
     #ofertas{
+        margin-top: 20px;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        width: 90%;
-        border: black 1px solid;
+        width: 95%;
     }
 
     #ofertas>h3{
         text-align: center;
+        font-size: 18px;
+        background-color:gold;
     }
 
     #oferta1,#oferta2,#oferta3{
@@ -632,7 +655,7 @@
 }
 
 
-@media(min-width:600px) and (max-width:999px){
+@media only screen and (min-width:600px) and (max-width:999px){
     *{
         list-style-type: none;
     }
@@ -640,11 +663,15 @@
     #fotoEncabezado, #ofertas, #direccion>a>img, #direccionTablet>a>img, aside{
         display: none;
     }
+
+    #navegacionPagina>ul> #ofertas{
+        display: none;
+    }
     
     body{
         margin:auto;
         padding:0;
-        width: 100%;
+        width: 90.3%;
         border:black 1px solid;
     }
 
@@ -668,20 +695,21 @@
         font-family: Arial, Helvetica, sans-serif;
     }
 
-    #contenedorMonitor{
+    #contenedorFijo{
         position: fixed;
-        overflow: hidden;
-        width:100%;
+        width:90%;
         display:flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
-        background-color: gold
+        background-color: gold;
+        border: black 2px solid;
+        height: 150px;
     }
 
     #header{
         order:1;
-        width: 440px;
+        width: 50%;
     }
 
     #header>img{
@@ -692,7 +720,8 @@
 
     #login{
         order:2;
-        width:250px;
+        width:25%;
+        overflow: hidden;
     }
 
     #formLogin{
@@ -706,7 +735,6 @@
         background-color: black;
         color:gold;
         border:white;
-        margin: 10px;
         font-weight: bold;
     }
 
@@ -724,16 +752,22 @@
 
     #navegacionPagina>ul{
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         flex-direction: row;
         padding:0;
         text-align: center;
+        width:100%;
+        margin:auto;
     }
 
     #navegacionPagina>ul>li{
         background-color: white;
-        width:18%;
+        width:auto;
         border-radius: 5px;
+        height:auto;
+        display:flex;
+        align-items: center;
+        margin:auto;
     }
 
     #navegacionPagina>ul>li:hover{
@@ -744,7 +778,7 @@
     }
 
     #navegacionPagina>ul>li>a{
-        font-family: cuprum;
+        font-family: Cuprum;
         font-weight: bold;
         text-align:center;
     }
@@ -754,71 +788,102 @@
     }
 
     #contedorContenido{
-        margin-top: 160px;
+        margin-top: 150px;
+        width:100%;
     }
 
     #horarios{
-        border:black 1px solid;
+        clear:both;
     }
 
     #horarios>h2{
         background-color: black;
         color: gold;
     }
+    
+    #espacioTablas{
+        margin: auto;
+        padding:0;
+        width:100%;
+    }
 
     #espacioTablas>h3{
         background-color: gold;
-        color:black
     }
 
     #espacioActiv{
+        width:100%;
         display: flex;
-        flex-direction: row;
-        align-items: center;
+        justify-content: space-between;
+        align-items: flex-start;
+        overflow: scroll;
     }
 
     #tablaActividades{
-        width:80%;
-        text-align: center;
-        font-weight: bold;
-        font-family: Cuprum;
-        border-color: black;
+        width:75%;
+        border: none;
+        text-align:center;
     }
 
     #formularioAct{
-        width:15%;
-        float: right;
         margin:auto;
-        font-family: Cuprum;
-    }
-
-    #boton1{
-        background-color: gold;
-        font-weight: bold;
+        padding: 0;
+        float:left;
+        width:20%;
     }
 
     #espacioFisios{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+        width:100%;
+        display:flex;
+        justify-content: space-between;
+        align-items: flex-start;
     }
 
     #tablaFisios{
-        width:80%;
-        text-align: center;
-        font-weight: bold;
-        font-family: Cuprum;
+        width:75%;
+        background-color:white;
+        border: none;
+        text-align:center;
+    }
+
+
+    tbody>tr>th,td{
+        font-family: Kaushan Script;
+        font-weight: normal;
+    }
+
+    tr:hover{
+        background-color: gold;
+        color:black;
+    }
+
+    tr>th{
+        background-color: gold;
+        color:black;
+        font-family: Kaushan Script;
     }
 
     #formularioFis{
-        width:15%;
-        float: right;
         margin:auto;
-        font-family: Cuprum;
+        padding: 0;
+        float:left;
+        width:20%;
+    }
+
+    #boton1{
+        background-color: black;
+        color:gold;
+        font-weight: bold;
     }
 
     #boton2{
-        background-color: gold;
+        background-color: black;
+        color:gold;
+        font-weight: bold;
+    }
+
+    #formulario{
+        font-family: Kaushan Script;
         font-weight: bold;
     }
 
@@ -1125,8 +1190,7 @@
     }
 }
 
-@media(max-width:600px){
-/*@media (max-width:599px){*/
+@media only screen and (max-width:600px) and (min-width:300px){
     *{
         list-style-type: none;
     }
@@ -1155,36 +1219,32 @@
         display:none;
     }
 
+    #navegacionPagina>ul> #ofertasTablet{
+        display: none;
+    }
+
     body{
         margin:auto;
         padding:0;
-        width: 100%;
-        border: black 1px solid;
+        width: 90.3%;
+        border: black 2px solid;
     }
 
-    #contenedorMonitor{
+    #contenedorFijo{
         position: fixed;
-        overflow: hidden;
-        width:100%;
+        width:90%;
         display:flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-around;
-        width:100%;
+        justify-content: space-between;
         background-color: gold;
-        position: fixed;
-        overflow: hidden;
-        width:100%;
-    }
-
-    #contedorContenido{
-        margin-top: 160px;
+        border: black 2px solid;
+        height: 170px;
     }
 
     #header{
         order:1;
-        width: 100%;
-        display:flex;
+        width: 50%;
     }
 
     #header>img{
@@ -1195,21 +1255,21 @@
 
     #login{
         order:2;
-        width:40%;
+        width:25%;
+        overflow: hidden;
     }
 
     #formLogin{
         padding:0;
         margin: 2px;
         font-weight: bold;
-        text-align: left;
+        text-align: right;
     }
 
     #botonLogin{
         background-color: black;
         color:gold;
         border:white;
-        margin: 10px;
         font-weight: bold;
     }
 
@@ -1219,42 +1279,55 @@
         font-size: 20px;
     }
 
-    #usuario, #password{
-        width:80%;
-    }
-
     #navegacionPagina{
         order:3;
-        width:40%;
-        float:right;
+        width:100%;
+        padding: 0;
     }
-    
+
     #navegacionPagina>ul{
-        width:100%;
-        padding:0;
         display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-    }
-    
-    #navegacionPagina>ul>li{
-        width:100%;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        flex-direction: row;
         padding:0;
-        margin-bottom: 5px;
-        text-align: right;
+        text-align: center;
+        width:100%;
+        margin:auto;
+    }
+
+    #navegacionPagina>ul>li{
         background-color: white;
-        color:black;
-        font-weight: bold;
-        font-size:12px;
+        width:auto;
+        border-radius: 5px;
+        height:auto;
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+        margin:auto;
+        margin-top:10px;
     }
 
     #navegacionPagina>ul>li:hover{
         text-align: center;
-        color:black;
-        font-weight: bold;
-        font-size:10px;
+        color:white;
         transition: background-color 1s ease;
-        color: white;
+        background-color: black;
+    }
+
+    #navegacionPagina>ul>li>a{
+        font-family: Cuprum;
+        font-weight: bold;
+        text-align:center;
+    }
+
+    #navegacionPagina>ul>li>a:hover{
+        color:white;
+    }
+
+    #contedorContenido{
+        margin-top: 170px;
+        width:100%;
     }
 
     #horarios{
@@ -1262,6 +1335,66 @@
         flex-direction: column;
         justify-content: center;
         text-align: center;
+        overflow: scroll;
+    }
+
+    #horarios>h2{
+        background-color: black;
+        color: gold;
+    }
+    
+    #espacioTablas{
+        margin: auto;
+        padding:0;
+        width:100%;
+    }
+
+    #espacioTablas>h3{
+        background-color: gold;
+    }
+
+    #espacioActiv{
+        width:100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    #espacioFisios{
+        width:100%;
+        display:flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    #tablaFisios{
+        width:75%;
+        background-color:white;
+        border: none;
+        text-align:center;
+    }
+
+    tbody>tr>th,td{
+        font-family: Kaushan Script;
+        font-weight: normal;
+    }
+
+    tr:hover{
+        background-color: gold;
+        color:black;
+    }
+
+    tr>th{
+        background-color: black;
+        color:white;
+        font-family: Kaushan Script;
+    }
+
+    #formularioFis{
+        margin:auto;
+        padding: 0;
+        float:left;
+        width:20%;
     }
 
 
@@ -1286,28 +1419,6 @@
         font-weight: bold;
         width:25%;
         text-align: center;
-    }
-
-    .ampliarMovil{
-        transition: transform .2s;
-    }
-
-    .ampliarMovil:hover{
-        transform: scale(1.1);
-    }
-
-    #tablaFisios{
-        font-size: 12px;
-        width:90%;
-        text-align: center;
-        font-weight: bold;
-        border: white 2px solid;
-    }
-
-    #formularioFis{
-        font-family: Cuprum;
-        font-size: 15px;
-        font-weight: bold;
     }
 
     #boton2{
@@ -1414,7 +1525,6 @@
     #dias{
         margin-top: 50px;
         width:90%;
-        border: black 1px solid;
         font-size: 20px;
         font-weight: bold;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -1426,7 +1536,6 @@
     }
 
     #dias>ul{
-        border-bottom: black 1px solid;
         width:100%;
         margin:auto;
         padding:0;
@@ -1449,6 +1558,7 @@
         font-weight: bold;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         text-align: center;
+        margin-top: 20px;
     }
 
     #cerrar>h3{
@@ -1473,10 +1583,10 @@
     }
 
     #direccion{
+        margin-top: 20px;
         text-align: center;
         font-size: 20px;
         width: 90%;
-        border: black 1px solid;
     }
 
     #direccion>p{
@@ -1493,15 +1603,16 @@
     }
 
     #ofertas{
+        margin-top: 20px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         width: 90%;
-        border: black 1px solid;
     }
 
     #ofertas>h3{
         text-align: center;
+        font-size: 22px;
     }
 
     #oferta1,#oferta2,#oferta3{
@@ -1594,3 +1705,8 @@
 
 }
 
+@media only screen and (max-width:299px){
+    *{
+        display: none;
+    }
+}
