@@ -36,6 +36,8 @@
         font-family: Cuprum;
     }
 
+    
+
     /*los títulos h2 y h3 deberan estar centrados*/
     h3, h2{
         text-align: center;
@@ -140,8 +142,13 @@
 /******************************************************/
 @media only screen and (min-width: 1000px){
 
+    /*A toda la página: que las listas no tengan estilo por defecto*/
     *{
         list-style-type: none;
+    }
+
+    table, tbody, tr, td{
+        border:none;
     }
 
     /*secciones escritas exclusivamente para modelo tablet que no aparezcan*/
@@ -153,7 +160,8 @@
     a{
         text-decoration: none;
         color:black;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-family: Cuprum;
+        font-size: 25px;
     }
 
     /*estilo de los h2*/
@@ -305,7 +313,7 @@
     }
 
         /*Seccion de la página donde están los horarios de fisios y actividades*/
-        /*SECTION > HORARIOS*/
+        /*SECTION > ARTICLE HORARIOS*/
         #horarios{
             clear:both;
             background-color: gold;
@@ -316,6 +324,11 @@
                 margin: auto;
                 padding:0;
                 width:100%;
+            }
+
+            /*tablas sin borde*/
+            table, tbody, tr, td{
+                border:none;
             }
 
             /*Definimos el peso de la letra y la fuente de los th y td de las tablas*/
@@ -402,7 +415,7 @@
                         font-weight: bold;
                     }
 
-        /*SECTION > INDICES*/
+        /*SECTION > ARTICLE INDICES*/
         /*Parte de los indices (IMC Y FCM)*/ 
         #indices{
             background-color: black;
@@ -427,12 +440,13 @@
                     float:right;
                     width:50%;
                     color:white;
-                    font-weight: bold;
-                    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                    font-family: Cuprum;
                     background-color: black;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
+                    font-size: 22px;
+                    font-weight: bold;
                 }
 
                     /*h3 de imc*/
@@ -453,21 +467,37 @@
 
                 /*Parte de FCM, estilos y distribucion*/    
                 #fcm{
-                    float:right;
+                    float:left;
                     width:50%;
                     color:white;
                     font-family: Cuprum;
                     background-color: black;
                     display: flex;
                     flex-direction: column;
-                    justify-content: center;
+                    align-items: center;
                     border-right: gold 1px solid;
+                    font-weight: bold;
                 }
 
                     /*Alineacion y color de todos los h3 de fcm*/                
                     #fcm>h3{
                         text-align: center;
                         color: gold;
+                    }
+
+                    /*fmc de cada persona*/
+                    #fcmpersonal{
+                        text-align: center;
+                        font-size: 22px;
+                        font-family: Cuprum;
+                    }
+
+                    /*Lista de los distintos niveles de fcm*/
+                    #listafcm{
+                        text-align: left;
+                        font-size: 13px;
+                        width:50%;
+                        font-size: 22px;
                     }
 
                     /*Boton de FCM*/
@@ -480,8 +510,8 @@
                         padding: 0;
                     }
         
-        /*SECTION > FOTOS*/
-        /*Ancho y color de fondo del */
+        /*SECTION > ARTICLE FOTOS*/
+        /*Ancho y color de fondo del article fotos*/
         #articleFotos{
             background-color: gold;
             width:100%;
@@ -646,16 +676,16 @@
                 border: black 1px solid;
             }
 
-                /*Ofertas 1 2 y 3 que tengan este estilo*/
-                #oferta1,#oferta2,#oferta3{
-                    margin-top:15px;
-                    text-align: center;
-                    border: black 1px solid;
-                }
+            /*Ofertas 1 2 y 3 que tengan este estilo*/
+            #oferta1,#oferta2,#oferta3{
+                margin-top:15px;
+                text-align: center;
+                border: black 1px solid;
+            }
 
                 /*Clase para definir los titulos de las ofertas*/
                 .tituloOferta{
-                    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                    font-family: Cuprum;
                     font-weight: bold;
                     font-size: 28px;
                     background-color: gold;
@@ -663,7 +693,7 @@
 
                 /*Clase para definir los precios de las ofertas*/
                 .precio{
-                    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                    font-family: Cuprum;
                     font-weight: bold;
                     font-size: 20px;
                     background-color: black;
@@ -696,7 +726,7 @@
             padding: 0;
         }
 
-        /*Contenido que engloba a las redes del footer*/
+            /*Contenido que engloba a las redes del footer*/
             #contenidorrss{
                 width:40%;
                 margin:auto;
@@ -711,7 +741,7 @@
 
                 /*Texto de "siguenos en redes" del footer*/
                 #contenidorrss>p{
-                    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                    font-family: Cuprum;
                     font-weight: bold;
                     text-align: center;
                     font-size: 20px;
@@ -740,7 +770,7 @@
                     margin:2px;
                     text-align: left;
                     font-size: 18px;
-                    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                    font-family: Cuprum;
                     font-weight: bold;
                     color:white;
                 }
@@ -774,7 +804,7 @@
     a{
         text-decoration: none;
         color:black;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-family: Cuprum;
     }
 
     /*estilo de los h2*/
@@ -917,8 +947,7 @@
         margin-top: 150px;
         width:100%;
     }
-
-        /*SECTION > HORARIOS*/
+        /*SECTION > ARTICLE HORARIOS*/
         #horarios{
             clear:both;
         }
@@ -934,6 +963,11 @@
                     margin: auto;
                     padding:0;
                     width:100%;
+                }
+
+                /*Tablas sin borde*/
+                table, tbody, tr, td{
+                    border:none;
                 }
                 
                 /*Definimos el peso de la letra y la fuente de los th y td de las tablas*/
@@ -976,20 +1010,21 @@
                         text-align:center;
                     }
 
-                    /*Formulario de actividades*/
-                    #formularioAct{
-                        margin:auto;
-                        padding: 0;
-                        float:left;
-                        width:20%;
-                    }
+                        /*Formulario de actividades*/
+                        #formularioAct{
+                            margin:auto;
+                            padding: 0;
+                            float:left;
+                            width:20%;
+                            font-family: Cuprum;
+                        }
 
-                    /*Boton de "mostrar del formulario de actividades*/
-                    #boton1{
-                        background-color: black;
-                        color:gold;
-                        font-weight: bold;
-                    }
+                            /*Boton de "mostrar del formulario de actividades*/
+                            #boton1{
+                                background-color: black;
+                                color:gold;
+                                font-weight: bold;
+                            }
 
                 /*Espacio de fisios (tabla + form)*/
                 #espacioFisios{
@@ -1007,354 +1042,405 @@
                         text-align:center;
                     }
 
-                    /*Formulario fisios*/
-                    #formularioFis{
+                        /*Formulario fisios*/
+                        #formularioFis{
+                            margin:auto;
+                            padding: 0;
+                            float:left;
+                            width:20%;
+                            font-family: Cuprum;
+                        }
+
+                            /*Boton de "mostrar del formulario de fisios*/
+                            #boton2{
+                                background-color: black;
+                                color:gold;
+                                font-weight: bold;
+                            }
+
+        /*SECTION > INDICES*/
+        /*Parte de los indices (IMC Y FCM)*/ 
+        #indices{
+            background-color: gold;
+            border: black 1px solid;
+        }
+
+            /*Div que engloba a IMC + FCM*/
+            #espacioIndices{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+                /*Parte de FCM, estilos y distribucion*/
+                #fcm{
+                    width:50%;
+                    color:white;
+                    font-family: Cuprum;
+                    font-weight: bold;
+                    background-color: gold;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    color:black;
+                }
+                
+                    /*div que te dice tu fcm*/
+                    #fcmpersonal{
+                        text-align: center;
+                        font-family: Cuprum;
+                        font-weight: bold;
+                    }
+
+                    /*Lista de los distintos niveles de fcm*/
+                    #listafcm{
+                        text-align: left;
+                        font-size: 13px;
+                        width:50%;
+                    }
+
+                    /*Alineacion y color de todos los h3 de fcm*/
+                    #fcm>h3{
+                        text-align: center;
+                        color: black;
+                    }
+
+                    /*Lista de fcm, tamaño fuente*/
+                    #listafcm>li{
+                        font-size: 16.5px;
+                    }
+
+                    /*Boton de FCM*/
+                    #botonFCM{
+                        background-color: white;
+                        color:black;
+                        font-weight: bold;
+                        width: 30%;
                         margin:auto;
                         padding: 0;
-                        float:left;
-                        width:20%;
+                    }
+
+                /*Distribucion y estilos de IMC*/
+                #imc{
+                    width: 50%;
+                    float:right;
+                    font-family: Cuprum;
+                    font-weight: bold;
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                    /*h3 de imc*/
+                    #imc>h3{
+                        text-align: center;
+                        color: black;
+                    }
+
+                    /*Lista con los niveles de IMC*/
+                    #listaimc{
+                        float: left;
+                        font-size: 12px;
+                        text-align: left;
+                        color:black;
+                    }
+
+                    /*Parrafo que te muestra tu imc, tamaño fuente*/
+                    #listaimc>li{
+                        font-size: 15px;
+                    }
+
+                    /*Boton de "calcular" del imc*/
+                    #botonIMC{
+                        background-color: white;
+                        color:black;
+                        font-weight: bold;
+                        width: 30%;
+                        margin:auto;
+                        padding: 0;
+                    }
+
+        /*SECTION > ARTICLE FOTOS*/
+        /*Ancho y color de fondo del */
+        #articleFotos{
+            width:55.3%;
+            float: left;
+            height:100%;
+            background-color: black;
+            margin-bottom: 0;
+        }
+
+            /*Estilo del titulo de h2*/
+            #articleFotos>h2{
+                color:gold;
+            }
+
+            /*Espacio donde metes todas las fotos (GALERIA)*/
+            #espacioFotos{
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: space-between;
+                width:100%;
+                background-color: black;
+            }
+                /*Imagenes de espacio de fotos*/
+                #espacioFotos>img{
+                    width:49.25%;
+                    margin:1px;
+                }
+
+                    /*Clase ampliar -> transicion de transformacion*/
+                    .ampliar{
+                        transform: transition .2s;
+                    }
+
+                    /*Cuando pase el raton se ampliará la foto*/
+                    .ampliar:hover{
+                        transform: scale(1.5);
+                    }
+
+        /*SECTION > ARTICLE APERTURA*/
+        /*Este article no estaba en el mediaquery del monitor*/
+        /*He decidido que en tablet no va a haber aside, por lo tanto dias de apertura y cierre las he metido en section*/
+        #apertura{
+            padding: 0;
+            float: right;
+            width: 44.5%;
+            background-color: black;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border-left: white;
+            background-color: black;
+            height: 100%;
+        }
+
+            /*Estilo de los h3 de dias*/
+            #diasTablet>h3{
+                background-color: gold;
+                color:black;
+                text-align: center;
+            }
+
+                /*Lista de días*/
+                #diasTablet>ul{
+                    width:100%;
+                    margin:auto;
+                    padding:0;
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: column;
+                }
+
+                    /*Elementos de la lista de dias*/
+                    #diasTablet>ul>li{
+                        margin:2px;
+                        text-align: left;
+                        color:white;
+                        font-size: 18px;
                         font-family: Cuprum;
                     }
 
-                /*Boton de "mostrar del formulario de fisios*/
-                #boton2{
-                    background-color: black;
-                    color:gold;
-                    font-weight: bold;
+            /*Dias de cierre del gimnasio, version media tablet*/
+            #cerrarTablet{
+                width:100%;
+                font-size: 20px;
+                text-align: center;
+            }
+
+                /*Estilo del h3 de cerrar*/
+                #cerrarTablet>h3{
+                    background-color: gold;
+                    color:black;
                 }
 
-    #indices{
-        background-color: gold;
-        border: black 1px solid;
-    }
+                /*Lista de los dias de cierre*/
+                #cerrarTablet>ul{
+                    width:100%;
+                    margin:auto;
+                    padding:0;
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: column;
+                }
 
-    #espacioIndices{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
+                    /*Elementos de la lista de los dias de cierre*/
+                    #cerrarTablet>ul>li{
+                        margin:2px;
+                        text-align: left;
+                        color:white;
+                        font-size: 18px;
+                        font-family: Cuprum;
+                    }
 
-    #fcm{
-        width:50%;
-        color:white;
-        font-family: Cuprum;
-        font-weight: bold;
-        background-color: gold;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        color:black;
-    }
+        /*SECTION > ARTICLEOFERTAS TABLET*/
+        /*He creado otra section única para tablet, para ponerla después de apertura y cierre al no haber aside*/
+        /*Parte de ofertas unico estilo de tablet*/
+        #ofertasTablet{
+            width:100%;
+            margin: auto;
+            padding:0;
+            clear:both;
+            text-align: center;
+            background-color: gold;
+        }
 
-    #fcmpersonal{
-        text-align: center;
-        font-family: Cuprum;
-        font-weight: bold;
-    }
+            /*h3 de ofertas*/
+            #ofertasTablet>h3{
+                font-size: 35px;
+            }
 
-    #listafcm{
-        text-align: left;
-        font-size: 13px;
-    }
+                /*Parte de ofertas tablet para definir su distribucion*/
+                #espacioOfertasTablet{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                }
 
-    #fcm>h3{
-        text-align: center;
-        color: black;
-    }
+                    /*Ofertas 1 2 y 3 que tengan este estilo*/
+                    #oferta1, #oferta2, #oferta3{
+                        margin:4px;
+                        border: black 1px solid;
+                        background-color: white;
+                    }
 
-    #botonFCM{
-        background-color: white;
-        color:black;
-        font-weight: bold;
-        width: 30%;
-        margin:auto;
-        padding: 0;
-    }
+                    /*Clase para definir los titulos de las ofertas*/
+                    .tituloOferta{
+                        font-family: Cuprum;
+                        font-weight: bold;
+                        font-size: 20px;
+                        background-color: gold;
+                    }
 
-    #imc{
-        width: 50%;
-        float:right;
-        font-family: Cuprum;
-        font-weight: bold;
-        display: flex;
-        flex-direction: column;
-    }
+                    /*Clase para definir los precios de las ofertas*/
+                    .precio{
+                        font-family: Cuprum;
+                        font-weight: bold;
+                        font-size: 20px;
+                        background-color: black;
+                        color:white;
+                    }
 
-    #imc>h3{
-        text-align: center;
-        color: black;
-    }
+                    /*Descripcion de la oferta*/
+                    .textoOferta{
+                        font-family: Cuprum;
+                    }
 
-    #listaimc{
-        float: left;
-        font-size: 12px;
-        text-align: left;
-        color:black;
-    }
+        /*FOOTER - TABLET*/
+        /*Footer de la página*/
+        footer{
+            clear:both;
+            width:100%;
+            height: 200px;
+            background-color: black;
+            color:white;
+            display:flex;
+            flex-direction: row;
+            justify-content:center;
+        }
 
-    #botonIMC{
-        background-color: white;
-        color:black;
-        font-weight: bold;
-        width: 30%;
-        margin:auto;
-        padding: 0;
-    }
+            /*FOOTER > RRSS*/
+            /*Parte de enlaces de redes del footer*/
+            #rrss{
+                width:50%;
+                margin:auto;
+                padding: 0;
+            }
 
-    #articleFotos{
-        width:55.3%;
-        float: left;
-        height:90%;
-        background-color: black;
-        margin-bottom: 0;
-    }
+                /*Contenido que engloba a las redes del footer*/
+                #contenidorrss{
+                    width:60%;
+                    margin:auto;
+                    padding: 0;
+                    text-align: center;
+                }
 
-    #articleFotos>h2{
-        color:gold;
-    }
+                    /*Anchura de las imagenes del contenidorrss*/
+                    #contenidorrss>a>img{
+                        width:40px;
+                    }
 
-    #espacioFotos{
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-between;
-        width:100%;
-        background-color: black;
-    }
+                    /*Texto de "siguenos en redes" del footer*/
+                    #contenidorrss>p{
+                        font-family: Cuprum;
+                        font-weight: bold;
+                        text-align: center;
+                        font-size: 20px;
+                    }
 
-    #espacioFotos>img{
-        width:49.25%;
-        margin:1px;
-    }
+            /*FOOTER > ENLACESFOOTER*/
+            /*Enlaces del footer de contacto (unete, sugerencias...)*/
+            #enlacesFooter{
+                margin:auto;
+                padding: 0;
+                width:40%;
+            }
 
-    .ampliar{
-        transition: transform .2s;
-    }
+                /*Lista de los enlaces del footer*/
+                #enlacesFooter>ul{
+                    width:95%;
+                    margin:auto;
+                    padding:0;
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: column;
+                }
 
-    .ampliar:hover{
-        transform: scale(1.5);
-        border: black 1px solid;
-    }
+                    /*Elementos de la lista de enlaces del footer*/
+                    #enlacesFooter>ul>li>a{
+                        margin:2px;
+                        text-align: left;
+                        font-size: 15px;
+                        font-family: Cuprum;
+                        font-weight: bold;
+                        color:white;
+                    }
 
-    #apertura{
-        padding: 0;
-        float: right;
-        width: 44.5%;
-        background-color: black;
-        color: white;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        border-left: white;
-        height: 504px;
-    }
-
-    #diasTablet, #cerrarTablet, #direccionTablet{
-        margin-bottom: 10px;
-    }
-
-    #diasTablet>h3{
-        background-color: gold;
-        color:black;
-        text-align: center;
-    }
-
-    #diasTablet>ul{
-        border-bottom: black 1px solid;
-        width:100%;
-        margin:auto;
-        padding:0;
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-    }
-
-    #diasTablet>ul>li{
-        margin:2px;
-        text-align: left;
-        color:white;
-        font-size: 15px;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    }
-
-    #cerrarTablet{
-        width:100%;
-        font-size: 20px;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        text-align: center;
-    }
-
-    #cerrarTablet>h3{
-        background-color: gold;
-        color:black;
-    }
-
-    #cerrarTablet>ul{
-        width:100%;
-        margin:auto;
-        padding:0;
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-    }
-
-    #cerrarTablet>ul>li{
-        margin:2px;
-        text-align: left;
-        color:white;
-        font-size: 15px;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    }
-
-    #direccionTablet{
-        margin:auto;
-        padding:0;
-        text-align: center;
-    }
-
-    #direccionTablet>p{
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: 15px;
-        font-weight: bold;
-    }
-
-    #direccionTablet>h3{
-        background-color: gold;
-        color: black;
-    }
-
-    #ofertasTablet{
-        width:100%;
-        margin: auto;
-        padding:0;
-        clear:both;
-        text-align: center;
-        background-color: gold;
-    }
-
-    #ofertasTablet>h3{
-        font-size: 35px;
-    }
-
-    #espacioOfertasTablet{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    #oferta1, #oferta2, #oferta3{
-        margin:4px;
-        border: black 1px solid;
-        background-color: white;
-    }
-
-    .tituloOferta{
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        font-weight: bold;
-        font-size: 20px;
-        background-color: gold;
-    }
-
-    .precio{
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        font-weight: bold;
-        font-size: 20px;
-        background-color: black;
-        color:white;
-    }
-
-    .textoOferta{
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    }
-
-    footer{
-        clear:both;
-        width:100%;
-        height: 200px;
-        background-color: black;
-        color:white;
-        display:flex;
-        flex-direction: row;
-        justify-content:center;
-    }
-
-    #rrss{
-        width:50%;
-        margin:auto;
-        padding: 0;
-    }
-
-    #contenidorrss{
-        width:60%;
-        margin:auto;
-        padding: 0;
-        text-align: center;
-    }
-
-    #contenidorrss>a>img{
-        width:40px;
-    }
-
-    #contenidorrss>p{
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        font-weight: bold;
-        text-align: center;
-        font-size: 20px;
-    }
-
-    #enlacesFooter{
-        margin:auto;
-        padding: 0;
-        width:40%;
-    }
-    #enlacesFooter>ul{
-        width:95%;
-        margin:auto;
-        padding:0;
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-    }
-
-    #enlacesFooter>ul>li>a{
-        margin:2px;
-        text-align: left;
-        font-size: 15px;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        font-weight: bold;
-        color:white;
-    }
-
-    #enlacesFooter>ul>li>a:hover{
-        color:gold;
-    }
+                    /*Cuando pases el raton por los enlaces... (hover)*/
+                    #enlacesFooter>ul>li>a:hover{
+                        color:gold;
+                    }
 }
 
+
+
+/*/******************************************************/
+/*MEDIA QUERY -> MÓVIL*/
+/******************************************************/
 @media only screen and (max-width:600px) and (min-width:300px){
+
+    /*A toda la página: que las listas no tengan estilo por defecto*/
     *{
         list-style-type: none;
     }
 
+    /*estilo de todos los enlaces*/
     a{
         text-decoration: none;
         color:black;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-family: Cuprum;
+        font-size: 18px;
     }
 
+    /*estilo de los h2*/
     h2{
         font-family: Bebas Neue;
         font-size: 30px;
     }
 
+    /*estilo de los h3*/
     h3{
         font-family: Kaushan Script;
         font-size: 15px;
     }
     
+    /*estilo de los parrafos*/
     p{
         font-family: Arial, Helvetica, sans-serif;
     }
 
+    /*Estos elementos no aparecerán*/
     #ofertasTablet, #apertura, #fotoEncabezado, #direccionTablet>a{
         display:none;
     }
@@ -1363,6 +1449,7 @@
         display: none;
     }
 
+    /*BODY - MOVIL*/
     body{
         margin:auto;
         padding:0;
@@ -1370,6 +1457,8 @@
         border: black 2px solid;
     }
 
+    /*HEADER, NAV - MOVIL*/
+    /*Contenedor que va a permanecer fijo en la página. Parte superior*/
     #contenedorFijo{
         position: fixed;
         width:90%;
@@ -1379,474 +1468,561 @@
         justify-content: space-between;
         background-color: gold;
         border: black 2px solid;
-        height: 170px;
+        height: 180px;
     }
 
-    #header{
-        order:1;
-        width: 50%;
-    }
+        /*Header del contenedor fijo*/
+        #header{
+            order:1;
+            width: 50%;
+        }
 
-    #header>img{
-        margin:auto;
-        padding:0;
-        width:90%;
-    }
+            /*Foto del header (logo página)*/
+            #header>img{
+                margin:auto;
+                padding:0;
+                width:90%;
+            }
 
-    #login{
-        order:2;
-        width:25%;
-        overflow: hidden;
-    }
+        /*Login de la página dentro del contenedor fijo*/
+        #login{
+            order:2;
+            width:25%;
+            overflow: hidden;
+        }
 
-    #formLogin{
-        padding:0;
-        margin: 2px;
-        font-weight: bold;
-        text-align: right;
-    }
+            /*Formulario del login*/
+            #formLogin{
+                padding:0;
+                margin: 2px;
+                font-weight: bold;
+                text-align: right;
+            }
 
-    #botonLogin{
-        background-color: black;
-        color:gold;
-        border:white;
-        font-weight: bold;
-    }
+            /*Boton de login*/
+            #botonLogin{
+                background-color: black;
+                color:gold;
+                border:white;
+                font-weight: bold;
+            }
 
-    #labelU, #labelC{
-        margin: 2px;
-        font-family: Cuprum;
-        font-size: 20px;
-    }
+                /*Campos a rellenar del login (U-> usuario, C->clave)*/
+                #labelU, #labelC{
+                    margin: 2px;
+                    font-family: Cuprum;
+                    font-size: 20px;
+                }
+        
+        /*Parte de la navegacion de la página*/
+        #navegacionPagina{
+            order:3;
+            width:100%;
+            padding: 0;
+        }
 
-    #navegacionPagina{
-        order:3;
-        width:100%;
-        padding: 0;
-    }
+           /*Lista de la parte de la navegación de la página*/ 
+            #navegacionPagina>ul{
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                flex-direction: row;
+                padding:0;
+                text-align: center;
+                width:100%;
+                margin:auto;
+            }
 
-    #navegacionPagina>ul{
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        flex-direction: row;
-        padding:0;
-        text-align: center;
-        width:100%;
-        margin:auto;
-    }
+                /*Elementos de la lista de la navegacion de la pagina*/
+                #navegacionPagina>ul>li{
+                    background-color: white;
+                    width:auto;
+                    border-radius: 5px;
+                    height:auto;
+                    display:flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin:auto;
+                    margin-top:10px;
+                }
 
-    #navegacionPagina>ul>li{
-        background-color: white;
-        width:auto;
-        border-radius: 5px;
-        height:auto;
-        display:flex;
-        align-items: center;
-        justify-content: space-between;
-        margin:auto;
-        margin-top:10px;
-    }
+                /*Hover de los elementos de la página*/
+                #navegacionPagina>ul>li:hover{
+                    text-align: center;
+                    color:white;
+                    transition: background-color 1s ease;
+                    background-color: black;
+                }
 
-    #navegacionPagina>ul>li:hover{
-        text-align: center;
-        color:white;
-        transition: background-color 1s ease;
-        background-color: black;
-    }
+                    /*Estilos a los enlaces de la lista*/
+                    #navegacionPagina>ul>li>a{
+                        font-family: Cuprum;
+                        font-weight: bold;
+                        text-align:center;
+                    }
 
-    #navegacionPagina>ul>li>a{
-        font-family: Cuprum;
-        font-weight: bold;
-        text-align:center;
-    }
+                    /*Hover a los enlaces de la lista del nav principal*/
+                    #navegacionPagina>ul>li>a:hover{
+                        color:white;
+                    }
 
-    #navegacionPagina>ul>li>a:hover{
-        color:white;
-    }
-
+    /*Bloque de contenido de la página a partir del contenedor fijo*/
     #contedorContenido{
-        margin-top: 170px;
+        margin-top: 180px;
         width:100%;
     }
+        /*SECTION - MOVIL*/
+        /*Section de la página*/
+            /*SECTION > ARTICLE HORARIOS*/
+            /*Seccion de la página donde están los horarios de fisios y actividades*/
+            #horarios{
+                display:flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                overflow: scroll;
+            }
+                /*Estilo de h2 de horarios*/
+                #horarios>h2{
+                    background-color: black;
+                    color: gold;
+                }
+        
+                /*Espacio de las tablas de fisios y horarios*/
+                #espacioTablas{
+                    margin: auto;
+                    padding:0;
+                    width:100%;
+                }
 
-    #horarios{
-        display:flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        overflow: scroll;
-    }
+                /*tablas sin borde*/
+                table, tbody, tr, td{
+                    border:none;
+                }
 
-    #horarios>h2{
-        background-color: black;
-        color: gold;
-    }
-    
-    #espacioTablas{
-        margin: auto;
-        padding:0;
-        width:100%;
-    }
+                /*Definimos el peso de la letra y la fuente de los th y td de las tablas*/
+                tbody>tr>th,td{
+                    font-family: Cuprum;
+                    font-weight: bold;
+                }
+            
+                /*Hover de las filas*/
+                tr:hover{
+                    background-color: gold;
+                    color:black;
+                }
+            
+                /*Estilo de cabeceras*/
+                tr>th{
+                    background-color: black;
+                    color:white;
+                    font-family: Kaushan Script;
+                }
 
-    #espacioTablas>h3{
-        background-color: gold;
-    }
+                    /*Estilo de h3 dentro del espacio de tablas*/
+                    #espacioTablas>h3{
+                        background-color: gold;
+                    }
 
-    #espacioActiv{
-        width:100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-    }
+                        /*Espacio de actividades (tabla + form)*/
+                        #espacioActiv{
+                            width:100%;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: flex-start;
+                        }
 
-    #espacioFisios{
-        width:100%;
-        display:flex;
-        justify-content: space-between;
-        align-items: flex-start;
-    }
+                            /*Tabla actividades*/
+                            #tablaActividades{
+                                font-size: 12px;
+                                width:90%;
+                                text-align: center;
+                                font-weight: bold;
+                                border: white 2px solid;
+                            }
+                    
+                                /*Formulario de actividades*/
+                                #formularioAct{
+                                    font-family: Cuprum;
+                                    font-size: 15px;
+                                    font-weight: bold;
+                                    width:100%;
+                                    text-align: center;
+                                }
 
-    #tablaFisios{
-        width:75%;
-        background-color:white;
-        border: none;
-        text-align:center;
-    }
+                                    /*Boton de "mostrar del formulario de actividades*/
+                                    #boton1{
+                                        background-color: gold;
+                                        font-weight: bold;
+                                        width:25%;
+                                        text-align: center;
+                                    }
+                    /*Espacio de fisios (tabla + form)*/
+                    #espacioFisios{
+                        width:100%;
+                        display:flex;
+                        justify-content: space-between;
+                        align-items: flex-start;
+                    }
 
-    tbody>tr>th,td{
-        font-family: Cuprum;
-        font-weight: bold;
-    }
+                        /*Tabla de fisios*/
+                        #tablaFisios{
+                            width:75%;
+                            background-color:white;
+                            border: none;
+                            text-align:center;
+                        }
 
-    tr:hover{
-        background-color: gold;
-        color:black;
-    }
+                            /*Formulario fisios*/
+                            #formularioFis{
+                                margin:auto;
+                                padding: 0;
+                                float:left;
+                                width:20%;
+                                font-family: Cuprum;
+                                font-weight: bold;
+                            }
 
-    tr>th{
-        background-color: black;
-        color:white;
-        font-family: Kaushan Script;
-    }
+                                /*Boton de "mostrar del formulario de fisios*/
+                                #boton2{
+                                    background-color: gold;
+                                    font-weight: bold;
+                                    width:25%;
+                                    text-align: center;
+                                }
+            
+            /*SECTION > ARTICLEINDICES*/
+            /*Parte de los indices (IMC Y FCM)*/
+            #indices{
+                background-color: black;
+            }
 
-    #formularioFis{
-        margin:auto;
-        padding: 0;
-        float:left;
-        width:20%;
-        font-family: Cuprum;
-        font-weight: bold;
-    }
+                /*Titulos de los indices*/
+                #indices>h2{
+                    text-align: center;
+                    color: gold;
+                }
 
+                /*Div que engloba a IMC + FCM*/
+                #espacioIndices{
+                    display: flex;
+                    flex-direction: column;
+                }
+        
+                    /*Distribucion y estilos de IMC*/
+                    #imc{
+                        width:100%;
+                        color:white;
+                        font-weight: bold;
+                        font-family: Cuprum;
+                        background-color: black;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                    }
 
-    #tablaActividades{
-        font-size: 12px;
-        width:90%;
-        text-align: center;
-        font-weight: bold;
-        border: white 2px solid;
-    }
+                        /*h3 de imc*/
+                        #imc>h3{
+                            text-align: center;
+                            color: gold;
+                        }
 
-    #formularioAct{
-        font-family: Cuprum;
-        font-size: 15px;
-        font-weight: bold;
-        width:100%;
-        text-align: center;
-    }
+                        /*Boton de "calcular" del imc*/
+                        #botonIMC{
+                            background-color: white;
+                            color:black;
+                            font-weight: bold;
+                            width: 30%;
+                            margin:auto;
+                            padding: 0;
+                        }
 
-    #boton1{
-        background-color: gold;
-        font-weight: bold;
-        width:25%;
-        text-align: center;
-    }
+                    /*Parte de FCM, estilos y distribucion*/ 
+                    #fcm{
+                        width:100%;
+                        color:white;
+                        font-weight: bold;
+                        font-family: Cuprum;
+                        background-color: black;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        border: gold 1px solid;
+                    }
 
-    #boton2{
-        background-color: gold;
-        font-weight: bold;
-        width:25%;
-        text-align: center;
-    }
+                        /*Alineacion y color de todos los h3 de fcm*/
+                        #fcm>h3{
+                            text-align: center;
+                            color: gold;
+                        }
 
-    #indices{
-        background-color: black;
-    }
+                        #fcmpersonal{
+                            text-align: center;
+                            font-family: Cuprum;
+                            font-weight: bold;
+                        }
 
-    #indices>h2{
-        text-align: center;
-        color: gold;
-    }
+                        /*Boton de FCM*/
+                        #botonFCM{
+                            background-color: white;
+                            color:black;
+                            font-weight: bold;
+                            width: 30%;
+                            margin:auto;
+                            padding: 0;
+                        }
 
-    #espacioIndices{
-        display: flex;
-        flex-direction: column;
-    }
-    
-    #imc{
-        width:100%;
-        color:white;
-        font-weight: bold;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        background-color: black;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
+            /*SECTION > ARTICLE FOTOS*/
+            /*Ancho y color de fondo del article fotos*/
+            #articleFotos{
+                background-color: black;
+                color:black;
+            }
 
-    #imc>h3{
-        text-align: center;
-        color: gold;
-    }
+                /*Espacio donde metes todas las fotos (GALERIA)*/
+                #espacioFotos{
+                    display:flex;
+                    flex-wrap: wrap;
+                    flex-direction: row;
+                    justify-content: space-around;
+                    background-color: black;
+                    text-align: center;
+                }
 
-    #botonIMC{
-        background-color: white;
-        color:black;
-        font-weight: bold;
-        width: 30%;
-        margin:auto;
-        padding: 0;
-    }
+                    /*Imagenes de espacio de fotos*/
+                    #espacioFotos>img{
+                        margin-top: 1px;
+                        width:98%;
+                    }
+            
+        /*ASIDE - MOVIL*/
+        /*Aside de la página*/
+        aside{
+            width:100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            height:100%;
+        }
 
-    #fcm{
-        width:100%;
-        color:white;
-        font-weight: bold;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        background-color: black;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        border: gold 1px solid;
-    }
+            /*ASIDE > DIAS*/
+            /*Parte de los dias de apertura. Estilo y distribucion*/
+            #dias{
+                margin-top: 50px;
+                width:90%;
+                font-size: 20px;
+                font-weight: bold;
+                font-family: Cuprum;
+                text-align: center;
+            }
 
-    #fcm>h3{
-        text-align: center;
-        color: gold;
-    }
+                /*Estilo de los h3 de dias*/
+                #dias>h3{
+                    background-color: gold;
+                }
 
-    #botonFCM{
-        background-color: white;
-        color:black;
-        font-weight: bold;
-        width: 30%;
-        margin:auto;
-        padding: 0;
-    }
+                    /*Lista de días*/
+                    #dias>ul{
+                        width:100%;
+                        margin:auto;
+                        padding:0;
+                        display: flex;
+                        justify-content: space-between;
+                        flex-direction: column;
+                    }
 
-    #articleFotos{
-        background-color: black;
-        color:black;
-    }
+                        /*Elementos de la lista de dias*/
+                        #dias>ul>li{
+                            margin:2px;
+                            text-align: left;
+                            color:black;
+                            font-size: 18px;
+                            font-family: Cuprum;
+                        }
+                
+                /*ASIDE > CERRAR*/
+                /*Dias de cierre del gimnasio*/
+                #cerrar{
+                    width:100%;
+                    font-size: 20px;
+                    font-weight: bold;
+                    font-family: Cuprum;
+                    text-align: center;
+                    margin-top: 20px;
+                }
 
-    
-    #espacioFotos{
-        display:flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: space-around;
-        background-color: black;
-        text-align: center;
-    }
+                    /*Estilo del h3 de cerrar*/
+                    #cerrar>h3{
+                        background-color: gold;
+                    }
 
-    #espacioFotos>img{
-        margin-top: 1px;
-        width:98%;
-    }
+                    /*Lista de los dias de cierre*/
+                    #cerrar>ul{
+                        width:100%;
+                        margin:auto;
+                        padding:0;
+                        display: flex;
+                        justify-content: space-between;
+                        flex-direction: column;
+                    }
 
-    aside{
-        width:100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        height:100%;
-    }
+                        /*Elementos de la lista de los dias de cierre*/
+                        #cerrar>ul>li{
+                            margin:2px;
+                            text-align: left;
+                            color:black;
+                            font-size: 18px;
+                            font-family: Cuprum;
+                        }
 
-    #dias{
-        margin-top: 50px;
-        width:90%;
-        font-size: 20px;
-        font-weight: bold;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        text-align: center;
-    }
+                /*ASIDE > DIRECCION*/
+                /*Parte donde mostramos la ubicacion del gimnasio*/
+                #direccion{
+                    margin-top: 20px;
+                    text-align: center;
+                    font-size: 20px;
+                    width: 90%;
+                }
 
-    #dias>h3{
-        background-color: gold;
-    }
+                    /*Estilo del parrafo de direccion*/
+                    #direccion>p{
+                        font-family: Cuprum;
+                    }
 
-    #dias>ul{
-        width:100%;
-        margin:auto;
-        padding:0;
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-    }
+                    /*Estilo del h3 de direccion*/
+                    #direccion>h3{
+                        background-color: gold;
+                    }
 
-    #dias>ul>li{
-        margin:2px;
-        text-align: left;
-        color:black;
-        font-size: 18px;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    }
+                    /*Imagen de maps de direccion*/
+                    #direccion>a>img{
+                        border: 1px black solid;
+                        width:95%;
+                    }
 
-    #cerrar{
-        width:100%;
-        font-size: 20px;
-        font-weight: bold;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        text-align: center;
-        margin-top: 20px;
-    }
+                /*ASIDE > OFERTAS*/
+                #ofertas{
+                    margin-top: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    width: 90%;
+                }
 
-    #cerrar>h3{
-        background-color: gold;
-    }
+                    /*h3 de ofertas*/
+                    #ofertas>h3{
+                        text-align: center;
+                        font-size: 22px;
+                    }
 
-    #cerrar>ul{
-        width:100%;
-        margin:auto;
-        padding:0;
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-    }
+                    /*Ofertas 1 2 y 3 que tengan este estilo*/
+                    #oferta1,#oferta2,#oferta3{
+                        margin-top:15px;
+                        text-align: center;
+                        border: black 1px solid;
+                    }
 
-    #cerrar>ul>li{
-        margin:2px;
-        text-align: left;
-        color:black;
-        font-size: 18px;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    }
+                        /*Clase para definir los titulos de las ofertas*/
+                        .tituloOferta{
+                            font-family: Cuprum;
+                            font-weight: bold;
+                            font-size: 28px;
+                            background-color: gold;
+                        }
 
-    #direccion{
-        margin-top: 20px;
-        text-align: center;
-        font-size: 20px;
-        width: 90%;
-    }
+                        /*Clase para definir los precios de las ofertas*/
+                        .precio{
+                            font-family: Cuprum;
+                            font-weight: bold;
+                            font-size: 20px;
+                            background-color: black;
+                            color:white;
+                        }
 
-    #direccion>p{
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
+                        /*Descripcion de la oferta*/
+                        .textoOferta{
+                            font-family: Cuprum;
+                        }
+        
+        /*FOOTER - MONITOR*/
+        footer{
+            clear:both;
+            width:100%;
+            height: 200px;
+            background-color: black;
+            color:white;
+            display:flex;
+            flex-direction: row;
+            justify-content:center;
+        }
 
-    #direccion>h3{
-        background-color: gold;
-    }
+            /*FOOTER > RRSS*/
+            /*Parte de enlaces de redes del footer*/
+            #rrss{
+                width:50%;
+                margin:auto;
+                padding: 0;
+            }
 
-    #direccion>a>img{
-        border: 1px black solid;
-        width:95%;
-    }
+                /*Contenido que engloba a las redes del footer*/
+                #contenidorrss{
+                    width:60%;
+                    margin:auto;
+                    padding: 0;
+                    text-align: center;
+                }
 
-    #ofertas{
-        margin-top: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 90%;
-    }
+                    /*Anchura de las imagenes del contenidorrss*/
+                    #contenidorrss>a>img{
+                        width:20px;
+                    }
 
-    #ofertas>h3{
-        text-align: center;
-        font-size: 22px;
-    }
+                    /*Texto de "siguenos en redes" del footer*/
+                    #contenidorrss>p{
+                        font-family: Cuprum;
+                        font-weight: bold;
+                        text-align: center;
+                        font-size: 14px;
+                    }
 
-    #oferta1,#oferta2,#oferta3{
-        margin-top:15px;
-        text-align: center;
-        border: black 1px solid;
-    }
+            /*FOOTER > ENLACESFOOTER*/
+            /*Enlaces del footer de contacto (unete, sugerencias...)*/
+            #enlacesFooter{
+                margin:auto;
+                padding: 0;
+                width:40%;
+            }
 
-    .tituloOferta{
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        font-weight: bold;
-        font-size: 28px;
-        background-color: gold;
-    }
+                /*Lista de los enlaces del footer*/
+                #enlacesFooter>ul{
+                    width:95%;
+                    margin:auto;
+                    padding:0;
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: column;
+                }
 
-    .precio{
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        font-weight: bold;
-        font-size: 20px;
-        background-color: black;
-        color:white;
-    }
-
-    .textoOferta{
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    }
-
-    footer{
-        clear:both;
-        width:100%;
-        height: 200px;
-        background-color: black;
-        color:white;
-        display:flex;
-        flex-direction: row;
-        justify-content:center;
-    }
-
-    #rrss{
-        width:50%;
-        margin:auto;
-        padding: 0;
-    }
-
-    #contenidorrss{
-        width:60%;
-        margin:auto;
-        padding: 0;
-        text-align: center;
-    }
-
-    #contenidorrss>a>img{
-        width:20px;
-    }
-
-    #contenidorrss>p{
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        font-weight: bold;
-        text-align: center;
-        font-size: 14px;
-    }
-
-    #enlacesFooter{
-        margin:auto;
-        padding: 0;
-        width:40%;
-    }
-    #enlacesFooter>ul{
-        width:95%;
-        margin:auto;
-        padding:0;
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-    }
-
-    #enlacesFooter>ul>li>a{
-        margin-top:10px;
-        padding: 0;
-        text-align: left;
-        font-size: 11px;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        font-weight: bold;
-        color:white;
-    }
-
-    #enlacesFooter>ul>li>a:hover{
-        color:gold;
-    }
+                    /*Elementos de la lista de enlaces del footer*/
+                    #enlacesFooter>ul>li>a{
+                        margin-top:10px;
+                        padding: 0;
+                        text-align: left;
+                        font-size: 11px;
+                        font-family: Cuprum;
+                        font-weight: bold;
+                        color:white;
+                    }
+                    
+                    /*Cuando pases el raton por los enlaces... (hover)*/
+                    #enlacesFooter>ul>li>a:hover{
+                        color:gold;
+                    }
 
 }
 
+/*Media Query para indicar que si el dispositivo mide menos que 300px no se visualice nada*/
 @media only screen and (max-width:299px){
     *{
         display: none;
