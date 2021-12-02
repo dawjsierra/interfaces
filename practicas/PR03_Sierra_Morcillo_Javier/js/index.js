@@ -138,7 +138,7 @@ function mostrarAct(){
         for(var j=0; j<=celdasActiv.length-1;j++){
             celdasActiv[j].style.backgroundColor="white";
             celdasActiv[j].style.color="black";
-            celdasActiv[j].style.fontWeight="bold";
+            celdasActiv[i].style.fontWeight="normal";
         }
     }
 
@@ -184,8 +184,8 @@ function mostrarFis(){
                 //en este caso, al solo poder seleccionar 1, no hace falta machacar el estilo. Si no coincide, entonces...
                 celdasFisios[j].style.backgroundColor="white";
                 celdasFisios[j].style.color="black";
-                celdasFisios[j].style.fontWeight="bold";
                 celdasFisios[j].style.textAlign="center";
+                celdasFisios[i].style.fontWeight="normal";
             }
         }
     }

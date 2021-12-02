@@ -1,181 +1,2030 @@
-@media (min-width: 1000px) { 
-    
-    body{
-        margin:auto;
-        padding:0;
-        width: 1600px;
-        background-color: rgb(245,245,245);
-    }
+/*Fuente que usaremos para los H2*/
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('../fonts/Bebas_Neue/BebasNeue-Regular.ttf') format('truetype');
+    font-weight: 1;
+    font-style: normal;
+}
 
-    #contenedorFijoMonitor{
-        border:blue 1px solid;
-        width:100%;
-        margin:auto;
-        padding:0;
-        display:flex;
-        height: 125px;
-        background-color: rgb(157,205,245);
-    }
+/*Fuente que usaremos para los h3 y para algunas partes con letra decorativa*/
+@font-face {
+    font-family: 'Kaushan Script';
+    src: url('../fonts/Kaushan_Script/KaushanScript-Regular.ttf') format('truetype');
+    font-weight: 1;
+    font-style: normal;
+}
 
-    #navegacionMonitor{
-        width:25%;
-        height:125px;
-    }
+/*Fuente usada para texto más que para otra cosa*/
+@font-face {
+    font-family: 'Cuprum';
+    src: url('../fonts/Cupurum/Cuprum-VariableFont_wght.ttf') format('truetype');
+    font-weight: 1;
+    font-style: normal;
+}
 
-    #navegacionMonitor>ul{
-        width:90%;
-        height:100%;
-        margin:0;
-        padding:0;
+
+
+/******************************************************/
+/*MEDIA PRINT: Media querie que usaremos para la impresion de la página*/
+/******************************************************/
+@media print{
+
+    /*Le ponemos a todo el contenido fuente cuprum (en principio) y que no tenga ninguna decoracion en listas
+    */
+    *{
         list-style-type: none;
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
+        font-family: Cuprum;
     }
 
-    #navegacionMonitor>ul>li{
-        margin:2px;
+    
+
+    /*los títulos h2 y h3 deberan estar centrados*/
+    h3, h2{
         text-align: center;
+    }
+
+    /*las partes de direccion, dias y ofertas tendrán estas características*/
+    #direccion, #dias, #ofertas{
+        border: gold 1px solid;
+        margin-top: 15px;
+    }
+
+    /*estos elementos y los siguientes (para que no sea tan largo), lo hacemos en dos pasos*/
+    #login, #fotoEncabezado, #navegacionPagina, #horarios, #enlacesFooter, #espacioTablas{
+        display:none;
+    }
+
+    #indices, #articleFotos, #direccionTablet>a>img, #cerrar, #direccion>a>img, #ofertasTablet, #apertura, footer{
+        display: none;
+    }
+
+    /*body sin borde*/
+    body{
+        border:none;
+    }
+
+    /*foto del header (logo): centrada */
+    #header>img{
+        margin-top:0;
+        padding-top:0;
+        margin:auto;
+        padding: 0;
+    }
+
+    /*contenido aparte del logo*/
+    #contedorContenido{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        
+    }
+
+    /*dias que abren*/
+    #dias{
+        border: gold 1px solid;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+        /*titulo de dias que abren*/
+        #dias>h3{
+            font-family: Cuprum;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        /*lista de dias que abren*/
+        #dias>ul{
+            width: 60%;
+            display:flex;
+            flex-direction: column;
+            text-align: left;
+        }
+
+        /*elementos de lista de dias que abren*/
+        #dias>ul>li{
+            text-align: left;
+            font-family: Cuprum;
+        }
+
+    /*texto de direccion centrado*/
+    #direccion{
+        text-align: center;
+    }
+
+    /*estilos de ofertas*/
+    #oferta1, #oferta2, #oferta3{
+        border-top: black 2px solid;
+        text-align: center;
+    }
+
+    /*estilos de oferta y precio*/
+    .tituloOferta, .precio{
+        font-weight: bold;
+        font-size: 22px;
+    }
+
+    /*estilo del titulo de redes (footer)*/
+    #tituloRedes{
+        font-family: Cuprum;
+        font-weight: bold;
+        font-size: 20px;
+        text-align: center;
+    }
+}
+
+
+
+/******************************************************/
+/*MEDIA QUERY -> MONITOR*/
+/******************************************************/
+@media only screen and (min-width: 1000px){
+
+    /*A toda la página: que las listas no tengan estilo por defecto*/
+    *{
+        list-style-type: none;
+    }
+
+    table, tbody, tr, td{
+        border:none;
+    }
+
+    /*secciones escritas exclusivamente para modelo tablet que no aparezcan*/
+    #ofertasTablet, #apertura{
+        display:none;
+    }
+
+    /*estilo de todos los enlaces*/
+    a{
+        text-decoration: none;
         color:black;
-        border:red 1px solid;
+        font-family: Cuprum;
+        font-size: 25px;
     }
 
-    #headerMonitor{
-        width:50%;
-        height:125px;
-    }
-    #headerMonitor>img{
-        width:100%;
-        height:125px;
+    /*estilo de los h2*/
+    h2{
+        font-family: Bebas Neue;
+        font-size: 50px;
     }
 
-    #loginMonitor{
-        width:25%;
-        height:125px;
+    /*estilo de los h3*/
+    h3{
+        font-family: Kaushan Script;
+        font-size: 20px;
+    }
+    
+    /*estilo de los parrafos*/
+    p{
+        font-family: Arial, Helvetica, sans-serif;
     }
 
-    #formLoginMonitor{
-        height:100%;
+    /*BODY - MONITOR*/
+    /*definimos estilo del body*/
+    body{
+        width:90%;
+        margin: auto;
         padding:0;
-        text-align: right;
+        border-top:solid 1px black;
+        border-bottom:solid 1px black;
+        border-left:solid 1px black;
     }
 
-    #fotoEncabezadoMonitor{
+    /*HEADER, NAV - MONITOR*/
+    /*Contenedor que va a permanecer fijo en la página. Parte superior*/
+    #contenedorFijo{
+        position: fixed;
+        overflow: hidden;
+        margin-top:0;
+        width:90%;
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        background-color: gold;
+        border: black 5px solid;
+        box-sizing: border-box;
+        height:190px;
+    }
+        /*Lista de la parte de la navegación de la página*/
+        #navegacionPagina>ul{
+            width:100%;
+            margin:5px;
+            padding:0;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+        
+            /*Elementos de la lista de la navegacion de la pagina*/
+            #navegacionPagina>ul>li{
+                width:100%;
+                margin:2px;
+                text-align: center;
+                background-color: white;
+                color:black;
+                font-weight: bold;
+                font-size:20px;
+            }
+
+            /*Hover de los elementos de la página*/
+            #navegacionPagina>ul>li:hover{
+                width:120%;
+                margin:2px;
+                text-align: center;
+                color:black;
+                font-weight: bold;
+                font-size:20px;
+                transition: background-color 1s ease;
+                color: white;
+            }
+    
+        /*Header del contenedor fijo*/
+        header{
+            width:50%;
+            height:125px;
+        }
+
+            /*Foto del header (logo página)*/
+            header>img{
+                width:90%;
+                height:125px;
+            }
+    
+        /*Login de la página dentro del contenedor fijo*/
+        #login{
+            width:25%;
+            height:125px;
+        }
+
+            /*Formulario del login*/
+            #formLogin{
+                height:80%;
+                padding:0;
+                text-align: left;
+                margin-top: 20px;
+                font-size: 20px;
+                font-weight: bold;
+            }
+
+            /*Campos a rellenar del login (U-> usuario, C->clave)*/
+            #labelU, #labelC{
+                margin: 2px;
+                font-family: Cuprum;
+                font-size: 20px;
+            }
+
+            /*Boton de login*/
+            #botonLogin{
+                margin:0;
+                background-color: black;
+                color:gold;
+                border:white;
+                margin: 10px;
+                font-weight: bold;
+            }
+
+    /*Foto de encabezado, justo despues del contenedor fijo*/
+    #fotoEncabezado{
         width:100%;
         display: flex;
         justify-content: center;
-        background-color: rgb(20,23,28);
+        background-color: black;
     }
 
-    #fotoEncabezadoMonitor>img{
-        width:100%;
-        padding: 0;
-        margin:auto;
-    }
-
-    #sectionMonitor{
-        width:74%;
-    }
-
-    #espacioTablas{
-        border: red 1px solid;
-        width:100%;
+        /*Anchura de la imagen del encabezado*/
+        #fotoEncabezado>img{
+            width: 100%;
+        }
+    
+    /*SECTION - MONITOR*/
+    /*Section de la página*/
+    section{
+        float:left;
+        width:75%;
         display: flex;
-        justify-content: space-between;
         flex-direction: column;
-        float:left;
-    }
-
-    #espacioActiv{
-        width:100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-    }
-
-    #tablaActividades{
-        width:80%;
-    }
-
-    #formularioAct{
-        margin:10px;
-        padding: 0;
-        float:left;
-        width:30%;
-    }
-
-    #espacioFisios{
-        width:100%;
-        display:flex;
-        justify-content: space-between;
-        align-items: flex-start;
-    }
-    
-    #tablaFisios{
-        width:80%;
-    }
-
-    #formularioFis{
-        margin-left:10px;
-        margin-top:50px;
-        float:left;
-        width:35%;
-    }
-
-    #espacioIndices{
-        display: flex;
-        flex-direction: row;
         justify-content: space-around;
-        border: blue 1px solid;
+        background-color: black;
+        border: black 1px solid;
+        margin-bottom: 0;
     }
 
-    #fcm{
-        border: red 1px solid;
-    }
+        /*Seccion de la página donde están los horarios de fisios y actividades*/
+        /*SECTION > ARTICLE HORARIOS*/
+        #horarios{
+            clear:both;
+            background-color: gold;
+        }  
 
-    #imgsMonitor{
-        display:flex;
-        flex-wrap: wrap;
-        flex-direction: row;
+            /*Espacio de las tablas de fisios y horarios*/
+            #espacioTablas{
+                margin: auto;
+                padding:0;
+                width:100%;
+            }
+
+            /*tablas sin borde*/
+            table, tbody, tr, td{
+                border:none;
+            }
+
+            /*Definimos el peso de la letra y la fuente de los th y td de las tablas*/
+            tbody>tr>th,td{
+                font-family: Cuprum;
+                font-weight: bold;
+            }
+        
+            /*Hover de las filas*/
+            tr:hover{
+                background-color: gold;
+                color:black;
+            }
+        
+            /*Estilo de cabeceras*/
+            tr>th{
+                background-color: black;
+                color: white;
+            }
+                
+                /*Espacio de actividades (tabla + form)*/
+                #espacioActiv{
+                    width:100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                }
+
+                    /*Tabla actividades*/
+                    #tablaActividades{
+                        width:75%;
+                        background-color:white;
+                        border: none;
+                        text-align:center;
+                    }
+                    
+                    /*Formulario de actividades*/
+                    #formularioAct{
+                        margin:auto;
+                        padding: 0;
+                        float:left;
+                        width:20%;
+                        font-family: Cuprum;
+                        font-weight: bold;
+                    }
+
+                    /*Boton de "mostrar del formulario de actividades*/
+                    #boton1{
+                        background-color: black;
+                        color:white;
+                        font-weight: bold;
+                    }
+
+                /*Espacio de fisios (tabla + form)*/
+                #espacioFisios{
+                    width:100%;
+                    display:flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                }
+
+                    /*Tabla de fisios*/
+                    #tablaFisios{
+                        width:75%;
+                        background-color:white;
+                        border: none;
+                        text-align:center;
+                    }
+
+                    /*Formulario fisios*/
+                    #formularioFis{
+                        margin:auto;
+                        padding: 0;
+                        float:left;
+                        width:20%;
+                        font-family: Cuprum;
+                        font-weight: bold;
+                    }
+                    
+                    /*Boton de "mostrar del formulario de fisios*/
+                    #boton2{
+                        background-color: black;
+                        color:white;
+                        font-weight: bold;
+                    }
+
+        /*SECTION > ARTICLE INDICES*/
+        /*Parte de los indices (IMC Y FCM)*/ 
+        #indices{
+            background-color: black;
+        }
+
+            /*Titulos de los indices*/
+            #indices>h2{
+                color:rgb(255, 215, 0)
+            }
+
+            /*Div que engloba a IMC + FCM*/
+            #espacioIndices{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                background-color: white;
+                border-top: gold 1px solid;
+            }
+
+                /*Distribucion y estilos de IMC*/
+                #imc{
+                    float:right;
+                    width:50%;
+                    color:white;
+                    font-family: Cuprum;
+                    background-color: black;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    font-size: 22px;
+                    font-weight: bold;
+                }
+
+                    /*h3 de imc*/
+                    #imc>h3{
+                        text-align: center;
+                        color: gold;
+                    }
+
+                    /*Boton de "calcular" del imc*/
+                    #botonIMC{
+                        background-color: gold;
+                        color:black;
+                        font-weight: bold;
+                        width: 30%;
+                        margin:auto;
+                        padding: 0;
+                    }
+
+                /*Parte de FCM, estilos y distribucion*/    
+                #fcm{
+                    float:left;
+                    width:50%;
+                    color:white;
+                    font-family: Cuprum;
+                    background-color: black;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    border-right: gold 1px solid;
+                    font-weight: bold;
+                }
+
+                    /*Alineacion y color de todos los h3 de fcm*/                
+                    #fcm>h3{
+                        text-align: center;
+                        color: gold;
+                    }
+
+                    /*fmc de cada persona*/
+                    #fcmpersonal{
+                        text-align: center;
+                        font-size: 22px;
+                        font-family: Cuprum;
+                    }
+
+                    /*Lista de los distintos niveles de fcm*/
+                    #listafcm{
+                        text-align: left;
+                        font-size: 13px;
+                        width:50%;
+                        font-size: 22px;
+                    }
+
+                    /*Boton de FCM*/
+                    #botonFCM{
+                        background-color: gold;
+                        color:black;
+                        font-weight: bold;
+                        width: 30%;
+                        margin:auto;
+                        padding: 0;
+                    }
+        
+        /*SECTION > ARTICLE FOTOS*/
+        /*Ancho y color de fondo del article fotos*/
+        #articleFotos{
+            background-color: gold;
+            width:100%;
+        }
+    
+            /*Espacio donde metes todas las fotos (GALERIA)*/
+            #espacioFotos{
+                display:flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                justify-content: space-around;
+                background-color: gold;
+            }
+
+                /*Imagenes de espacio de fotos*/
+                #espacioFotos>img{
+                    margin-top: 1px;
+                    width: 33%;
+                }
+
+                    /*Clase ampliar -> transicion de transformacion*/
+                    .ampliar{
+                        transition: 0.8s linear;
+                    }
+                    
+                    /*Cuando pase el raton se ampliará la foto*/
+                    .ampliar:hover{
+                        transform: scale(1.3);
+                    }
+
+    /*ASIDE - MONITOR*/
+    /*Aside de la página*/
+    aside{
+        float:right;
+        width: 24%;
+        display: flex;
+        margin-right: 0px;
+        flex-direction: column;
         justify-content: space-between;
+        height:70%;
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
 
-    #imgsMonitor>img{
-        margin-top: 1px;
+        /*ASIDE > DIAS*/
+        /*Parte de los dias de apertura. Estilo y distribucion*/
+        #dias{
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            font-family: Cuprum;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 95%;
+        }
+
+            /*Estilo de los h3 de dias*/
+            #dias>h3{
+                background-color: gold;
+                width: 100%;
+                border: black 1px solid;
+            }
+
+            /*Lista de días*/
+            #dias>ul{
+                width:100%;
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                align-items: left;
+            }
+
+                /*Elementos de la lista de dias*/
+                #dias>ul>li{
+                    text-align: left;
+                    color:black;
+                    font-size: 18px;
+                    font-family: Cuprum;
+                }
+
+        /*ASIDE > CERRAR*/
+        /*Dias de cierre del gimnasio*/
+        #cerrar{
+            width:100%;
+            font-family: Cuprum;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+            /*Estilo del h3 de cerrar*/
+            #cerrar>h3{
+                background-color: gold;
+                width: 100%;
+                text-align: center;
+                border: black 1px solid;
+            }
+
+            /*Lista de los dias de cierre*/
+            #cerrar>ul{
+                width:100%;
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                align-items: left;
+            }
+
+                /*Elementos de la lista de los dias de cierre*/
+                #cerrar>ul>li{
+                    text-align: left;
+                    color:black;
+                    font-size: 18px;
+                    font-family: Cuprum;
+                }
+
+        /*ASIDE > DIRECCION*/
+        /*Parte donde mostramos la ubicacion del gimnasio*/
+        #direccion{
+            margin-top: 20px;
+            text-align: center;
+            font-size: 15px;
+            width: 95%;
+        }
+
+            /*Estilo del parrafo de direccion*/
+            #direccion>p{
+                font-family: Cuprum;
+                font-size: 16px;
+                font-weight: bold;
+            }
+
+            /*Estilo del h3 de direccion*/
+            #direccion>h3{
+                background-color: gold;
+                border: black 1px solid;
+            }
+
+            /*Imagen de maps de direccion*/
+            #direccion>a>img{
+                border: 1px black solid;
+                width:80%;
+                border: black 1px solid;
+            }
+
+        /*ASIDE > OFERTAS*/
+        /*Parte de ofertas*/
+        #ofertas{
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            width: 95%;
+        }
+
+            /*h3 de ofertas*/
+            #ofertas>h3{
+                text-align: center;
+                font-size: 18px;
+                background-color:gold;
+                border: black 1px solid;
+            }
+
+            /*Ofertas 1 2 y 3 que tengan este estilo*/
+            #oferta1,#oferta2,#oferta3{
+                margin-top:15px;
+                text-align: center;
+                border: black 1px solid;
+            }
+
+                /*Clase para definir los titulos de las ofertas*/
+                .tituloOferta{
+                    font-family: Cuprum;
+                    font-weight: bold;
+                    font-size: 28px;
+                    background-color: gold;
+                }
+
+                /*Clase para definir los precios de las ofertas*/
+                .precio{
+                    font-family: Cuprum;
+                    font-weight: bold;
+                    font-size: 20px;
+                    background-color: black;
+                    color:white;
+                }
+
+                /*Descripcion de la oferta*/
+                .textoOferta{
+                    font-family: Cuprum;
+                }
+
+    /*FOOTER - MONITOR*/
+    /*Footer de la página*/
+    footer{
+        clear:both;
+        width:100%;
+        height: 200px;
+        background-color: black;
+        color:white;
+        display:flex;
+        flex-direction: row;
+        justify-content:center;
     }
 
-    #asideMonitor{
-        width:24%;
-        float: right;
-        border:red 1px solid;
-    }
+        /*FOOTER > RRSS*/
+        /*Parte de enlaces de redes del footer*/
+        #rrss{
+            width:50%;
+            margin:auto;
+            padding: 0;
+        }
 
+            /*Contenido que engloba a las redes del footer*/
+            #contenidorrss{
+                width:40%;
+                margin:auto;
+                padding: 0;
+                text-align: center;
+            }
+
+                /*Anchura de las imagenes del contenidorrss*/
+                #contenidorrss>a>img{
+                    width:15%;
+                }
+
+                /*Texto de "siguenos en redes" del footer*/
+                #contenidorrss>p{
+                    font-family: Cuprum;
+                    font-weight: bold;
+                    text-align: center;
+                    font-size: 20px;
+                }
+
+        /*FOOTER > ENLACESFOOTER*/
+        /*Enlaces del footer de contacto (unete, sugerencias...)*/
+        #enlacesFooter{
+            margin:auto;
+            padding: 0;
+            width:50%;
+        }
+
+            /*Lista de los enlaces del footer*/
+            #enlacesFooter>ul{
+                width:95%;
+                margin:auto;
+                padding:0;
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+            }
+
+                /*Elementos de la lista de enlaces del footer*/
+                #enlacesFooter>ul>li>a{
+                    margin:2px;
+                    text-align: left;
+                    font-size: 18px;
+                    font-family: Cuprum;
+                    font-weight: bold;
+                    color:white;
+                }
+
+                /*Cuando pases el raton por los enlaces... (hover)*/
+                #enlacesFooter>ul>li>a:hover{
+                    color:gold;
+                }
 }
 
-@media(min-width:600px) and (max-width:999px){
+
+
+/*/******************************************************/
+/*MEDIA QUERY -> TABLET*/
+/******************************************************/
+@media only screen and (min-width:600px) and (max-width:999px){
     *{
-        border: blue 1px solid;
+        list-style-type: none;
+    }
+
+    /*Divs que no van a aparecer en este mediaquery*/
+    #fotoEncabezado, #ofertas, #direccion>a>img, #direccionTablet>a>img{
+        display: none;
+    }
+
+    #navegacionPagina>ul> #ofertas, aside, #direccionTablet{
+        display: none;
+    }
+
+    /*estilo de todos los enlaces*/
+    a{
+        text-decoration: none;
+        color:black;
+        font-family: Cuprum;
+    }
+
+    /*estilo de los h2*/
+    h2{
+        font-family: Bebas Neue;
+        font-size: 30px;
+    }
+
+    /*estilo de los h3*/
+    h3{
+        font-family: Kaushan Script;
+        font-size: 15px;
     }
     
+    /*estilo de los parrafos*/
+    p{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /*BODY - TABLET*/
+    /*definimos estilo del body*/
     body{
         margin:auto;
         padding:0;
-        width: 80%;
+        width: 90.3%;
+        border:black 1px solid;
     }
+
+    /*HEADER, NAV - Tablet*/
+    /*Contenedor que va a permanecer fijo en la página. Parte superior*/
+    #contenedorFijo{
+        position: fixed;
+        width:90%;
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        background-color: gold;
+        border: black 2px solid;
+        height: 150px;
+    }
+
+        /*Header del contenedor fijo*/
+        #header{
+            order:1;
+            width: 50%;
+        }
+
+            /*Foto del header (logo página)*/
+            #header>img{
+                margin:auto;
+                padding:0;
+                width:90%;
+            }
+
+        /*Login de la página dentro del contenedor fijo*/
+        #login{
+            order:2;
+            width:25%;
+            overflow: hidden;
+        }
+
+            /*Formulario del login*/
+            #formLogin{
+                padding:0;
+                margin: 2px;
+                font-weight: bold;
+                text-align: right;
+            }
+
+            /*Boton de login*/
+            #botonLogin{
+                background-color: black;
+                color:gold;
+                border:white;
+                font-weight: bold;
+            }
+
+            /*Campos a rellenar del login (U-> usuario, C->clave)*/
+            #labelU, #labelC{
+                margin: 2px;
+                font-family: Cuprum;
+                font-size: 20px;
+            }
+
+
+        /*Orden en el contenedor y tamaño de la navegacion*/
+        #navegacionPagina{
+            order:3;
+            width:100%;
+            padding: 0;
+        }
+
+            /*Lista de la parte de la navegación de la página*/
+            #navegacionPagina>ul{
+                display: flex;
+                justify-content: space-around;
+                flex-direction: row;
+                padding:0;
+                text-align: center;
+                width:100%;
+                margin:auto;
+            }
+
+                /*Elementos de la lista de la navegacion de la pagina*/
+                #navegacionPagina>ul>li{
+                    background-color: white;
+                    width:auto;
+                    border-radius: 5px;
+                    height:auto;
+                    display:flex;
+                    align-items: center;
+                    margin:auto;
+                }
+
+                /*Hover de los elementos de la página*/
+                #navegacionPagina>ul>li:hover{
+                    text-align: center;
+                    color:white;
+                    transition: background-color 1s ease;
+                    background-color: black;
+                }
+
+                /*Hover de los elementos de la página*/
+                #navegacionPagina>ul>li>a:hover{
+                    color:white;
+                }
+
+                    /*Estilo de los enlaces de la navegacion*/
+                    #navegacionPagina>ul>li>a{
+                        font-family: Cuprum;
+                        font-weight: bold;
+                        text-align:center;
+                    }
+
+                
+    /*Contenedor que va a englobar el contenido de pagina menos el contenedor fijo*/
+    /*Le ponemos lo que mide de altura del contenedor principal*/                
+    #contedorContenido{
+        margin-top: 150px;
+        width:100%;
+    }
+        /*SECTION > ARTICLE HORARIOS*/
+        #horarios{
+            clear:both;
+        }
+
+            /*h2 de horarios*/
+            #horarios>h2{
+                background-color: black;
+                color: gold;
+            }
+
+                /*Espacio de las tablas de fisios y horarios*/
+                #espacioTablas{
+                    margin: auto;
+                    padding:0;
+                    width:100%;
+                }
+
+                /*Tablas sin borde*/
+                table, tbody, tr, td{
+                    border:none;
+                }
+                
+                /*Definimos el peso de la letra y la fuente de los th y td de las tablas*/
+                tbody>tr>th,td{
+                    font-family: Cuprum;
+                    font-weight: bold;
+                }
+                
+                /*Hover de las filas*/
+                tr:hover{
+                    background-color: gold;
+                    color:black;
+                }
+            
+                /*Estilo de cabeceras*/
+                tr>th{
+                    background-color: gold;
+                    color:black;
+                    font-family: Kaushan Script;
+                }
+
+                    /*H3 de espacio tablas*/
+                    #espacioTablas>h3{
+                        background-color: gold;
+                    }
+
+                /*Espacio de actividades (tabla + form)*/
+                #espacioActiv{
+                    width:100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    overflow: scroll;
+                }
+
+                    /*Tabla actividades*/
+                    #tablaActividades{
+                        width:75%;
+                        border: none;
+                        text-align:center;
+                    }
+
+                        /*Formulario de actividades*/
+                        #formularioAct{
+                            margin:auto;
+                            padding: 0;
+                            float:left;
+                            width:20%;
+                            font-family: Cuprum;
+                        }
+
+                            /*Boton de "mostrar del formulario de actividades*/
+                            #boton1{
+                                background-color: black;
+                                color:gold;
+                                font-weight: bold;
+                            }
+
+                /*Espacio de fisios (tabla + form)*/
+                #espacioFisios{
+                    width:100%;
+                    display:flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                }
+
+                    /*Tabla de fisios*/
+                    #tablaFisios{
+                        width:75%;
+                        background-color:white;
+                        border: none;
+                        text-align:center;
+                    }
+
+                        /*Formulario fisios*/
+                        #formularioFis{
+                            margin:auto;
+                            padding: 0;
+                            float:left;
+                            width:20%;
+                            font-family: Cuprum;
+                        }
+
+                            /*Boton de "mostrar del formulario de fisios*/
+                            #boton2{
+                                background-color: black;
+                                color:gold;
+                                font-weight: bold;
+                            }
+
+        /*SECTION > INDICES*/
+        /*Parte de los indices (IMC Y FCM)*/ 
+        #indices{
+            background-color: gold;
+            border: black 1px solid;
+        }
+
+            /*Div que engloba a IMC + FCM*/
+            #espacioIndices{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+                /*Parte de FCM, estilos y distribucion*/
+                #fcm{
+                    width:50%;
+                    color:white;
+                    font-family: Cuprum;
+                    font-weight: bold;
+                    background-color: gold;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    color:black;
+                }
+                
+                    /*div que te dice tu fcm*/
+                    #fcmpersonal{
+                        text-align: center;
+                        font-family: Cuprum;
+                        font-weight: bold;
+                    }
+
+                    /*Lista de los distintos niveles de fcm*/
+                    #listafcm{
+                        text-align: left;
+                        font-size: 13px;
+                        width:50%;
+                    }
+
+                    /*Alineacion y color de todos los h3 de fcm*/
+                    #fcm>h3{
+                        text-align: center;
+                        color: black;
+                    }
+
+                    /*Lista de fcm, tamaño fuente*/
+                    #listafcm>li{
+                        font-size: 16.5px;
+                    }
+
+                    /*Boton de FCM*/
+                    #botonFCM{
+                        background-color: white;
+                        color:black;
+                        font-weight: bold;
+                        width: 30%;
+                        margin:auto;
+                        padding: 0;
+                    }
+
+                /*Distribucion y estilos de IMC*/
+                #imc{
+                    width: 50%;
+                    float:right;
+                    font-family: Cuprum;
+                    font-weight: bold;
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                    /*h3 de imc*/
+                    #imc>h3{
+                        text-align: center;
+                        color: black;
+                    }
+
+                    /*Lista con los niveles de IMC*/
+                    #listaimc{
+                        float: left;
+                        font-size: 12px;
+                        text-align: left;
+                        color:black;
+                    }
+
+                    /*Parrafo que te muestra tu imc, tamaño fuente*/
+                    #listaimc>li{
+                        font-size: 15px;
+                    }
+
+                    /*Boton de "calcular" del imc*/
+                    #botonIMC{
+                        background-color: white;
+                        color:black;
+                        font-weight: bold;
+                        width: 30%;
+                        margin:auto;
+                        padding: 0;
+                    }
+
+        /*SECTION > ARTICLE FOTOS*/
+        /*Ancho y color de fondo del */
+        #articleFotos{
+            width:55.3%;
+            float: left;
+            height:100%;
+            background-color: black;
+            margin-bottom: 0;
+        }
+
+            /*Estilo del titulo de h2*/
+            #articleFotos>h2{
+                color:gold;
+            }
+
+            /*Espacio donde metes todas las fotos (GALERIA)*/
+            #espacioFotos{
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: space-between;
+                width:100%;
+                background-color: black;
+            }
+                /*Imagenes de espacio de fotos*/
+                #espacioFotos>img{
+                    width:49.25%;
+                    margin:1px;
+                }
+
+                    /*Clase ampliar -> transicion de transformacion*/
+                    .ampliar{
+                        transform: transition .2s;
+                    }
+
+                    /*Cuando pase el raton se ampliará la foto*/
+                    .ampliar:hover{
+                        transform: scale(1.5);
+                    }
+
+        /*SECTION > ARTICLE APERTURA*/
+        /*Este article no estaba en el mediaquery del monitor*/
+        /*He decidido que en tablet no va a haber aside, por lo tanto dias de apertura y cierre las he metido en section*/
+        #apertura{
+            padding: 0;
+            float: right;
+            width: 44.5%;
+            background-color: black;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border-left: white;
+            background-color: black;
+            height: 100%;
+        }
+
+            /*Estilo de los h3 de dias*/
+            #diasTablet>h3{
+                background-color: gold;
+                color:black;
+                text-align: center;
+            }
+
+                /*Lista de días*/
+                #diasTablet>ul{
+                    width:100%;
+                    margin:auto;
+                    padding:0;
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: column;
+                }
+
+                    /*Elementos de la lista de dias*/
+                    #diasTablet>ul>li{
+                        margin:2px;
+                        text-align: left;
+                        color:white;
+                        font-size: 18px;
+                        font-family: Cuprum;
+                    }
+
+            /*Dias de cierre del gimnasio, version media tablet*/
+            #cerrarTablet{
+                width:100%;
+                font-size: 20px;
+                text-align: center;
+            }
+
+                /*Estilo del h3 de cerrar*/
+                #cerrarTablet>h3{
+                    background-color: gold;
+                    color:black;
+                }
+
+                /*Lista de los dias de cierre*/
+                #cerrarTablet>ul{
+                    width:100%;
+                    margin:auto;
+                    padding:0;
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: column;
+                }
+
+                    /*Elementos de la lista de los dias de cierre*/
+                    #cerrarTablet>ul>li{
+                        margin:2px;
+                        text-align: left;
+                        color:white;
+                        font-size: 18px;
+                        font-family: Cuprum;
+                    }
+
+        /*SECTION > ARTICLEOFERTAS TABLET*/
+        /*He creado otra section única para tablet, para ponerla después de apertura y cierre al no haber aside*/
+        /*Parte de ofertas unico estilo de tablet*/
+        #ofertasTablet{
+            width:100%;
+            margin: auto;
+            padding:0;
+            clear:both;
+            text-align: center;
+            background-color: gold;
+        }
+
+            /*h3 de ofertas*/
+            #ofertasTablet>h3{
+                font-size: 35px;
+            }
+
+                /*Parte de ofertas tablet para definir su distribucion*/
+                #espacioOfertasTablet{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                }
+
+                    /*Ofertas 1 2 y 3 que tengan este estilo*/
+                    #oferta1, #oferta2, #oferta3{
+                        margin:4px;
+                        border: black 1px solid;
+                        background-color: white;
+                    }
+
+                    /*Clase para definir los titulos de las ofertas*/
+                    .tituloOferta{
+                        font-family: Cuprum;
+                        font-weight: bold;
+                        font-size: 20px;
+                        background-color: gold;
+                    }
+
+                    /*Clase para definir los precios de las ofertas*/
+                    .precio{
+                        font-family: Cuprum;
+                        font-weight: bold;
+                        font-size: 20px;
+                        background-color: black;
+                        color:white;
+                    }
+
+                    /*Descripcion de la oferta*/
+                    .textoOferta{
+                        font-family: Cuprum;
+                    }
+
+        /*FOOTER - TABLET*/
+        /*Footer de la página*/
+        footer{
+            clear:both;
+            width:100%;
+            height: 200px;
+            background-color: black;
+            color:white;
+            display:flex;
+            flex-direction: row;
+            justify-content:center;
+        }
+
+            /*FOOTER > RRSS*/
+            /*Parte de enlaces de redes del footer*/
+            #rrss{
+                width:50%;
+                margin:auto;
+                padding: 0;
+            }
+
+                /*Contenido que engloba a las redes del footer*/
+                #contenidorrss{
+                    width:60%;
+                    margin:auto;
+                    padding: 0;
+                    text-align: center;
+                }
+
+                    /*Anchura de las imagenes del contenidorrss*/
+                    #contenidorrss>a>img{
+                        width:40px;
+                    }
+
+                    /*Texto de "siguenos en redes" del footer*/
+                    #contenidorrss>p{
+                        font-family: Cuprum;
+                        font-weight: bold;
+                        text-align: center;
+                        font-size: 20px;
+                    }
+
+            /*FOOTER > ENLACESFOOTER*/
+            /*Enlaces del footer de contacto (unete, sugerencias...)*/
+            #enlacesFooter{
+                margin:auto;
+                padding: 0;
+                width:40%;
+            }
+
+                /*Lista de los enlaces del footer*/
+                #enlacesFooter>ul{
+                    width:95%;
+                    margin:auto;
+                    padding:0;
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: column;
+                }
+
+                    /*Elementos de la lista de enlaces del footer*/
+                    #enlacesFooter>ul>li>a{
+                        margin:2px;
+                        text-align: left;
+                        font-size: 15px;
+                        font-family: Cuprum;
+                        font-weight: bold;
+                        color:white;
+                    }
+
+                    /*Cuando pases el raton por los enlaces... (hover)*/
+                    #enlacesFooter>ul>li>a:hover{
+                        color:gold;
+                    }
 }
 
-@media(max-width:599px){
+
+
+/*/******************************************************/
+/*MEDIA QUERY -> MÓVIL*/
+/******************************************************/
+@media only screen and (max-width:600px) and (min-width:300px){
+
+    /*A toda la página: que las listas no tengan estilo por defecto*/
     *{
-        border: purple 1px solid;
-    }
-    
-    body{
-        margin:auto;
-        padding:0;
-        width: 80%;
+        list-style-type: none;
     }
 
-    #loginMonitor, #imcMonitor, #fcmMonitor, #fotoEncabezadoMonitor{
+    /*estilo de todos los enlaces*/
+    a{
+        text-decoration: none;
+        color:black;
+        font-family: Cuprum;
+        font-size: 18px;
+    }
+
+    /*estilo de los h2*/
+    h2{
+        font-family: Bebas Neue;
+        font-size: 30px;
+    }
+
+    /*estilo de los h3*/
+    h3{
+        font-family: Kaushan Script;
+        font-size: 15px;
+    }
+    
+    /*estilo de los parrafos*/
+    p{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /*Estos elementos no aparecerán*/
+    #ofertasTablet, #apertura, #fotoEncabezado, #direccionTablet>a{
         display:none;
+    }
+
+    #navegacionPagina>ul> #ofertasTablet{
+        display: none;
+    }
+
+    /*BODY - MOVIL*/
+    body{
+        margin:auto;
+        padding:0;
+        width: 90.3%;
+        border: black 2px solid;
+    }
+
+    /*HEADER, NAV - MOVIL*/
+    /*Contenedor que va a permanecer fijo en la página. Parte superior*/
+    #contenedorFijo{
+        position: fixed;
+        width:90%;
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        background-color: gold;
+        border: black 2px solid;
+        height: 180px;
+    }
+
+        /*Header del contenedor fijo*/
+        #header{
+            order:1;
+            width: 50%;
+        }
+
+            /*Foto del header (logo página)*/
+            #header>img{
+                margin:auto;
+                padding:0;
+                width:90%;
+            }
+
+        /*Login de la página dentro del contenedor fijo*/
+        #login{
+            order:2;
+            width:25%;
+            overflow: hidden;
+        }
+
+            /*Formulario del login*/
+            #formLogin{
+                padding:0;
+                margin: 2px;
+                font-weight: bold;
+                text-align: right;
+            }
+
+            /*Boton de login*/
+            #botonLogin{
+                background-color: black;
+                color:gold;
+                border:white;
+                font-weight: bold;
+            }
+
+                /*Campos a rellenar del login (U-> usuario, C->clave)*/
+                #labelU, #labelC{
+                    margin: 2px;
+                    font-family: Cuprum;
+                    font-size: 20px;
+                }
+        
+        /*Parte de la navegacion de la página*/
+        #navegacionPagina{
+            order:3;
+            width:100%;
+            padding: 0;
+        }
+
+           /*Lista de la parte de la navegación de la página*/ 
+            #navegacionPagina>ul{
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                flex-direction: row;
+                padding:0;
+                text-align: center;
+                width:100%;
+                margin:auto;
+            }
+
+                /*Elementos de la lista de la navegacion de la pagina*/
+                #navegacionPagina>ul>li{
+                    background-color: white;
+                    width:auto;
+                    border-radius: 5px;
+                    height:auto;
+                    display:flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin:auto;
+                    margin-top:10px;
+                }
+
+                /*Hover de los elementos de la página*/
+                #navegacionPagina>ul>li:hover{
+                    text-align: center;
+                    color:white;
+                    transition: background-color 1s ease;
+                    background-color: black;
+                }
+
+                    /*Estilos a los enlaces de la lista*/
+                    #navegacionPagina>ul>li>a{
+                        font-family: Cuprum;
+                        font-weight: bold;
+                        text-align:center;
+                    }
+
+                    /*Hover a los enlaces de la lista del nav principal*/
+                    #navegacionPagina>ul>li>a:hover{
+                        color:white;
+                    }
+
+    /*Bloque de contenido de la página a partir del contenedor fijo*/
+    #contedorContenido{
+        margin-top: 180px;
+        width:100%;
+    }
+        /*SECTION - MOVIL*/
+        /*Section de la página*/
+            /*SECTION > ARTICLE HORARIOS*/
+            /*Seccion de la página donde están los horarios de fisios y actividades*/
+            #horarios{
+                display:flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                overflow: scroll;
+            }
+                /*Estilo de h2 de horarios*/
+                #horarios>h2{
+                    background-color: black;
+                    color: gold;
+                }
+        
+                /*Espacio de las tablas de fisios y horarios*/
+                #espacioTablas{
+                    margin: auto;
+                    padding:0;
+                    width:100%;
+                }
+
+                /*tablas sin borde*/
+                table, tbody, tr, td{
+                    border:none;
+                }
+
+                /*Definimos el peso de la letra y la fuente de los th y td de las tablas*/
+                tbody>tr>th,td{
+                    font-family: Cuprum;
+                    font-weight: bold;
+                }
+            
+                /*Hover de las filas*/
+                tr:hover{
+                    background-color: gold;
+                    color:black;
+                }
+            
+                /*Estilo de cabeceras*/
+                tr>th{
+                    background-color: black;
+                    color:white;
+                    font-family: Kaushan Script;
+                }
+
+                    /*Estilo de h3 dentro del espacio de tablas*/
+                    #espacioTablas>h3{
+                        background-color: gold;
+                    }
+
+                        /*Espacio de actividades (tabla + form)*/
+                        #espacioActiv{
+                            width:100%;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: flex-start;
+                        }
+
+                            /*Tabla actividades*/
+                            #tablaActividades{
+                                font-size: 12px;
+                                width:90%;
+                                text-align: center;
+                                font-weight: bold;
+                                border: white 2px solid;
+                            }
+                    
+                                /*Formulario de actividades*/
+                                #formularioAct{
+                                    font-family: Cuprum;
+                                    font-size: 15px;
+                                    font-weight: bold;
+                                    width:100%;
+                                    text-align: center;
+                                }
+
+                                    /*Boton de "mostrar del formulario de actividades*/
+                                    #boton1{
+                                        background-color: gold;
+                                        font-weight: bold;
+                                        width:25%;
+                                        text-align: center;
+                                    }
+                    /*Espacio de fisios (tabla + form)*/
+                    #espacioFisios{
+                        width:100%;
+                        display:flex;
+                        justify-content: space-between;
+                        align-items: flex-start;
+                    }
+
+                        /*Tabla de fisios*/
+                        #tablaFisios{
+                            width:75%;
+                            background-color:white;
+                            border: none;
+                            text-align:center;
+                        }
+
+                            /*Formulario fisios*/
+                            #formularioFis{
+                                margin:auto;
+                                padding: 0;
+                                float:left;
+                                width:20%;
+                                font-family: Cuprum;
+                                font-weight: bold;
+                            }
+
+                                /*Boton de "mostrar del formulario de fisios*/
+                                #boton2{
+                                    background-color: gold;
+                                    font-weight: bold;
+                                    width:25%;
+                                    text-align: center;
+                                }
+            
+            /*SECTION > ARTICLEINDICES*/
+            /*Parte de los indices (IMC Y FCM)*/
+            #indices{
+                background-color: black;
+            }
+
+                /*Titulos de los indices*/
+                #indices>h2{
+                    text-align: center;
+                    color: gold;
+                }
+
+                /*Div que engloba a IMC + FCM*/
+                #espacioIndices{
+                    display: flex;
+                    flex-direction: column;
+                }
+        
+                    /*Distribucion y estilos de IMC*/
+                    #imc{
+                        width:100%;
+                        color:white;
+                        font-weight: bold;
+                        font-family: Cuprum;
+                        background-color: black;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                    }
+
+                        /*h3 de imc*/
+                        #imc>h3{
+                            text-align: center;
+                            color: gold;
+                        }
+
+                        /*Boton de "calcular" del imc*/
+                        #botonIMC{
+                            background-color: white;
+                            color:black;
+                            font-weight: bold;
+                            width: 30%;
+                            margin:auto;
+                            padding: 0;
+                        }
+
+                    /*Parte de FCM, estilos y distribucion*/ 
+                    #fcm{
+                        width:100%;
+                        color:white;
+                        font-weight: bold;
+                        font-family: Cuprum;
+                        background-color: black;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        border: gold 1px solid;
+                    }
+
+                        /*Alineacion y color de todos los h3 de fcm*/
+                        #fcm>h3{
+                            text-align: center;
+                            color: gold;
+                        }
+
+                        #fcmpersonal{
+                            text-align: center;
+                            font-family: Cuprum;
+                            font-weight: bold;
+                        }
+
+                        /*Boton de FCM*/
+                        #botonFCM{
+                            background-color: white;
+                            color:black;
+                            font-weight: bold;
+                            width: 30%;
+                            margin:auto;
+                            padding: 0;
+                        }
+
+            /*SECTION > ARTICLE FOTOS*/
+            /*Ancho y color de fondo del article fotos*/
+            #articleFotos{
+                background-color: black;
+                color:black;
+            }
+
+                /*Espacio donde metes todas las fotos (GALERIA)*/
+                #espacioFotos{
+                    display:flex;
+                    flex-wrap: wrap;
+                    flex-direction: row;
+                    justify-content: space-around;
+                    background-color: black;
+                    text-align: center;
+                }
+
+                    /*Imagenes de espacio de fotos*/
+                    #espacioFotos>img{
+                        margin-top: 1px;
+                        width:98%;
+                    }
+            
+        /*ASIDE - MOVIL*/
+        /*Aside de la página*/
+        aside{
+            width:100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            height:100%;
+        }
+
+            /*ASIDE > DIAS*/
+            /*Parte de los dias de apertura. Estilo y distribucion*/
+            #dias{
+                margin-top: 50px;
+                width:90%;
+                font-size: 20px;
+                font-weight: bold;
+                font-family: Cuprum;
+                text-align: center;
+            }
+
+                /*Estilo de los h3 de dias*/
+                #dias>h3{
+                    background-color: gold;
+                }
+
+                    /*Lista de días*/
+                    #dias>ul{
+                        width:100%;
+                        margin:auto;
+                        padding:0;
+                        display: flex;
+                        justify-content: space-between;
+                        flex-direction: column;
+                    }
+
+                        /*Elementos de la lista de dias*/
+                        #dias>ul>li{
+                            margin:2px;
+                            text-align: left;
+                            color:black;
+                            font-size: 18px;
+                            font-family: Cuprum;
+                        }
+                
+                /*ASIDE > CERRAR*/
+                /*Dias de cierre del gimnasio*/
+                #cerrar{
+                    width:100%;
+                    font-size: 20px;
+                    font-weight: bold;
+                    font-family: Cuprum;
+                    text-align: center;
+                    margin-top: 20px;
+                }
+
+                    /*Estilo del h3 de cerrar*/
+                    #cerrar>h3{
+                        background-color: gold;
+                    }
+
+                    /*Lista de los dias de cierre*/
+                    #cerrar>ul{
+                        width:100%;
+                        margin:auto;
+                        padding:0;
+                        display: flex;
+                        justify-content: space-between;
+                        flex-direction: column;
+                    }
+
+                        /*Elementos de la lista de los dias de cierre*/
+                        #cerrar>ul>li{
+                            margin:2px;
+                            text-align: left;
+                            color:black;
+                            font-size: 18px;
+                            font-family: Cuprum;
+                        }
+
+                /*ASIDE > DIRECCION*/
+                /*Parte donde mostramos la ubicacion del gimnasio*/
+                #direccion{
+                    margin-top: 20px;
+                    text-align: center;
+                    font-size: 20px;
+                    width: 90%;
+                }
+
+                    /*Estilo del parrafo de direccion*/
+                    #direccion>p{
+                        font-family: Cuprum;
+                    }
+
+                    /*Estilo del h3 de direccion*/
+                    #direccion>h3{
+                        background-color: gold;
+                    }
+
+                    /*Imagen de maps de direccion*/
+                    #direccion>a>img{
+                        border: 1px black solid;
+                        width:95%;
+                    }
+
+                /*ASIDE > OFERTAS*/
+                #ofertas{
+                    margin-top: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    width: 90%;
+                }
+
+                    /*h3 de ofertas*/
+                    #ofertas>h3{
+                        text-align: center;
+                        font-size: 22px;
+                    }
+
+                    /*Ofertas 1 2 y 3 que tengan este estilo*/
+                    #oferta1,#oferta2,#oferta3{
+                        margin-top:15px;
+                        text-align: center;
+                        border: black 1px solid;
+                    }
+
+                        /*Clase para definir los titulos de las ofertas*/
+                        .tituloOferta{
+                            font-family: Cuprum;
+                            font-weight: bold;
+                            font-size: 28px;
+                            background-color: gold;
+                        }
+
+                        /*Clase para definir los precios de las ofertas*/
+                        .precio{
+                            font-family: Cuprum;
+                            font-weight: bold;
+                            font-size: 20px;
+                            background-color: black;
+                            color:white;
+                        }
+
+                        /*Descripcion de la oferta*/
+                        .textoOferta{
+                            font-family: Cuprum;
+                        }
+        
+        /*FOOTER - MONITOR*/
+        footer{
+            clear:both;
+            width:100%;
+            height: 200px;
+            background-color: black;
+            color:white;
+            display:flex;
+            flex-direction: row;
+            justify-content:center;
+        }
+
+            /*FOOTER > RRSS*/
+            /*Parte de enlaces de redes del footer*/
+            #rrss{
+                width:50%;
+                margin:auto;
+                padding: 0;
+            }
+
+                /*Contenido que engloba a las redes del footer*/
+                #contenidorrss{
+                    width:60%;
+                    margin:auto;
+                    padding: 0;
+                    text-align: center;
+                }
+
+                    /*Anchura de las imagenes del contenidorrss*/
+                    #contenidorrss>a>img{
+                        width:20px;
+                    }
+
+                    /*Texto de "siguenos en redes" del footer*/
+                    #contenidorrss>p{
+                        font-family: Cuprum;
+                        font-weight: bold;
+                        text-align: center;
+                        font-size: 14px;
+                    }
+
+            /*FOOTER > ENLACESFOOTER*/
+            /*Enlaces del footer de contacto (unete, sugerencias...)*/
+            #enlacesFooter{
+                margin:auto;
+                padding: 0;
+                width:40%;
+            }
+
+                /*Lista de los enlaces del footer*/
+                #enlacesFooter>ul{
+                    width:95%;
+                    margin:auto;
+                    padding:0;
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: column;
+                }
+
+                    /*Elementos de la lista de enlaces del footer*/
+                    #enlacesFooter>ul>li>a{
+                        margin-top:10px;
+                        padding: 0;
+                        text-align: left;
+                        font-size: 11px;
+                        font-family: Cuprum;
+                        font-weight: bold;
+                        color:white;
+                    }
+                    
+                    /*Cuando pases el raton por los enlaces... (hover)*/
+                    #enlacesFooter>ul>li>a:hover{
+                        color:gold;
+                    }
+
+}
+
+/*Media Query para indicar que si el dispositivo mide menos que 300px no se visualice nada*/
+@media only screen and (max-width:299px){
+    *{
+        display: none;
     }
 }
