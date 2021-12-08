@@ -63,6 +63,12 @@
         border:none;
     }
 
+    /*Distribución del header. Centramos su contenido*/
+    header{
+        display: flex;
+        align-items: center;
+    }
+
     /*foto del header (logo): centrada */
     #header>img{
         margin-top:0;
