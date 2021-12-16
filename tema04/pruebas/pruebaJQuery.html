@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejemplon5. Añadir y quitar clases a elementos</title>
+        <script src="../software_empleado/jquery-3.4.1.min.js" type="text/javascript"></script>
+
+        <style type="text/css">
+            .rojo{color: red;}
+            .grande26 {font-size: 26px;}
+        </style>
+
+        <script>
+            $(document).ready(function(){
+                $("#boton01").click(function(){
+                    $("#parrafo").addClass("rojo");
+                });
+                $("#boton02").click(function(){
+                    $("#parrafo").addClass("rojo grande26");
+                });
+                $("#boton03").click(function(){
+                    $("#parrafo").removeClass("rojo");
+                });
+                $("#boton04").click(function(){
+                    $("#parrafo").removeClass("rojo grande26");
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <p id="parrafo">
+            <element></element>liminaciones de estilos en este parrafo
+        </p>
+
+        <input type="button" name="boton01" id="boton01" value="asignar color rojo">
+        <input type="button" name="boton02" id="boton02" value="asignar texto rojo y tamaño 26px">
+        <input type="button" name="boton03" id="boton03" value="eliminar estilo color rojo">
+        <input type="button" name="boton04" id="boton04" value="eliminar estilo color rojo y tamaño 26px"><br/><br/>
+    </body>
+</html>

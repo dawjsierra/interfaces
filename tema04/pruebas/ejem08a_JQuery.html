@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejemplo8a. Capturar la posicion o coordenadas del raton</title>
+        <script src="../software_empleado/jquery-3.4.1.min.js" type="text/javascript"></script>
+
+        <script>
+            $(document).ready(function(){
+
+                $("body").mousedown(function(evento){
+
+                    //borramos el contenido del id: button
+                $("#button").text("");
+
+                    alert(evento.button);
+
+                    //para button los valores son: 0, 1, 2
+                    //para buttons los valores son: 1, 2, 3
+
+                    switch(evento.button){
+                        case 0:
+                            $("#button").text("Boton izquierdo");
+                            break;
+                        case 1:
+                            $("#button").text("Boton central o ruleta");
+                            break;
+                        case 2:
+                            $("#button").text("Boton derecho");
+                            break;
+                        default:
+                            //
+                    }
+                })
+                
+
+                $("body").mouseover(function(evento){
+                    $("#screen").text("screenX - "+evento.screenX + " screen Y "+ evento.screenY);//relativo a pantalla
+                    $("#screen").text("clienteX - "+evento.clientX + " screen Y "+ evento.clientY);//relativo al navegador
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <h3>EN RELACION A LA PANTALLA</h3><div id="screen"></div>
+        <h3>EN RELACION AL NAVEGADOR</h3><div id="client"></div>
+        <h3>BOTON DEL RATON PULSADO</h3><div id="button"></div>
+    </body>
+</html>

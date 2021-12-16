@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejemplo8. Eventos (click, mouseover, mouseout, focus, blur)</title>
+        <script src="../software_empleado/jquery-3.4.1.min.js" type="text/javascript"></script>
+
+        <script>
+            $(document).ready(function(){
+                $("#btn_mostrar").click(function(evento){
+                    $("#mensaje").text("mostrando mensaje");
+                });
+                $("#btn_ocultar").click(function(evento){
+                    $("#mensaje").text("");
+                });
+                $("#btn_mouseover").mouseover(function(evento){
+                    $(this).val("estás pasando el raton sobre mi");
+                });
+                $("#btn_mouseover").mouseout(function(evento){
+                    $(this).val("pasa el raton sobre mi");
+                });
+                $("#campo").focus(function(evento){
+                    $("#resultado").html("el campo de texto sobre el foco");
+                });
+                $("#campo").blur(function(evento){
+                    $("#resultado").html("el campo de texto ha perdido el foco");
+                });
+
+                //manejando TOOGLE
+                $("#boton").click(function(){
+                    $("#target").toggle("slow");
+                });
+                $("#boton1").click(function(){
+                    $("#target").toggle("fast");
+                });
+                $("#boton2").click(function(){
+                    $("#target").toggle(5000);
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <input type="button" id="btn_mostrar" value="mostrar mensaje">
+        <input type="button" id="btn_ocultar" value="ocultar mensaje">
+
+        <div id="mensaje"></div>
+
+        <input type="bytton" id="btn_mouseover" value="pasa el raton sobre mi">
+
+        <input type="text" id="campo">
+        
+        <div id="resultado"></div>
+
+        <input id="boton" type="button" value="toggle() con efecto slow">
+        <input id="boton1" type="button" value="toggle() con efecto fast">
+        <input id="boton2" type="button" value="toggle() con efecto 500mil segundos">
+
+        <div id="target" style="width:100px; height: 100px; background:red"></div>
+    </body>
+</html>

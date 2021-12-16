@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <!--Titulo de la pagina-->
         <title>INDEX</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -8,21 +9,26 @@
         <script src="../js/index.js"></script>
     </head>
     <body>
+        <!--Contenedor fijo-->
         <div id="contenedorFijo">
+            <!--Navegacion de la pagina a diferentes secciones-->
             <nav id="navegacionPagina">
                 <ul>
                     <li><a href="#horarios">FISIOS Y ACTIVIDADES</a></li>
                     <li><a href="#indices">IMC Y FCM</a></li>
                     <li><a href="#direccion">HORARIO + UBICACIÓN</a></li>
                     <li><a href="#espacioFotos">IMÁGENES</a></li>
-                    <li id="ofertasTablet"><a href="#ofertasTablet">OFERTAS</a></li>
-                    <li id="ofertas"><a href="#ofertas">OFERTAS</a></li>
+                    <li id="ofertasNav"><a href="#ofertas">OFERTAS</a></li>
                 </ul>
             </nav>
+            <!--Header-->
             <header id="header">
+                <!--Foto del logo-->
                 <img src="../img/logoNegro.png" alt="fotoLogo">
             </header>
+            <!--Parte del login-->
             <nav id="login">
+                <!--Formulario de login (usuario - contraseña)-->
                 <form id="formLogin">
                     <label id="labelU">USUARIO</label><br/>
                     <input type="text" id="usuario" value=""><br/>
@@ -32,16 +38,23 @@
                 </form>
             </nav>
         </div>
+        <!--Contenedor del contenido sin contar el encabezado-->
         <div id="contedorContenido">
+            <!--Foto principal del encabezado-->
             <div id="fotoEncabezado">
                 <img src="../img/fotoencabezado.jpg" alt="Foto del encabezado">
             </div>
+            <!--Section / contenido principal de la pagina-->
             <section>
+                <!-- Parte de las tablas y los horarios-->
                 <article id="horarios">
                     <h2>NUESTRAS ACTIVIDADES Y FISIOS</h2>
+                    <!--Zona que engloba ambas tablas-->
                     <div id="espacioTablas">
                         <h3>ACTIVIDADES</h3>
+                        <!--Espacio de actividades-->
                         <div id="espacioActiv">
+                            <!--Tabla de actividades-->
                             <table id="tablaActividades">
                                 <tbody>
                                     <tr>
@@ -61,6 +74,7 @@
                                     <tr><td>19:00 - 21:00</td></tr>
                                 </tbody>
                             </table>
+                            <!--Formulario de actividades (elegir actividad)-->
                             <div id="formularioAct">
                                 <form id="formulario" name="formAct">
                                     <input type="checkbox" name="actividades" value="Crossfit">CROSSFIT<br/>
@@ -75,7 +89,9 @@
                         </div>
                         <br/>
                         <h3>FISIOS</h3>
+                        <!--Espacio que engloba tabla + formulario de fisios-->
                         <div id="espacioFisios">
+                            <!--Tabla de fisios-->
                             <table id="tablaFisios">
                                 <tbody>
                                     <tr>
@@ -98,8 +114,9 @@
                                     <tr><td>20:00 - 20:45</td></tr>
                                 </tbody>
                             </table>
+                            <!--Formulario para elegir a fisio-->
                             <div id="formularioFis">
-                                <form id="formulario" name="formFis">
+                                <form id="formularioF" name="formFis">
                                     <input type="radio" name="fisio" value="Marta">MARTA<br/>
                                     <input type="radio" name="fisio" value="Marcos">MARCOS<br/>
                                     <input type="radio" name="fisio" value="Sergio">SERGIO<br/>
@@ -116,11 +133,15 @@
                             </script>
                     </div>
                 </article>
+                <!--En este article empiezan las calculadoras de imc y fcm-->
                 <article id="indices">
                     <h2>BIENESTAR Y SALUD PERSONAL</h2>
+                    <!--Espacio que engloba ambos-->
                     <div id="espacioIndices">
+                        <!--Zona de FCM-->
                         <div id="fcm">
                             <h3>FRECUENCIA CARDIACA MÁXIMA</h3>
+                            <!--Parrafo que te indica tu fcm-->
                                 <p id="fcmpersonal">Tu frecuencia cardiaca máxima es: </p>
                                 <ul id="listafcm" >
                                     <!--Porcentajes-->
@@ -131,6 +152,7 @@
                                 </ul>
                                 <input type="button" id="botonFCM" value="CALCULAR" onclick="calcularfcm()">
                         </div>
+                        <!--Zona de IMC-->
                         <div id="imc">
                             <h3>INDICE DE MASA CORPORAL</h3>
                             <ul id="listaimc">
@@ -147,8 +169,10 @@
                         </div>
                     </div>
                 </article>
+                <!--Galeria de fotos-->
                 <article id="articleFotos">
                     <h2>Imágenes</h2>
+                    <!--Espacio que engloba las fotos-->
                     <div id="espacioFotos">
                         <img class="ampliar" src="../img/galeria1.jpg" alt="foto galeria1">
                         <img class="ampliar" src="../img/galeria2.jpg" alt="foto galeria2">
@@ -158,8 +182,9 @@
                         <img class="ampliar" src="../img/galeria6.jpg" alt="foto galeria6">
                     </div>
                 </article>
-                <!--Article solo para aside porque cambio la estructura-->
+                <!--Article solo para tablet porque cambio la estructura-->
                 <article id="apertura">
+                    <!--Dias de apertura solo para tablet-->
                     <div id="diasTablet">
                         <h3>HORARIO DE APERTURA:</h3>
                         <ul>
@@ -172,6 +197,7 @@
                             <li>DOMINGO: 10:00 - 14:00</li>
                         </ul>
                     </div>
+                    <!--Dias de cierre solo para tablet-->
                     <div id="cerrarTablet">
                         <h3>MENOS LOS DÍAS...</h3>
                         <ul>
@@ -185,7 +211,9 @@
                     </div>
                 </article>
             </section>
+            <!--Aside-->
             <aside id="aside">
+                <!--Dias abiertos-->
                 <div id="dias">
                     <h3>HORARIO DE APERTURA:</h3>
                     <ul>
@@ -197,6 +225,7 @@
                         <li>SABADO: 06:00 - 21:00</li>
                         <li>DOMINGO: 10:00 - 14:00</li>
                     </ul>
+                    <!--Dias de cierre-->
                     <div id="cerrar">
                         <h3>MENOS LOS DÍAS...</h3>
                         <ul>
@@ -209,23 +238,29 @@
                         </ul>
                     </div>
                 </div>
+                <!--Direccion del gimnasio-->
                 <div id="direccion">
                     <h3>¿DÓNDE ESTAMOS?</h3>
                     <p>C/Alberto Dominguez 18, Zaragoza, 50004</p>
+                    <!--Foto con enlace (pinchas y te redirige a la web indicada)-->
                     <a href="https://www.google.es/maps"><img src="../img/fotomaps.jpg" alt="Foto de google maps"></a>
                 </div>
+                <!--Espacio dedicado a las ofertas-->
                 <div id="ofertas">
                     <h3>¡APROVECHA NUESTRAS OFERTAS!</h3>
+                    <!--Oferta 1-->
                     <div id="oferta1">
                         <p class="tituloOferta">OFERTA GOLD</p>
                         <p class="textoOferta">6 MESES + ENTRENADOR PERSONAL</p>
                         <p class="precio">200€</p>
                     </div>
+                    <!--Oferta 2-->
                     <div id="oferta2">
                         <p class="tituloOferta">OFERTA FRIENDLY 2X1</p>
                         <p class="textoOferta">SI TE APUNTAS CON UN AMIGO, PAGAIS LA MITAD</p>
                         <p class="precio">-50%</p>
                     </div>
+                    <!--Oferta 3-->
                     <div id="oferta3">
                         <p class="tituloOferta">OFERTA NUEVOS</p>
                         <p class="textoOferta">AHORRATE LA CUOTA DE ALTA EL PRIMER MES</p>
@@ -233,29 +268,34 @@
                     </div>
                 </div>
             </aside>
-    
+            <!--Section a parte de ofertas. Solo visibles para tablet porque he cambiado el diseño para tablet
+                Este se ve en horizontal, el resto vertical
+            -->
             <section id="ofertasTablet">
                 <h3>¡APROVECHA NUESTRAS OFERTAS!</h3>
                 <div id="espacioOfertasTablet">
-                    <div id="oferta1" class="ampliar">
+                    <div id="oferta1T" class="ampliar">
                         <p class="tituloOferta">OFERTA GOLD</p>
                         <p class="textoOferta">6 MESES + ENTRENADOR PERSONAL</p>
                         <p class="precio">200€</p>
                     </div>
-                    <div id="oferta2" class="ampliar">
+                    <div id="oferta2T" class="ampliar">
                         <p class="tituloOferta">OFERTA FRIENDLY 2X1</p>
                         <p class="textoOferta">SI TE APUNTAS CON UN AMIGO, PAGAIS LA MITAD</p>
                         <p class="precio">-50%</p>
                     </div>
-                    <div id="oferta3" class="ampliar">
+                    <div id="oferta3T" class="ampliar">
                         <p class="tituloOferta">OFERTA NUEVOS</p>
                         <p class="textoOferta">AHORRATE LA CUOTA DE ALTA EL PRIMER MES</p>
                         <p class="precio">-20€</p>
                     </div>
                 </div>
             </section>
+            <!--Footer-->
             <footer>
+                <!--Seccion del footer de las redes sociales-->
                 <div id="rrss">
+                    <!--Contenido de redes sociales que engloba las imagenes de redes-->
                     <div id="contenidorrss">
                     <p id="tituloRedes">¡SÍGUENOS EN REDES!</p>
                     <a href="https://www.facebok.com"><img src="../img/logofacebook.png" alt="foto redes 1"></a>
@@ -265,7 +305,8 @@
                     <a href="https://www.snapchat.com"><img src="../img/logosnapchat.png" alt="foto redes 5"></a>
                     </div>
                 </div>
-    
+                
+                <!--Enlaces del footer de contacto-->
                 <div id="enlacesFooter">
                     <ul>
                         <li><a href="#">ÚNETE A NUESTRO EQUIPO</a></li>
