@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EJERCICIO 11</title>
+        <script src="../software_empleado/jquery-3.4.1.min.js" type="text/javascript"></script>
+        <style>
+            .respuesta{
+                display:none;
+            }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function(){
+
+                $('.alternar-respuesta').click(function(){
+                    $(this).parent().next().toggle();
+                });
+                $('#alternar-todo').click(function(){
+                    $('.respuesta').toggle('slow');
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <p>¿PREGUNTA 1? (<a href="#" class="alternar-respuesta">ver respuesta</a>)</p>
+        <p class="respuesta">RESPUESTA1</p>
+
+        <p>¿PREGUNTA 2? (<a href="#" class="alternar-respuesta">ver respuesta</a>)</p>
+        <p class="respuesta">RESPUESTA2</p>
+
+
+        <p>¿PREGUNTA 3? (<a href="#" class="alternar-respuesta">ver respuesta</a>)</p>
+        <p class="respuesta">RESPUESTA3</p>
+
+        <a href="#" id="alternar-todo">MOSTRAR Y OCULTAR TODAS LAS RESPUESTAS</a>
+    </body>
+</html>

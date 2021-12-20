@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EJERCICIO 12. Evento (toggle)</title>
+        <!--<script src="jquery/jquery-3.4.1.min.js" type="text/javascript"></script>-->
+        <script src="../software_empleado/jquery-1.8.3.js" type="text/javascript"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function(){
+                //primer click.function que descubre un panel oculto y cambua el texto del boton
+                fucntion(e){
+                    $('#panel-oculto').slideDown();
+                    $(this).val('Cerrar panel');
+                }, //separamos las dos funciones con una coma
+
+                /*
+                    segundo click.
+                */
+            });
+        </script>
+    </head>
+    <body>
+        <p>¿PREGUNTA 1? (<a href="#" class="alternar-respuesta">ver respuesta</a>)</p>
+        <p class="respuesta">RESPUESTA1</p>
+
+        <p>¿PREGUNTA 2? (<a href="#" class="alternar-respuesta">ver respuesta</a>)</p>
+        <p class="respuesta">RESPUESTA2</p>
+
+
+        <p>¿PREGUNTA 3? (<a href="#" class="alternar-respuesta">ver respuesta</a>)</p>
+        <p class="respuesta">RESPUESTA3</p>
+
+        <a href="#" id="alternar-todo">MOSTRAR Y OCULTAR TODAS LAS RESPUESTAS</a>
+    </body>
+</html>
