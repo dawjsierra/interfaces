@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>EJEMPLO 17. Eventos de touch de pantalla tactil</title>
+        <script src="../software_empleado/jquery-3.4.1.min.js" type="text/javascript"></script>
+        <script>
+            $(document).ready(function(){
+                $(document).on("touchstart", function (e){ //Cuando el dedo toca la superficie de la pantalla
+                    e.preventDefault();
+                    $("#resultado").text("touchstart(): EL DEDO HA TOCADO LA PANTALLA");
+                });
+
+                $(document).on("touchend", function (e){ //Cuando el dedo deja de tocar la superficie de la pantalla
+                    e.preventDefault();
+                    $("#resultado").text("touchend(): EL DEDO HA DEJADO DE TOCAR LA PANTALLA");
+                });
+
+                $(document).on("touchmove", function (e){ //Cuando el dedo se desplaza por la pantalla
+                    e.preventDefault();
+                    $("#resultado").text("touchmove(): EL DEDO SE DESPLAZA POR LA PANTALLA");
+                })
+            });
+        </script>
+    </head>
+
+    <body>
+        <div id="resultado"></div>
+    </body>
+</html>

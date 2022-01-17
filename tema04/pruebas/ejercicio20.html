@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>EJEMPLO 20. Eventos roggle, show, hide, fadeIn, fadeOut, slideDown, slideUp</title>
+        <script src="../software_empleado/jquery-3.4.1.min.js" type="text/javascript"></script>
+        <script>
+            $(document).ready(function(){
+
+                $("#btn_0").click(function(){
+                    $("#cajita").toggle("slow");
+                });
+
+                $("#btn_1").click(function(){
+                    $("#cajita").show();
+                });
+
+                $("#btn_2").click(function(){
+                    $("#cajita").hide();
+                });
+
+                $("#btn_3").click(function(){
+                    $("#cajita").fadeIn();
+                });
+
+                $("#btn_4").click(function(){
+                    $("#cajita").fadeOut();
+                });
+
+                $("#btn_5").click(function(){
+                    $("#cajita").slideDown();
+                });
+
+                $("#btn_6").click(function(){
+                    $("#cajita").slideUp();
+                });
+
+                $("#btn_7").click(function(){ //para animar la opacidad
+                    $("#cajita").fadeTo("3000", 0.7);
+                });
+
+            });
+        </script>
+        <style>
+            #cajita{
+                position: absolute;
+                top: 50px;
+                left: 0;
+                width: 200px;
+                height: 200px;
+                background-color: blue;
+                display: none;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div style="display:inline">
+            <button type="button" id="btn_0">toggle</button>
+            <button type="button" id="btn_1">show</button>
+            <button type="button" id="btn_2">hide</button>
+            <button type="button" id="btn_3">fadeIn</button>
+            <button type="button" id="btn_4">fadeOut</button>
+            <button type="button" id="btn_5">slideDown</button>
+            <button type="button" id="btn_6">slideUp</button>
+            <button type="button" id="btn_7">fadeTo</button>
+        </div>
+
+        <div id="cajita"></div>
+    </body>
+</html>
