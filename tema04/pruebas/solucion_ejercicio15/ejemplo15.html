@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		    <title>Menú deslizante con jQuery y Hover </title>
+		    <link rel="stylesheet" href="ejemplo15.css" type="text/css" media="screen" />
+		   <script src="jquery-3.4.1.min.js" type="text/javascript"></script>
+
+		    <script type="text/javascript">
+			// Ejecutamos la funcion ya que se cargo el documento
+				$(document).ready(function () {
+				// propiedad hover es el evento para cuando el mouse se coloca encima o quita del objeto
+					$('.navigation li').hover(
+					// Cuando el mouse entra se aplica el fadeIn al UL
+						function () {
+						//Fade in the navigation submenu
+							$('ul', this).fadeIn(); // fadeIn will show the sub cat menu
+						},
+						// Cuando el mouse se quita se oculta el UL
+						function () {
+						//Fade out the navigation submenu
+							$('ul', this).fadeOut(); // fadeOut will hide the sub cat menu
+						}
+					);
+				});
+			</script>
+		</head>
+		<body>
+			<ul class="navigation">
+				<li><a href="#">Menú op 1</a></li>
+
+				<li><a href="#">Menú op 2 </a>
+					<ul>
+						<li><a href="#">Sub menú 2-1</a></li>
+						<li><a href="#">Sub menú 2-2</a></li>
+						<li><a href="#">Sub menú 2-3</a></li>
+						<li><a href="#">Sub menú 2-4</a></li>
+						<li><a href="#">Sub menú 2-5</a></li>
+					</ul>
+				</li>
+
+				<li><a href="#">Menú op 3 </a>
+					<ul>
+						<li><a href="#">Sub menú 3-1</a></li>
+						<li><a href="#">Sub menú 3-2</a></li>
+						<li><a href="#">Sub menú 3-3</a></li>
+						<li><a href="#">Sub menú 3-4</a></li>
+						<li><a href="#">Sub menú 3-5</a></li>
+						<li><a href="#">Sub menú 3-6</a></li>
+						<li><a href="#">Sub menú 3-7</a></li>
+					</ul>
+				</li>
+				
+				<li><a href="#">Menú op 4 </a></li>
+			</ul>
+			
+		</body>
+</html>
