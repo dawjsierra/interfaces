@@ -1,0 +1,66 @@
+/* Configurando la fuente y tamaño */
+body{
+	font-family: Arial, Helvetica,sans-serif;
+	font-size:15px;
+}
+
+/* Ajustando margenes, padding y quitando los bullet de los menus */
+.navigation {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+/* ajustando las etiquetas li */
+.navigation li {
+	float:left; /* Mostrando los elementos en la misma linea */
+	width:150px;
+	position:relative;
+}
+
+/* Jugando con las categorias principales */
+.navigation li a {
+	background:#262626;
+	color:#fff;
+	display:block; /* Haciendo que el link cubra todo el elemento li */
+	padding:8px 7px 8px 7px;
+	text-decoration:none; /* Quita subrayado al link */
+	border-top:1px solid #F2861D;
+	text-align:center;
+	text-transform:uppercase;
+}
+.navigation li a:hover {
+	color:#F2861D;
+}
+
+/* Submenu*/
+.navigation ul {
+	position:absolute;
+	left:0;
+	display:none; /* Por defecto oculto */
+	margin:0 0 0 -1px;
+	padding:0;
+	list-style:none;
+	border-bottom:3px solid #F2861D;
+}
+
+.navigation ul li {
+	width:150px;
+	float:left;
+	border-top:none;
+}
+
+/* Propiedades de los links en los submenus */
+.navigation ul a {
+	display:block; /* Haciendo que el link cubra todo el elemento li */
+	height:15px;
+	padding:8px 7px 13px 7px;
+	color:#fff;
+	text-decoration:none;
+	border-top:none;
+	border-bottom:1px dashed #6B6B6B;
+}
+
+.navigation ul a:hover {
+	color:#F2861D;
+}
