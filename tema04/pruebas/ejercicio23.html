@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>EJEMPLO 22. Animacion de scroll con animate</title>
+        <script src="../software_empleado/jquery-3.4.1.min.js" type="text/javascript"></script>
+        <script>
+            var imagenes = ["imgejer23/img1.jpg", "imgejer23/img2.jpg", "imgejer23/img3.jpg", "imgejer23/img4.jpg", "imgejer23/img5.jpg", "imgejer23/img6.jpg", "imgejer23/img7.jpg", "imgejer23/img8.jpg"];
+
+            //creamos una funcion para reproducir las imagenes
+            var x = 0;
+            var timer;
+            var reproducir = function(){
+                if(x > imagenes.length){
+                    x = 0;
+                }
+                $("#imagen").attr('src', imagenes[x]);
+                x++;
+
+                //para que se reproduzca de forma infinita
+                timer = setTimeout('reproducir()',300);
+            }
+
+            //creamos una función para parar animación
+            var parar = function(){clearTimeOut(timer);}
+            
+            $(document).ready(function(){
+                reproducir();
+                
+                $("btn_run").click(function(){
+                    reproducir();
+                });
+
+                $("#btn_stop").click(function(){
+                    parar();
+                });
+            });
+        </script>
+        <style>
+            #cajita{
+                background-color: black;
+                height: 300px;
+                padding-top: 30px;
+            }
+
+            #imagen{
+                width: 250px;
+                height: 100px;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div id="cajita">
+            <center><img src='' id="imagen"></center>
+        </div>
+
+        <button id="btn_run">INICIAR ANIMACIÓN</button>
+        <button id="btn_stops">PARAR ANIMACIÓN</button>
+    </body>
+</html>
