@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<title>Ejemplo11. Evento (toggle)</title>
+		<script src="jQuery/jquery-3.4.1.min.js" type="text/javascript"></script>
+		
+		<script>
+			
+			$(document).ready(function(){
+		        $('.alternar-respuesta').click(function () {
+		            $(this).parent().next().toggle();
+		        });
+		        
+		        $('#alternar-todo').click(function () {
+		            $('.respuesta').toggle('slow');
+		        });
+			 });
+
+		</script>
+
+		<style media="screen">
+			body{ background: #666;}
+			
+			.respuesta{display: none;}
+		</style>
+
+	</head>
+	
+	<body>
+ 		<p>Pregunta 1... (<a href="#" class="alternar-respuesta">ver respuesta</a>)</p>
+		<p class="respuesta" >Respuesta 1...</p>
+		 
+		<p>Pregunta 2... (<a href="#" class="alternar-respuesta">ver respuesta</a>)</p>
+		<p class="respuesta" >Respuesta 2...</p>
+		 
+		<p>Pregunta 3... (<a href="#" class="alternar-respuesta">ver respuesta</a>)</p>
+		<p class="respuesta" >Respuesta 3...</p>
+		 
+		<a href="#" id="alternar-todo">Mostrar y ocultar todas las respuestas</a>
+	</body>
+</html>

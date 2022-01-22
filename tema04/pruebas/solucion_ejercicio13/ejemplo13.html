@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<title>Ejemplo13. Evento (toggle) con hover</title>
+		<script src="jQuery/jquery-3.4.1.min.js" type="text/javascript"></script>
+		
+		<script>
+			$(document).ready(function(){
+
+				// manejando TOGGLE
+				$("#mostrar_panel").click(function () {	 
+					$('#panel-oculto').toggle("slow");
+				});
+
+			 });
+
+		</script>
+
+		<style media="screen">
+			#panel-oculto {
+				display: none; position: fixed; 
+				top:30px; right: 400px; width: 100px; 
+				height: 200px; z-index: 1000; background-color: #222; }
+		</style>
+
+	</head>
+	
+	<body>
+ 		
+ 		<div id="panel-oculto" ></div>
+		<input type="button" id="mostrar_panel" value="Mostrar panel">
+ 		
+
+	</body>
+</html>

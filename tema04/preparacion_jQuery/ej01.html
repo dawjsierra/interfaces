@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>PREP JQUERY01</title>
+        <link rel="stylesheet" href="ejemplo14.css" type="text/css" media="screen"/>
+        <script src="jquery-3.4.1.min.js" type="text/javascript"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $(".trigger").click(function(){
+                    $(".panel").toggle("fast");
+                    $(this).toggleClass("active");
+                });
+
+
+            });
+        </script>
+    </head>
+    <body>
+        <nav class="boton">
+            
+        </nav>
+    </body>
+</html>
