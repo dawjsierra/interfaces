@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>Parte 1.2_2 completo</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="generator" content="CSE HTML Validator (https://www.htmlvalidator.com/)">
+		<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+		<link href="css/estilo1.css" type="text/css" rel="stylesheet">
+		<script src="js/jquery-3.4.1.min.js"></script>
+		
+		<script>
+		
+			$(document).ready(function(){
+				
+				$("h1").click(function(){
+					$("#esquina1").animate({top:"+=35%",left:"+=35%"},4000).animate({top:"-=35%",left:"-=35%"},4000);
+					$("#esquina2").animate({top:"+=35%",right:"+=35%"},4000).animate({top:"-=35%",right:"-=35%"},4000);
+					$("#esquina3").animate({bottom:"+=35%",left:"+=35%"},4000).animate({bottom:"-=35%",left:"-=35%"},4000);
+					$("#esquina4").animate({bottom:"+=35%",right:"+=35%"},4000).animate({bottom:"-=35%",right:"-=35%"},4000);
+				});
+				
+			});
+				
+		</script>
+	</head>
+
+	<body>
+		<<h1>INICIAL</h1>	
+		
+		<div class="esquina" id="esquina1">
+			<span class="fa fa-eye"></span>
+		</div>
+		<div class="esquina" id="esquina2">
+			<span class="fa fa-check"></span>
+		</div>
+		<div class="esquina" id="esquina3">
+			<span class="fa fa-car"></span>
+		</div>
+		<div class="esquina" id="esquina4">
+			<span class="fa fa-comment"></span>
+		</div>
+		
+	</body>
+</html>

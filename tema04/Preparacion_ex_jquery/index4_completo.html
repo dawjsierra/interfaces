@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>Parte 4 completo</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="generator" content="CSE HTML Validator (https://www.htmlvalidator.com/)">
+		<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+		<script src="js/jquery-3.4.1.min.js"></script>
+		
+		<style>
+			@charset "UTF-8";
+			/* CSS created with CSE HTML Validator */
+
+			body {
+				background-color: black;
+				margin:0px;
+				padding:0px;
+			}
+
+			h1{
+				background-color: darkblue;
+				color: lightblue;
+				width: 150px;
+				font-size: 2em;
+				position: absolute;
+				top: 50%;
+				left: 52%;
+				text-align: center;
+				padding: 1em 0;
+				margin: -50px  0 0 -100px;
+			}
+
+			h1:hover{
+				background-color: rgb(72, 72, 206);
+				cursor: pointer;
+			}
+			.esquina{
+				position:absolute;
+				background-color: red;
+				color: white;
+				padding: 30px;
+				text-align:center;
+				font-size: 2em;
+				z-index: 500;
+				transition: opacity 0.8s;
+				width: 130px;
+			}
+			#esquina1{
+				top:0px;
+				left:0px;
+			}
+			#esquina2{
+				top:0px;
+				right:0px;
+			}
+            #esquina3{
+				bottom:0px;
+				left:0px;
+			}
+            #esquina4{
+				bottom:0px;
+				right:0px;
+			}
+			
+	
+		</style>
+
+		<script>
+			// calculamos el ancho y alto de la pantalla
+			var ancho = $(window).width();
+			var alto = $(window).height();
+			
+			$(document).ready(function(){
+				// calculamos el valor de los padding derecho e izquierdo (todo suma para el tamaño)
+				var pad1 = parseInt($(".esquina").css("padding-left")) + parseInt($(".esquina").css("padding-right"));
+				// calculamos el valor de los padding superior e inferior (todo suma para el tamaño)
+				var pad2 = parseInt($(".esquina").css("padding-top")) + parseInt($(".esquina").css("padding-bottom"));
+				
+				$("h1").click(function(){
+					var tope1 = ancho - $(".esquina").width() - pad1;
+					var tope2 = alto - $(".esquina").height() - pad2; 
+					
+					$("#esquina1").animate({left:tope1},4000);
+					$("#esquina1").animate({top:tope2},4000);
+					$("#esquina1").animate({left:"0"},4000);
+					$("#esquina1").animate({top:"0"},4000);
+
+                    $("#esquina2").animate({top:tope2},4000);
+					$("#esquina2").animate({right:tope1},4000);
+					$("#esquina2").animate({top:"0"},4000);
+					$("#esquina2").animate({right:0},4000);
+                    
+                    $("#esquina3").animate({bottom:tope2},4000);
+					$("#esquina3").animate({left:tope1},4000);
+                    $("#esquina3").animate({bottom:"0"},4000);
+					$("#esquina3").animate({left:"0"},4000);
+                    
+					$("#esquina4").animate({left:"0"},4000);
+                    $("#esquina4").animate({bottom:tope2},4000);
+					$("#esquina4").animate({left:tope1},4000);
+				    $("#esquina4").animate({bottom:"0"},4000);
+					
+				});
+				
+			});
+				
+		</script>
+	</head>
+
+	<body>
+		<h1>INICIAR</h1>	
+		
+	    <div class="esquina" id="esquina1">
+			<span class="fa fa-eye"></span>
+		</div>
+
+		<div class="esquina" id="esquina2">
+			<span class="fa fa-check"></span>
+        </div>
+        
+        <div class="esquina" id="esquina3">
+			<span class="fa fa-car"></span>
+        </div>	
+        
+        <div class="esquina" id="esquina4">
+			<span class="fa fa-comment"></span>
+		</div>
+		
+		
+	</body>
+</html>
