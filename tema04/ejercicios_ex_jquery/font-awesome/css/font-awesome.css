@@ -178,15 +178,6 @@
 .fa-inverse {
   color: #ffffff;
 }
-
-.fa-inverseAzul {
-  color: #2516ff;
-}
-
-.fa-inverseNegro {
-  color: #000000;
-}
-
 /* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
    readers do not read off random characters that represent icons */
 .fa-glass:before {
