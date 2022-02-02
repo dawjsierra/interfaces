@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		    <title>Ejemplo14. Panel vertical deslizante con jQuery</title>
+		    <link rel="stylesheet" href="ejemplo14.css" type="text/css" media="screen" />
+		   <script src="jquery-3.4.1.min.js" type="text/javascript"></script>
+
+		    <script type="text/javascript">
+				$(document).ready(function(){
+					// cuando se hace click en trigger
+				    $(".trigger").click(function(){
+				        $(".panel").toggle("fast");
+
+				        /* toggleClass nos permita añadir o quitar una clase de un elemento 
+						sin importarnos si ya la tiene o no */
+				        $(this).toggleClass("active");
+				    });
+
+				    // cuando se hace click en trigger1
+					$(".trigger1").click(function(){
+				        $(".panel1").toggle("fast");
+				        $(this).toggleClass("active");
+				    });
+				});
+			</script>
+		</head>
+		<body>
+
+			<!-- Definición del primer panel deslizante INFOR-->
+			<nav class="panel">
+			    <h3>Panel deslizante</h3>
+			    <p> Aquí está el panel deslizante realizado con jQuery con la función de alternar (toggle) y algo de CSS3 para las esquinas redondeadas </p>
+				<p> Este panel también se puede colocar a la derecha. Esto podría ser particularmente útil si,<a href="#" title="cosas">like me</a>, tiene un diseño de sitio web alineado a la izquierda.</p>
+			 
+			    <h3>Un poco sobre mi</h3>
+			    <img src="yola.jpg" alt="Jon Phillips" />
+			    <p>Me llamo Yolanda Escorza, soy profesora de sistemas y aplicaciones informáticas CSS, HTML y JQuery entre otras cosas....</p>
+				
+				<div class="columns">
+				    <div class="colleft">
+					    <h3>Menú</h3>
+					        <ul>
+					            <li><a href="#" title="home">Home</a></li>
+					            <li><a href="#"  title="a cerca de">A cerca de</a></li>
+					            <li><a href="#"  title="portfolio">Portfolio</a></li>
+					            <li><a href="#"  title="contacto">Contacto</a></li>
+					            <li><a href="#"  title="blog">Blog</a></li>
+					        </ul>
+				    </div>
+			 
+				    <div class="colright">
+				        <h3>Redes sociales</h3>
+				        <ul>
+				            <li><a href="#" title="">Opción1</a></li>
+				            <li><a href="#" title="">Opción2</a></li>
+				            <li><a href="#" title="">Opción3</a></li>
+				            <li><a href="#" title="">Opción4</a></li>
+				            <li><a href="#" title="">Opción5</a></li>
+				        </ul>
+				    </div>
+				</div>
+			</nav>
+
+			<!-- Definición del segundo panel deslizante MENÚ-->
+			<nav class="panel1">
+				<h3>Menú panel 1</h3>
+				    <ul>
+					    <li><a href="#" title="home">Home</a></li>
+					    <li><a href="#"  title="a cerca de">A cerca de</a></li>
+					    <li><a href="#"  title="portfolio">Portfolio</a></li>
+					    <li><a href="#"  title="contacto">Contacto</a></li>
+					    <li><a href="#"  title="blog">Blog</a></li>
+					</ul>
+			</nav>
+			
+			<aside>
+				<a class="trigger" href="#" title="Información">Infor</a>
+				<a class="trigger1" href="#" title="Opciones de menú">Menú</a>
+			</aside>
+		</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>EJ05 JQUERY</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="generator" content="CSE HTML Validator (https://www.htmlvalidator.com/)">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <link href="css/ejercicio03.css" type="text/css" rel="stylesheet">
+
+    <script>
+        $(window).ready(function () {
+            var boton = document.getElementById("titulo");
+            $("#inicial").one("click", function () {
+                titulo.innerHTML="Click Off";
+                $(".esquina").css("width","100%");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="inicial">
+        <h1 id="titulo">INICIAR</h1>
+    </div>
+
+    <div id="esquina1" class="esquina">
+        <span class="fa fa-eye fa-2x"></span>
+    </div>
+</body>
+
+</html>

@@ -1,39 +1,99 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>EJERCICIO 01</title>
+        <title>EJ01 JQUERY</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="generator" content="CSE HTML Validator (https://www.htmlvalidator.com/)">
 		<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
-        <style>
-            body{
-                background-color: black;
-                margin:0px;
-				padding:0px;
-            }
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <link href="css/ejercicio01.css" type="text/css" rel="stylesheet">
+        
+        <script>
+            $(window).ready(function(){
+                $("#esquina1").click(function(){
+                    $("#contenido1").css("left","0");
+                    $("#contenido1").css("top","0");
+                });
+                $("#contenido1").click(function(){
+                    $("#contenido1").css("left","-100%");
+                    $("#contenido1").css("top","-100%");
+                });
 
-            #esquina1{
-                top:0;
-                left:0;
-            }
+                $("#esquina2").click(function(){
+                    $("#contenido2").css("right","0");
+                    $("#contenido2").css("top","0");
+                });
+                $("#contenido2").click(function(){
+                    $("#contenido2").css("right","-100%");
+                    $("#contenido2").css("top","-100%");
+                });
 
-            .esquina{
-                position: fixed;
-                background-color: red;
-                color:white;
-                padding: 30px;
-				text-align:center;
-				font-size: 2em;
-            }
+                $("#esquina3").click(function(){
+                    $("#contenido3").css("left","0");
+                    $("#contenido3").css("bottom","0");
+                });
+                $("#contenido3").click(function(){
+                    $("#contenido3").css("left","-100%");
+                    $("#contenido3").css("bottom","-100%");
+                });
 
-            #esquina1:hover{
-				background-color: rgb(150, 59, 59);
-				cursor: pointer;
-			}
-        </style>
+                $("#esquina4").click(function(){
+                    $("#contenido4").css("right","0");
+                    $("#contenido4").css("bottom","0");
+                });
+                $("#contenido4").click(function(){
+                    $("#contenido4").css("right","-100%");
+                    $("#contenido4").css("bottom","-100%");
+                });
+            })
+        </script>
     </head>
     <body>
-        <div id="esquina1" class="esquina">
-            <span class="fa fa-eye"></span>
+
+        <div class="cajita">
+            <h1>INICIAL</h1>
         </div>
+
+        <div id="esquina1" class="esquina">
+            <span class="fa fa-eye fa-3x"></span>
+        </div>
+
+        <div id="contenido1" class="contenido">
+            <div class="cajita">
+                <h1><span class="fa fa-eye"></span></h1>
+            </div>
+        </div>
+
+        <div id="esquina2" class="esquina">
+            <span class="fa fa-check fa-3x"></span>
+        </div>
+
+        <div id="contenido2" class="contenido">
+            <div class="cajita">
+                <h1><span class="fa fa-check"></span></h1>
+            </div>
+        </div>
+
+        <div id="esquina3" class="esquina">
+            <span class="fa fa-car fa-3x"></span>
+        </div>
+
+        <div id="contenido3" class="contenido">
+            <div class="cajita">
+                <h1><span class="fa fa-car"></span></h1>
+            </div>
+        </div>
+
+        <div id="esquina4" class="esquina">
+            <span class="fa fa-comment fa-3x"></span>
+        </div>
+
+        <div id="contenido4" class="contenido">
+            <div class="cajita">
+                <h1><span class="fa fa-comment"></span></h1>
+            </div>
+        </div>
+
+        
     </body>
 </html>

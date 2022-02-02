@@ -1,0 +1,54 @@
+html, body{
+    height:99%;
+    width:99%;
+}
+
+body{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#inicial{
+    background-color: darkblue;
+    color: lightblue;
+    text-align: center;
+    width:200px;
+}
+
+#inicial:hover{
+    background-color: blue;
+    cursor: pointer;
+}
+
+.esquina{
+    background-color: red;
+    color: white;
+    position: fixed;
+    width:190px;
+    height:100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#esquina1{
+    top:0;
+    left: 0;
+}
+
+#esquina2{
+    top:0;
+    right: 0;
+}
+
+#esquina3{
+    bottom:0;
+    left: 0;
+}
+
+#esquina4{
+    bottom:0;
+    right: 0;
+}
