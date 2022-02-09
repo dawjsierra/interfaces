@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JQuery Mobile</title>
+    <meta charset="utf8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+  </head>
+    <body>
+
+        <!-- página principal-->
+        <div data-role="page" id="principal" data-theme="b" data-content-theme="b">
+
+            <div data-role="header" >
+                <h1>Cabecera de la página principal</h1>
+            </div>
+
+            <div role="main" class="ui-content">
+                <p>Contenido de la página principal</p>
+                <p><a href="#secundaria"  data-transition="slide" >enlace a la página secundaria</a></p>
+            </div>
+
+            <div data-role="footer">
+                <h4>pie de página principal</h4>
+            </div><!-- /footer -->
+        </div>
+
+        <!-- página secundaria-->
+        <div data-role="page" id="secundaria">
+
+            <div data-role="header" >
+                <h1>Cabecera de la página secundaria</h1>
+            </div>
+
+            <div role="main" class="ui-content">
+                <p>Contenido de la página secundaria</p>
+                <p><a href="#principal" data-transition="slide" data-direction="reverse">enlace a la página principal</a></p>
+            </div>
+
+            <div data-role="footer">
+                <h4>pie de página secundaria</h4>
+            </div><!-- /footer -->
+        </div>
+
+    </body>
+</html>

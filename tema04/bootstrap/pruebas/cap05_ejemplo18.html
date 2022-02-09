@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JQuery Mobile</title>
+    <meta charset="utf8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+  </head>
+    <body>
+
+      <div data-role="page" data-theme="b" data-content-theme="b">
+
+        <div data-role="header" >
+          <h1>JQuery Mobile</h1>
+            <a href="#" class="ui-btn ui-btn-left ui-icon-home ui-btn-icon-left">Inicio</a>
+            <a href="#" class="ui-btn ui-btn-right ui-icon-search ui-btn-icon-left">Buscar</a>
+        </div>
+
+        <div role="main" class="ui-content">
+          <p>Contenido de la página</p>
+          <a href="#" data-role="button" data-icon="star">Botón</a>
+          <div data-role="collapsible-set">
+              <div data-role="collapsible">
+                  <h3>HTML5</h3>
+                  <p>Mediante HTML5 detallamos el contenido de la Web</p>
+              </div>
+              <div data-role="collapsible">
+                  <h3>CSS3</h3>
+                  <p>Las Hojas de Estilo CSS permiten dar formato al contenido</p>
+              </div>
+              <div data-role="collapsible">
+                  <h3>JS/JQuery</h3>
+                  <p>Gracias a JavaScript y JQuery podemos interactuar con el usuario.</p>
+              </div>
+          </div>
+        </div>
+
+        <div data-role="footer">
+          <div data-role="navbar">
+            <ul>
+              <li><a href="#" data-icon="grid">Menú</a></li>
+              <li><a href="#" data-icon="star" class="ui-btn-active">Favoritos</a></li>
+              <li><a href="#" data-icon="gear">Configuración</a></li>
+            </ul>
+          </div><!-- /navbar -->
+        </div><!-- /footer -->
+
+      </div>
+
+    </body>
+</html>

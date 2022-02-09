@@ -22,12 +22,14 @@
             }
 
             //creamos una función para parar animación
-            var parar = function(){clearTimeOut(timer);}
+            var parar = function(){
+                clearTimeout(timer);
+            }
             
             $(document).ready(function(){
                 reproducir();
                 
-                $("btn_run").click(function(){
+                $("#btn_run").click(function(){
                     reproducir();
                 });
 

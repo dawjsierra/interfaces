@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Isotope</title>
+    <meta charset="utf8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+
+    <style>
+      .element-item img {margin:7px;width:64px;float:left;} 
+      .element-item h5 {font-weight:bold;color:darkred;}
+    </style>
+
+    <script>
+      $(document).ready( function() {
+        
+          // inicializar Isotope
+          var $grid = $('#grid').isotope({
+              itemSelector: '.element-item',
+              layoutMode: 'fitRows',
+               getSortData: {
+                name: '.nombre',
+                price: '.precio parseFloat'
+              }
+          });
+
+          // Ordenación
+          $("#ascendente").click(function(){
+            $grid.isotope({ sortBy: 'name', sortAscending: true });
+          });
+          $("#descendente").click(function(){
+            $grid.isotope({ sortBy: 'name', sortAscending: false });
+          });
+          $("#precio").click(function(){
+            $grid.isotope({ sortBy: 'price', sortAscending: true });
+          });
+
+          // Filtrado
+          $("#bebidas").click(function(){
+            $grid.isotope({ filter: '.bebida'});
+          });
+          $("#basicos").click(function(){
+            $grid.isotope({ filter: '.basico'});
+          });
+          $("#todo").click(function(){
+            $grid.isotope({ filter: '*'});
+          });
+      });
+    </script>
+
+  </head>
+  <body>
+
+    <div class="container">
+
+      <div class="row" style="margin-top:30px">
+
+        <!-- Controles --> 
+        <div class="col-md-6 col-sm-12 col-xs-12 ">
+          Filtro: <button id="bebidas" class="btn btn-primary">Bebidas</button>
+          <button id="basicos" class="btn btn-primary">Básicos</button>
+          <button id="todo" class="btn btn-primary">Todo</button>
+        </div>
+        
+        <div class="col-md-6 col-sm-12 col-xs-12 " style="margin-top:10px"></div><!-- para separar -->
+
+        <div class="col-md-6 col-sm-12 col-xs-12 ">
+          Orden: <button id="ascendente" class="btn btn-primary">Nombre A-Z</button>
+          <button id="descendente" class="btn btn-primary">Nombre Z-A</button>
+          <button id="precio" class="btn btn-primary">Precio</button>
+        </div>
+      </div>
+
+      <div class="row" id="grid" style="margin-bottom:30px; margin-top:50px">
+
+        <div class="element-item col-md-4 col-sm-6 col-xs-12 basico">
+          <img src="img/supermarket/lechuga.png"/>
+          <h5 class="nombre">Lechuga</h5>
+          <span class="precio">0.99</span>€
+        </div>
+
+        <div class="element-item col-md-4 col-sm-6 col-xs-12">
+          <img src="img/supermarket/chocolate.png"/>
+          <h5 class="nombre">Chocolate</h5>
+          <span class="precio">0.9</span>€
+        </div>
+
+        <div class="element-item col-md-4 col-sm-6 col-xs-12">
+          <img src="img/supermarket/fruta.png"/>
+          <h5 class="nombre">Fruta</h5>
+          <span class="precio">10</span>€
+        </div>
+
+        <div class="element-item col-md-4 col-sm-6 col-xs-12 basico">
+          <img src="img/supermarket/harina.png"/>
+          <h5 class="nombre">Harina</h5>
+          <span class="precio">0.75</span>€
+        </div>
+
+        <div class="element-item col-md-4 col-sm-6 col-xs-12 basico">
+          <img src="img/supermarket/aceite.png"/>
+          <h5 class="nombre">Aceite</h5>
+          <span class="precio">7</span>€
+        </div>
+
+        <div class="element-item col-md-4 col-sm-6 col-xs-12 bebida">
+          <img src="img/supermarket/cafe.png"/>
+          <h5 class="nombre">Cafe</h5>
+          <span class="precio">1.2</span>€
+        </div>
+
+        <div class="element-item col-md-4 col-sm-6 col-xs-12">
+          <img src="img/supermarket/helado.png"/>
+          <h5 class="nombre">Helado</h5>
+          <span class="precio">12</span>€
+        </div>
+
+        <div class="element-item col-md-4 col-sm-6 col-xs-12 basico">
+          <img src="img/supermarket/huevos.png"/>
+          <h5 class="nombre">Huevos</h5>
+          <span class="precio">2.75</span>€
+        </div>
+
+        <div class="element-item col-md-4 col-sm-6 col-xs-12 bebida basico">
+          <img src="img/supermarket/leche.png"/>
+          <h5 class="nombre">Leche</h5>
+          <span class="precio">14</span>€
+        </div>
+
+        <div class="element-item col-md-4 col-sm-6 col-xs-12 bebida">
+          <img src="img/supermarket/batido.png"/>
+          <h5 class="nombre">Batidos</h5>
+          <span class="precio">2</span>€
+        </div>
+
+        <div class="element-item col-md-4 col-sm-6 col-xs-12">
+          <img src="img/supermarket/bolleria.png"/>
+          <h5 class="nombre">Bolleria</h5>
+          <span class="precio">3.5</span>€
+        </div>
+
+        <div class="element-item col-md-4 col-sm-6 col-xs-12">
+          <img src="img/supermarket/sopa.png"/>
+          <h5 class="nombre">Sopa</h5>
+          <span class="precio">6.3</span>€
+        </div>
+
+        <div class="element-item col-md-4 col-sm-6 col-xs-12 bebida">
+          <img src="img/supermarket/vino.png"/>
+          <h5 class="nombre">Vino</h5>
+          <span class="precio">3.55</span>€
+        </div>
+
+        <div class="element-item col-md-4 col-sm-6 col-xs-12 basico">
+          <img src="img/supermarket/pan.png"/>
+          <h5 class="nombre">Pan</h5>
+          <span class="precio">0.55</span>€
+        </div>
+
+        <div class="element-item col-md-4 col-sm-6 col-xs-12 basico">
+          <img src="img/supermarket/pollo.png"/>
+          <h5 class="nombre">Pollo</h5>
+          <span class="precio">6.15</span>€
+        </div>
+
+        <div class="element-item col-md-4 col-sm-6 col-xs-12">
+          <img src="img/supermarket/ternera.png"/>
+          <h5 class="nombre">Ternera</h5>
+          <span class="precio">9.75</span>€
+        </div>
+
+        <div class="element-item col-md-4 col-sm-6 col-xs-12">
+          <img src="img/supermarket/pescado.png"/>
+          <h5 class="nombre">Pescado</h5>
+          <span class="precio">19.95</span>€
+        </div>
+
+        <div class="element-item col-md-4 col-sm-6 col-xs-12">
+          <img src="img/supermarket/marisco.png"/>
+          <h5 class="nombre">Marisco</h5>
+          <span class="precio">27.30</span>€
+        </div>  
+
+      </div> <!-- row -->
+    </div> <!--container -->
+
+  </body>
+</html>
