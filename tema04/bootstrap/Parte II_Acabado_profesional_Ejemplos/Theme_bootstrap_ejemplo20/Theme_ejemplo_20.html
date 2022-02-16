@@ -1,0 +1,96 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <style>
+      /* ponemos color de fondo, bordes redondeados y color de texto */
+      .badge{
+        background-color: white ;
+        border-radius: 30%;
+        color:blue;
+      }
+      
+      /* ponemos un color de fondo gris a la clase btn-default para que se vea bien */
+      span.btn-default{
+        background-color:dimgrey ;
+      }
+
+      /* definimos tipo de letra negrita a la clase btn */
+      span.btn{
+        font-weight: bold;
+        font-size: 0.6em;
+        cursor:default;
+      }
+    </style>
+
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <h3>Breadcrumb</h3>
+
+      <ol class="breadcrumb">
+        <!-- para que funcione bien se ha tenido que añadir la clase breadcrumb-item-->
+        <li class="breadcrumb-item"><a href="#">Tecnologías Web</a></li>
+        <li class="breadcrumb-item"><a href="#">Librerías</a></li>
+        <li class="breadcrumb-item active">Bootstrap</li>
+      </ol>
+
+      <!-- con el tema descargado Darkly la clase label no funciona-->
+      <!-- se ha sustituido por la clase btn (boton)-->
+      <!-- el btn-default sobre fondo negro no se ve bien, se ha redefinido-->
+      <h3>Label</h3>
+
+      <h3>
+        <!-- <span class="label label-default ">Por defecto</span>
+        <span class="label label-primary">Primaria</span>
+        <span class="label label-success">Exito</span>
+        <span class="label label-info">Información</span>
+        <span class="label label-warning">Aviso</span>
+        <span class="label label-danger">Error</span>-->
+
+        <span class="btn btn-default btn-sm disabled ">Por defecto</span>
+        <span class="btn btn-primary  btn-sm disabled">Primaria</span>
+        <span class="btn btn-success  btn-sm disabled">Exito</span>
+        <span class="btn btn-info  btn-sm disabled">Información</span>
+        <span class="btn btn-warning  btn-sm disabled">Aviso</span>
+        <span class="btn btn-danger  btn-sm disabled">Error</span>
+      </h3>
+
+      <!-- con el tema descargado Dark clase badge  no funciona igual-->
+      <!-- se ha redifinido la clase de forma incrustada-->
+      <h3>Badge</h3>
+
+      <button class="btn btn-primary" type="button">
+        Mensajes <span class="badge">12</span>
+      </button>
+
+      <h3>Alert</h3>
+
+      <div class="alert alert-warning alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <strong>¡Cuidado!</strong>Reproduce todos los ejemplos por tí mismo.
+      </div>
+
+      <h3>Progress</h3>
+
+      <div class="progress">
+        <div  class="progress-bar progress-bar-success progress-bar-striped" 
+              role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" 
+              style="width: 40%">
+        </div>
+      </div>
+
+      </div>
+
+  </body>
+</html>
