@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#ventana"
+              style="margin-top: 300px;">
+        Abrir ventana modal
+      </button>
+
+      <!-- Modal -->
+        <div class="modal fade" id="ventana" role="dialog" aria-labelledby="titulo">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="titulo">Título</h4>
+              </div>
+
+              <div class="modal-body">
+                Contenido del diálogo.
+              </div>
+
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary">Aceptar</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+    </div>
+  </body>
+</html>
