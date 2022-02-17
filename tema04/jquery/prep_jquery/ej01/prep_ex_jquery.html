@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>PREP EX JQUERY</title>
+    <meta charset="UTF-8">
+    <script src="jquery-3.4.1.min.js"></script>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            width: 100%;
+            text-align: center;
+        }
+
+        #cuadro {
+            position: absolute;
+            width: 800px;
+            height: 500px;
+            top: 25%;
+            right: 25%;
+            border: 5px solid white;
+            z-index: -5;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        #cuadro:hover {
+            cursor: pointer;
+        }
+
+        #fotoPlaya {
+            width: 100%;
+            height: 100%;
+        }
+
+        #sol {
+            position: absolute;
+            width: 100px;
+            background-color: transparent;
+            top: -200px;
+            left: 90px;
+            width: 20%;
+        }
+
+        #xixo1 {
+            position: absolute;
+            background-color: transparent;
+            bottom: 60px;
+            left: 0px;
+            width: 20%;
+            z-index: 4;
+            visibility: hidden;
+        }
+
+        #arthur {
+            position: absolute;
+            background-color: transparent;
+            bottom: -50px;
+            left: 0;
+            width: 50%;
+            z-index: 10;
+            visibility: hidden;
+        }
+
+        #yo {
+            position: absolute;
+            background-color: transparent;
+            bottom: -10px;
+            right: -250px;
+            width: 30%;
+            z-index: 11;
+            visibility: hidden;
+        }
+
+        #xixo4 {
+            position: absolute;
+            background-color: transparent;
+            bottom: 120px;
+            left: 120px;
+            width: 22%;
+            z-index: 1;
+            visibility: hidden;
+        }
+
+        #xixo33 {
+            position: absolute;
+            background-color: transparent;
+            bottom: -100px;
+            left: 150px;
+            width: 40%;
+            z-index: 20;
+            visibility: hidden;
+        }
+
+        #texto {
+            position: absolute;
+            background-color: transparent;
+            top: -100px;
+            width: 100%;
+            text-align: center;
+            z-index: 14;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 30px;
+            color: red;
+            /*visibility: hidden;*/
+        }
+
+        #nube1 {
+            position: absolute;
+            background-color: transparent;
+            top: 0px;
+            left: -200px;
+            width: 15%;
+            /*visibility: hidden;*/
+        }
+
+        #nube2 {
+            position: absolute;
+            background-color: transparent;
+            top: 90px;
+            left: -150px;
+            width: 15%;
+            /*visibility: hidden;*/
+        }
+
+        #papiro {
+            position: absolute;
+            background-color: transparent;
+            top: 50px;
+            right: -200px;
+            width: 20%;
+            /*visibility: hidden;*/
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("#cuadro").click(function () {
+                //sol
+                $("#sol").animate({top: "+=200"},500);
+
+                //papiro
+                $("#papiro").animate({left: "-=300px"},1000).animate({top: "+=10px"},0);
+
+                //texto
+                $("#texto").animate({top: "+=100"},200);
+
+                $("#arthur").css({visibility: "visible"},2000);
+                $("#xixo33").css({visibility: "visible"},2000);
+                $("#xixo4").css({visibility: "visible"},2000);
+                $("#xixo1").css({visibility: "visible"},2000);
+                $("#yo").css({visibility: "visible"},2000);
+
+                bucleNube1();
+                bucleNube2();
+                bucleXixoArthur();
+                bucleYo();
+                bucleBrilloSol();
+                bucleLetras();
+                
+            });
+        });
+
+        function bucleYo(){
+            $("#yo").animate({ left: "-=300px" }, 2000).animate({ left: "+=300px" }, 4000);
+            setTimeout("bucleYo()", 300);
+        }
+
+        function bucleXixoArthur(){
+            $("#xixo33").animate({ bottom: "+=50px" }, 500).animate({ bottom: "-=50px" }, 100);
+            setTimeout("bucleXixoArthur()", 300);
+        }
+
+        function bucleNube1() {
+            $("#nube1").animate({ left: "+=1000px" }, 5500).animate({ left: "-=1000px" }, 0);
+            setTimeout("bucleNube1()", 300);
+        }
+
+        function bucleNube2() {
+            $("#nube2").animate({ left: "+=1000px" }, 4000).animate({ left: "-=1000px" }, 0);
+            setTimeout("bucleNube2()", 300);
+        }
+
+        function bucleBrilloSol(){
+            $("#sol").animate({opacity: "+=0.8"},2000).animate({opacity: "-=0.9"},2000);
+            setTimeout("bucleBrilloSol()", 300);
+        }
+
+        function bucleLetras(){
+            $("#texto").css({color: "black"},2000).css({color: "purple"},2000);
+            setTimeout("bucleLetras()", 300);
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Examen 2a evalucación. Parte 1 jQuery</h1>
+    <h2>Alumno/a: Javier</h2>
+
+
+    <div id="cuadro">
+        <img src="fotoplaya.jpg" id="fotoPlaya">
+        <img src="sol.png" id="sol">
+        <img src="xixo01.png" id="xixo1">
+        <img src="yo.png" id="yo">
+        <img src="arturito.png" id="arthur">
+        <img src="xixo04.png" id="xixo4">
+        <!--<img src="xixo03.png" id="xixo3">-->
+        <img src="xixo03_3.png" id="xixo33">
+        <div id="texto">
+            <p>La Xixoneta y el Arthur</p>
+        </div>
+        <img src="nube1.png" id="nube1">
+        <img src="nube2.png" id="nube2">
+        <img src="papiro.png" id="papiro">
+
+    </div>
+
+</body>
+
+</html>

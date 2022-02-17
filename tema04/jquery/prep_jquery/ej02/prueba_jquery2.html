@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>PRUEBA2 JQUERY</title>
+        <script src="jquery-3.4.1.min.js"></script>
+        <style>
+            body{
+                text-align: center;
+                background-color: black;
+                color: white;
+                overflow: hidden;
+            }
+
+            #cuadro{
+                display: block;
+                position: absolute;
+                background-color: red;
+                width:800px;
+                height: 500px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border: 3px solid white;
+                z-index: 0;
+                /*overflow: hidden;*/
+            }
+
+            #cuadro:hover{
+                cursor: pointer;
+            }
+
+            #montana{
+                width: 100%;
+                height: 100%;
+            }
+
+            #kayak{
+                position:absolute;
+                width:70%;
+                right:-400px;
+                bottom:-50px;
+                z-index: 30;
+            }
+
+            #sol{
+                position:absolute;
+                width:15%;
+                left:0px;
+                top:-150px;
+            }
+
+            #nino{
+                position:absolute;
+                width:15%;
+                top:280px;
+                left:-150px;
+                transform: scaleX(-1);
+                z-index: 1;
+            }
+
+            #avion{
+                position:absolute;
+                width:25%;
+                top:20px;
+                right:-200px;
+                transform: scaleX(-1);
+                z-index: 10;
+            }
+
+            #skiador{
+                position:absolute;
+                width:15%;
+                top:120px;
+                right:500px;
+                z-index: 2;
+            }
+        </style>
+        <script>
+            $(document).ready(function(){
+                $("#")
+            })
+        </script>
+    </head>
+    <body>
+        <h1>Examen 2ª evaluación. Parte 1 jQuery</h1>
+        <h2>Alumno/a: Apellido1 Apellido2, Nombre</h2>
+        <div id="cuadro">
+            <img src="montaña.jpg" id="montana">
+            <img src="kayak.png" id="kayak">
+            <img src="sol.png" id="sol">
+            <img src="nino_nadando.png" id="nino">
+            <img src="avion.png" id="avion">
+            <img src="skiador01.png" id="skiador">
+        </div>
+    </body>
+</html>
