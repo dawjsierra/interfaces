@@ -136,11 +136,7 @@
     <script>
         $(document).ready(function () {
             
-            var clicks = 0;
             $("#cuadro").click(function () {
-                
-                if (clicks < 1) {
-                    clicks++;
                     //sol
                     $("#sol").animate({ top: "+=200" }, 500);
 
@@ -162,12 +158,7 @@
                     bucleYo();
                     bucleBrilloSol();
                     bucleLetras();
-                }else{
-                    location.reload();
-                }
-
-
-
+                
             });
         });
 
