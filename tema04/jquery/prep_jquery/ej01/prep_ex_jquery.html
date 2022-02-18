@@ -135,38 +135,48 @@
     </style>
     <script>
         $(document).ready(function () {
+            
+            var clicks = 0;
             $("#cuadro").click(function () {
-                //sol
-                $("#sol").animate({top: "+=200"},500);
-
-                //papiro
-                $("#papiro").animate({left: "-=300px"},1000).animate({top: "+=10px"},0);
-
-                //texto
-                $("#texto").animate({top: "+=100"},200);
-
-                $("#arthur").css({visibility: "visible"},2000);
-                $("#xixo33").css({visibility: "visible"},2000);
-                $("#xixo4").css({visibility: "visible"},2000);
-                $("#xixo1").css({visibility: "visible"},2000);
-                $("#yo").css({visibility: "visible"},2000);
-
-                bucleNube1();
-                bucleNube2();
-                bucleXixoArthur();
-                bucleYo();
-                bucleBrilloSol();
-                bucleLetras();
                 
+                if (clicks < 1) {
+                    clicks++;
+                    //sol
+                    $("#sol").animate({ top: "+=200" }, 500);
+
+                    //papiro
+                    $("#papiro").animate({ left: "-=300px" }, 1000).animate({ top: "+=10px" }, 0);
+
+                    //texto
+                    $("#texto").animate({ top: "+=100" }, 200);
+
+                    $("#arthur").css({ visibility: "visible" }, 2000);
+                    $("#xixo33").css({ visibility: "visible" }, 2000);
+                    $("#xixo4").css({ visibility: "visible" }, 2000);
+                    $("#xixo1").css({ visibility: "visible" }, 2000);
+                    $("#yo").css({ visibility: "visible" }, 2000);
+
+                    bucleNube1();
+                    bucleNube2();
+                    bucleXixoArthur();
+                    bucleYo();
+                    bucleBrilloSol();
+                    bucleLetras();
+                }else{
+                    location.reload();
+                }
+
+
+
             });
         });
 
-        function bucleYo(){
+        function bucleYo() {
             $("#yo").animate({ left: "-=300px" }, 2000).animate({ left: "+=300px" }, 4000);
             setTimeout("bucleYo()", 300);
         }
 
-        function bucleXixoArthur(){
+        function bucleXixoArthur() {
             $("#xixo33").animate({ bottom: "+=50px" }, 500).animate({ bottom: "-=50px" }, 100);
             setTimeout("bucleXixoArthur()", 300);
         }
@@ -181,13 +191,13 @@
             setTimeout("bucleNube2()", 300);
         }
 
-        function bucleBrilloSol(){
-            $("#sol").animate({opacity: "+=0.8"},2000).animate({opacity: "-=0.9"},2000);
+        function bucleBrilloSol() {
+            $("#sol").animate({ opacity: "+=0.8" }, 2000).animate({ opacity: "-=0.9" }, 2000);
             setTimeout("bucleBrilloSol()", 300);
         }
 
-        function bucleLetras(){
-            $("#texto").css({color: "black"},2000).css({color: "purple"},2000);
+        function bucleLetras() {
+            $("#texto").animate({ color: "black" }, 2000).animate({ color: "purple" }, 2000);
             setTimeout("bucleLetras()", 300);
         }
     </script>

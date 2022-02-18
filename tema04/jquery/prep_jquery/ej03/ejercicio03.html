@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>EJERCICIO03</title>
+    <meta charset="UTF-8">
+    <script src="jquery-3.4.1.min.js" type="text/javascript"></script>
+    <style>
+        body{
+            background-color: black;
+            text-align: center;
+        }
+
+        #cuadro{
+            position:absolute;
+            top:200px;
+            background-color: black;
+            height: 500px;
+            width:50%;
+            left:25%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #imagen{
+            width:100%;
+        }
+
+        #botones{
+            position:absolute;
+            text-align: center;
+            bottom:30%;
+            left: 40%;
+            width:20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: red;
+        }
+
+    </style>
+    <script>
+        //declaramos el array con las imagenes
+        var frames = ["frame1.jpg", "frame2.jpg", "frame3.jpg", "frame4.jpg", "frame5.jpg", "frame6.jpg", "frame7.jpg", "frame8.jpg", "frame9.jpg", "frame10.jpg", "frame11.jpg"
+        ];
+
+
+        var x = 0;
+        var timer;
+
+        //declaramos funcion y la definimos
+        var reproducir = function () {
+
+            //si x es mayor a la longitud del array
+            if (x > frames.length) {
+                //x valdrá 0
+                x = 0;
+            }
+
+            $("#imagen").attr('src', frames[x]);
+            x++;
+
+            //setTimeout para que se repita en bucle
+            timer = setTimeout('reproducir()', 300);
+        }
+
+        //en la variable parar le metemos una funcion
+        //clear timerout y la funcion cargada timer que contiene el bucle
+        var parar = function(){
+            clearTimeout(timer);
+        }
+
+        //ahora hacemos el flujo normal de jquery
+        $(document).ready(function () {
+
+            //Si el documento está listo y clickamos en el botonIniciar
+            $("#botonIniciar").click(function () {
+                //llamará a la funcion reproducir
+                reproducir();
+            });
+
+            //Si el documento está listo y clickamos en el botonParar
+            $("#botonParar").click(function(){
+                //llamará a la funcion parar
+                parar();
+            })
+        });
+    </script>
+</head>
+
+<body>
+    <div id="cuadro">
+        <img src='' id="imagen">
+    </div>
+
+    <div id="botones">
+        <button id="botonIniciar">REPRODUCIR</button>
+        <button id="botonParar">PARAR</button>
+    </div>
+    
+</body>
+
+</html>
