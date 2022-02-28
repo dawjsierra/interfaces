@@ -9,33 +9,157 @@
         <script src="js/jquery-3.4.1.min.js"></script>
         <script src="bootstrap/js/bootstrap.min.js"></script>
         <style type="text/css">
+            @media screen and (min-width: 1200px){
+                .alturaFija{
+                    min-height: 250px;
+                }
+            }
         </style>
     </head>
 
     <body>
-        <div class="container-fluid">
-            <br/>
-            <div class="jumbotron text-center">
-                <h1>Ejercicio Bootstrap Javier Sierra</h1>
+        <!-- JUMBOTRON -->
+        <div class="jumbotron text-center"><h3>Ejercicio Bootstrap</h3>Javier Sierra</div>
+
+        <!-- BARRA NAVEGACION INFERIOR -->
+
+        <!-- Aplicamos navbar inverse para que sea de color inverso (negro) -->
+        <!-- barra fija abajo con fixed bottom -->
+        <nav class="navbar navbar-inverse navbar-fixed-bottom">
+            <!-- Aplicamos la clase container-fluid para que ocupe el 100% de la anchura -->
+            <div class="container-fluid">
+
+                <!-- aplicamos clase navar-nav para indicar una barra de navegacion -->
+                <ul class="nav navbar-nav">
+                    <!-- clase active para sobresaltar este elemento li de la ul -->
+                    <li class="active"><a href="#">INICIO</a></li>
+                    <li><a href="#">COCHES</a></li>
+                    <!-- dropdown para indicar que hay un menu desplegable hacia abajo -->
+                    <li class="dropdown">
+                        <!-- dropdown-toogle para que haga la animacion -->
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">MOTOS
+                            <!-- caret para añadirle la flechita del select -->
+                        <span class="caret"></span></a>
+                        <!-- opciones del menu desplegable, puestas con drop down menu -->
+                        <ul class="dropdown-menu">
+                            <li><a href="#">RACING</a></li>
+                            <li><a href="#">NAKED</a></li>
+                            <li><a href="#">TOURING</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">CAMIONES</a></li>
+                </ul>
             </div>
- 
-            <div class="navbar navbar-fixed-bottom navbar-inverse">
-                 <a class="navbar-brand" href="#">INICIO</a>
-                 <a class="navbar-brand" href="#">COCHES</a>
-                 <div class="up">
-                     <button class="btn btn-default dropup-toggle" type="button" 
-                             id="Menu1" data-toggle="dropup" aria-haspopup="true" 
-                             aria-expanded="true">
-                       MOTOS
-                       <span class="caret"></span>
-                     </button>
-                     <ul class="dropup-menu" aria-labelledby="Menu1">
-                       <li><a href="#">RACING</a></li>
-                       <li><a href="#">NAKED</a></li>
-                       <li><a href="#">TORUING</a></li>
-                       <li role="separator" class="divider"></li>
-                     </ul>
-                   </div>
+        </nav>
+
+        <!-- MENÚ VERTICAL -->
+
+        <!-- abrimos otro contenedor -->
+        <div class="container">
+            <!-- le indicamos que será una fila -->
+            <div class="row">
+                <!-- definimos las columnas que tendrá la fila segun el tamaño de pantalla -->
+                <div class="col-md-3 col-lg-2">
+                    <!-- le aplicamos nav-barcollapase para que no se nos quede el contenido apelotonado en caso de que ampliemos la pantalla-->
+                    <nav class="navbar navbar-default navbar-collapse">
+                        <!-- container fluid para que ocupe el contenido el 100% -->
+                        <div class="container-fluid">
+                            <!-- indicamos que habrá una barra de navegacion en una lista (ul) -->
+                            <ul class="nav navbar-nav">
+                                <!-- clase activa para sobresaltar el li -->
+                                <li class="active"> <a href="#">menu 1</a></li>
+                                <li> <a href="#">menu 2</a></li>
+                                <li class="dropdown">
+                                    <a class="dropdown toggle" data-toggle="dropdown" href="#">menu3
+                                    <span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">submenu 1</a></li>
+                                        <li><a href="#">submenu 2</a></li>
+                                        <li><a href="#">submenu 3</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">menu 4</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+
+                <!-- FOTOS -->
+
+                <!-- le indicamos las medidas responsive -->
+                <!-- le indicamos que si tiene la pantalla un tamaño medio se divida en 9 columnas -->
+                <!-- si tiene un tamaño large o superior en 10-->
+                <div class="col-md-9 col-lg-10">
+                    <div class="row">
+                        <!-- Medidas responsive -->
+                        <!-- en caso de que la pantalla sea small o > 6 columnas -->
+                        <!-- en caso de que la pantalla sea medium o > 4 columnas -->
+                        <!-- en caso de que la pantalla sea large o > 3 columnas -->
+                        <div class="col-sm-6 col-md-4 col-lg-3">
+                            <!-- le aplicamos la clase panel para que nos introduzca las fotos entre paneles -->
+                            <div class="panel panel-default alturaFija">
+                                <!-- indicamos la cabecera del panel -->
+                                <div class="panel-heading">
+                                    <h3>FOTO 1</h3>
+                                </div>
+                                <!-- cuerpo del panel -->
+                                <div class="panel-body">
+                                    <img class="img-responsive" src="img/foto1.jpg">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4 col-lg-3">
+                            <div class="panel panel-default alturaFija">
+                                <div class="panel-heading">
+                                    <h3>FOTO 2</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <img class="img-responsive" src="img/foto2.jpg">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4 col-lg-3">
+                            <div class="panel panel-default alturaFija">
+                                <div class="panel-heading">
+                                    <h3>FOTO 3</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <img class="img-responsive" src="img/foto3.jpg">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4 col-lg-3">
+                            <div class="panel panel-default alturaFija">
+                                <div class="panel-heading">
+                                    <h3>FOTO 4</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <img class="img-responsive" src="img/foto4.jpg">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4 col-lg-3">
+                            <div class="panel panel-default alturaFija">
+                                <div class="panel-heading">
+                                    <h3>FOTO 5</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <img class="img-responsive" src="img/foto5.jpg">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4 col-lg-3">
+                            <div class="panel panel-default alturaFija">
+                                <div class="panel-heading">
+                                    <h3>FOTO 6</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <img class="img-responsive" src="img/foto5.jpg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
          </div>
     </body>
