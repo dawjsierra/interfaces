@@ -9,29 +9,31 @@
     </head>
     <body>
         <div class="container-fluid">
-           <br/>
-           <div class="jumbotron text-center">
-               <h1>Ejercicio Bootstrap Javier Sierra</h1>
-           </div>
-
-           <div class="navbar navbar-fixed-bottom navbar-inverse">
-                <a class="navbar-brand" href="#">INICIO</a>
-                <a class="navbar-brand" href="#">COCHES</a>
-                <div class="up">
-                    <button class="btn btn-default dropup-toggle" type="button" 
-                            id="Menu1" data-toggle="dropup" aria-haspopup="true" 
-                            aria-expanded="true">
-                      MOTOS
-                      <span class="caret"></span>
-                    </button>
-                    <ul class="dropup-menu" aria-labelledby="Menu1">
-                      <li><a href="#">RACING</a></li>
-                      <li><a href="#">NAKED</a></li>
-                      <li><a href="#">TORUING</a></li>
-                      <li role="separator" class="divider"></li>
-                    </ul>
-                  </div>
-           </div>
+            <div class="jumbotron text-center">
+                <h1>Ejercicio Bootstrap Javier Sierra</h1>
+            </div>
         </div>
+
+            <div class="container">
+                <nav class="navbar navbar-inverse navbar-fixed-bottom">
+                    <div class="conatiner-fluid">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#">INICIO</a></li>
+                            <li><a href="#">COCHES</a></li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">MOTOS
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">RACING</a></li>
+                                    <li><a href="#">NAKED</a></li>
+                                    <li><a href="#">TOURING</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">CAMIONES</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
     </body>
 </html>

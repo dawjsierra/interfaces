@@ -24,7 +24,7 @@
             transform: translate(-50%, -50%);
             border: 3px solid white;
             z-index: 0;
-            /*overflow: hidden;*/
+            overflow: hidden;
         }
 
         #cuadro:hover {
@@ -115,7 +115,7 @@
         }
 
         function bucleKayak() {
-            $("#kayak").animate({ right: "+=200px" }, 1000).animate({ right: "-=200px" }, 0);
+            $("#kayak").animate({ right: "+=1000px" }, 2000).animate({ right: "-=1000px" }, 0);
             setTimeout("bucleKayak()", 300);
         }
 
