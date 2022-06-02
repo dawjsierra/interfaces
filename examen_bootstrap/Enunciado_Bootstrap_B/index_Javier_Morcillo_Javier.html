@@ -1,0 +1,151 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title>Parte II 2ª Evaluación Bootstrap 2021-22 tipo B</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="generator" content="CSE HTML Validator (https://www.htmlvalidator.com/)">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <script src="js/jquery-3.4.1.min.js"></script>
+
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- DEFINA AQUÍ EL CÓDIGO CSS -->
+    <style type="text/css">
+        
+    </style>
+</head>
+
+<body>
+    <!-- definimos nav y le ponemos que es navbar por defecto -->
+    <nav class="navbar navbar-default">
+        <!-- le ponemos un container-fluid para que ocupe el 100% de ancho -->
+        <div class="container-fluid">
+            <!-- definimos la cabecera del nabvar -->
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Examen 2ª Eval. Parte 2 Bootstrap</a>
+                <!-- boton hamburguesa (no se visualiza pero cumple su funcion) -->
+                <!-- collapse porque se usará cuando el navbar se colapse y no se pueda mostrar todo apuntando al id menu -->
+                <button type="button" class="navbar-toggle-collapsed" data-toggle="collapse" data-target="#menu"
+                    aria-expanded="false">
+                    <!-- los iconitos de las rayitas del boton hamburguesa -->
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <!-- contenido del navbar y lo que irá dentro del menu hamburguesa -->
+            <div class="collapse navbar-collapse" id="menu">
+                <!-- definimos navbar -->
+                <ul class="nav navbar-nav">
+                    <!-- opciones -->
+                    <li><a href="#">OPCIÓN 1</a></li>
+                    <li><a href="#">OPCIÓN 2</a></li>
+                    <!-- desplegable dropdown -->
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">OPCION 3
+                            <!-- caret para ponerle la flechita del desplegable -->
+                            <span class="caret"></span></a>
+                            <!-- opciones del desplegable -->
+                        <ul class="dropdown-menu">
+                            <li><a href="#">OPCION 3.1</a></li>
+                            <li><a href="#">OPCION 3.2</a></li>
+                            <li><a href="#">OPCION 3.3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">OPCIÓN 4</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- END BARRA NAVEGACIÓN -->
+
+
+    <!-- DEFINA AQUÍ EL JUMBOTRON -->
+    <!-- jumbotron con texto alineado -->
+    <div class="jumbotron text-center">
+
+        <h2>Sierra Morcillo, Javier</h2>
+        Diseño de interfaces web. Bootstrap <span class="btn btn-warning btn-md">Leer mas>></span>
+    </div>
+
+    <!-- END JUMBUTRON -->
+
+
+    <!-- DEFINA AQUÍ LA SECTION  -->
+    <!-- definimos los tamaños responsives -->
+    <section class="col-md-10 col-lg-12">
+        <!-- indicamos que el div tendrá la clase row (fila) donde irán todos los elementos dentro -->
+        <!-- cuando sea tamaño medio ocupará 10 columnas -->
+        <!-- cuando sea tamaño large ocupará 12 -->
+        <div class="row">
+            <!-- el div va a ocupar 4 columnas cuando sea tamaño medio md -->
+            <!-- 6 cuando sea la pantalla de tamaño sm -->
+            <div class="col-md-4 col-sm-6">
+                <div id="contenido1">
+                    <!-- introducimos imagen -->
+                    <img src="img/FPB.png">
+                    <!-- titulo en h2 -->
+                    <h2>F.P Basica</h2>
+                    <!-- texto -->
+                    <p>Donec id elit non mi porta gravida at eget metus. Fucse dapibus, tellus ac cursus commodo, tortor
+                        mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada
+                        magna mollis euismod. Donec sed odio dui.
+                    </p>
+                    <!-- boton que aparece -->
+                    <span class="btn btn-success btn-md">Ver detalles >></span>
+                    
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div id="contenido2">
+                    <img src="img/GM.png">
+                    <h2>F.P Grado Medio</h2>
+                    <p>
+                        Donec id elit non mi porta gravida at eget metus. Fucse dapibus, tellus ac cursus commodo, tortor
+                        mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada
+                        magna mollis euismod. Donec sed odio dui.
+                    </p>
+                    <span class="btn btn-danger btn-md">Ver detalles >></span>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div id="contenido3">
+                    <img src="img/GS.png">
+                    <h2>F.P Grado Superior</h2>
+                    <p>
+                        Donec id elit non mi porta gravida at eget metus. Fucse dapibus, tellus ac cursus commodo, tortor
+                        mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada
+                        magna mollis euismod. Donec sed odio dui.
+                    </p>
+                    <span class="btn btn-primary btn-md">Ver detalles >></span>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+    <!-- END SECTION -->
+
+
+    <!-- DEFINA AQUÍ EL FOOTER  -->
+    <!-- footer con contenedor fluid para que ocupe 100% de ancho y lo fijamos abajo -->
+    <div class="container-fluid">
+        <footer class="text-center bottom">
+            &copy 2022 IES SANTIAGO HERNANDEZ
+        </footer>
+    </div>
+
+
+    <!-- END FOOTER -->
+
+
+</body>
+
+</html>
